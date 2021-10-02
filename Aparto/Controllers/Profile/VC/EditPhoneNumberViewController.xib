@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditPhoneNumberViewController" customModule="Aparto" customModuleProvider="target">
+            <connections>
+                <outlet property="editPhoneNumberView" destination="GZq-9a-XUV" id="n0D-zR-Tp4"/>
+                <outlet property="phoneNumberLabel" destination="LTs-U5-sHe" id="S9Z-ui-yIf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fvc-1Q-PGC">
+                    <rect key="frame" x="16" y="58" width="382" height="213"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxl-pa-Tt6">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="102.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="qUD-cN-6UR">
+                                    <rect key="frame" x="16" y="16" width="350" height="70.5"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="I8d-kg-OMv">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="70.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hx-FM-z64">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="47"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Старый номер телефона">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.55294117649999996" green="0.59607843140000005" blue="0.61568627450000002" alpha="0.99999989889999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="14" name="ProximaNova-Semibold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTs-U5-sHe">
+                                                    <rect key="frame" x="0.0" y="51" width="350" height="19.5"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="9989">
+                                                            <attributes>
+                                                                <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="qUD-cN-6UR" firstAttribute="leading" secondItem="wxl-pa-Tt6" secondAttribute="leading" constant="16" id="8Ly-jx-Ye9"/>
+                                <constraint firstAttribute="bottom" secondItem="qUD-cN-6UR" secondAttribute="bottom" constant="16" id="BOS-E4-mga"/>
+                                <constraint firstItem="qUD-cN-6UR" firstAttribute="top" secondItem="wxl-pa-Tt6" secondAttribute="top" constant="16" id="GO2-Ga-IUS"/>
+                                <constraint firstAttribute="trailing" secondItem="qUD-cN-6UR" secondAttribute="trailing" constant="16" id="gDz-sC-fTy"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZq-9a-XUV" customClass="CustomTextFieldView" customModule="Aparto" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="110.5" width="382" height="102.5"/>
+                            <color key="backgroundColor" name="ApartoLowGrey"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="11"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0U-HH-Hho">
+                    <rect key="frame" x="16" y="789.5" width="382" height="52.5"/>
+                    <color key="backgroundColor" name="ApartoBlue"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Z0U-HH-Hho" secondAttribute="height" multiplier="342:47" id="Vg4-VQ-KkM"/>
+                    </constraints>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="Далее">
+                                <attributes>
+                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <font key="NSFont" size="18" name="ProximaNova-Semibold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="continueButtonTapped:" destination="-1" eventType="touchUpInside" id="oRF-Gj-L84"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fvc-1Q-PGC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="4ej-oF-Wlo"/>
+                <constraint firstItem="Z0U-HH-Hho" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="9DG-l8-w3U"/>
+                <constraint firstItem="fvc-1Q-PGC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="14" id="CMM-c5-vTe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Z0U-HH-Hho" secondAttribute="trailing" constant="16" id="Ngi-HV-beR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Z0U-HH-Hho" secondAttribute="bottom" constant="20" id="jgV-w1-v0a"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fvc-1Q-PGC" secondAttribute="trailing" constant="16" id="vg1-bx-Agc"/>
+            </constraints>
+            <point key="canvasLocation" x="115.94202898550725" y="77.678571428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="ApartoBlue">
+            <color red="0.039000000804662704" green="0.51399999856948853" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ApartoLowGrey">
+            <color red="0.9570000171661377" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

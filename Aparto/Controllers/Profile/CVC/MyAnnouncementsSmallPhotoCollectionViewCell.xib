@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MyAnnouncementsSmallPhotoCollectionViewCell" customModule="Aparto" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="218" height="147"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="218" height="147"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9y-i1-k3N">
+                        <rect key="frame" x="5" y="0.0" width="208" height="147"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-2" translatesAutoresizingMaskIntoConstraints="NO" id="5Ix-tU-RHd">
+                                <rect key="frame" x="0.0" y="0.0" width="208" height="147"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5Ix-tU-RHd" secondAttribute="trailing" id="Qpt-LA-l1I"/>
+                            <constraint firstItem="5Ix-tU-RHd" firstAttribute="leading" secondItem="i9y-i1-k3N" secondAttribute="leading" id="aFP-8A-61p"/>
+                            <constraint firstAttribute="bottom" secondItem="5Ix-tU-RHd" secondAttribute="bottom" id="qO9-Tg-K26"/>
+                            <constraint firstItem="5Ix-tU-RHd" firstAttribute="top" secondItem="i9y-i1-k3N" secondAttribute="top" id="qgO-tC-7iT"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="i9y-i1-k3N" secondAttribute="bottom" id="26t-gN-MpI"/>
+                <constraint firstAttribute="trailing" secondItem="i9y-i1-k3N" secondAttribute="trailing" constant="5" id="AYU-Lq-WPY"/>
+                <constraint firstItem="i9y-i1-k3N" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Mlw-ix-bzi"/>
+                <constraint firstItem="i9y-i1-k3N" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="RZF-sf-G14"/>
+            </constraints>
+            <size key="customSize" width="218" height="147"/>
+            <point key="canvasLocation" x="259.4202898550725" y="157.03125"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home-2" width="306" height="160"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

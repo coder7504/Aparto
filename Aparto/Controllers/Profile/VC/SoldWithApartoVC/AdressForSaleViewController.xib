@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AdressForSaleViewController" customModule="Aparto" customModuleProvider="target">
+            <connections>
+                <outlet property="apartmentNameView" destination="Yap-OZ-TIK" id="qjv-vN-d6f"/>
+                <outlet property="countryNameView" destination="GRf-kd-eAk" id="w4J-qA-09h"/>
+                <outlet property="entranceNameView" destination="VW5-yf-9ok" id="Xcw-zf-zpG"/>
+                <outlet property="houseNameView" destination="l3r-Eg-qW5" id="rRw-30-pa2"/>
+                <outlet property="quaerterNameView" destination="dLQ-6a-iLb" id="5hM-J8-chd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Jlb-8j-Auo">
+                    <rect key="frame" x="16" y="60" width="382" height="470.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="SAN-mV-e90">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="72.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3s5-yi-1ab">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="37.5"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Заполните анкету, и наша администрация свяжется с вами в ближайшее время">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="ProximaNova-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfv-On-n86">
+                                    <rect key="frame" x="0.0" y="51.5" width="382" height="21"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Адрес">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="ProximaNova-Semibold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5C-br-gCS" customClass="CustomBtn" customModule="Aparto" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="97.5" width="382" height="41.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="m5C-br-gCS" secondAttribute="height" multiplier="342:37" id="ps5-gc-egP"/>
+                            </constraints>
+                            <state key="normal" title="Выбрать на карте"/>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ITS-SB-4zC">
+                            <rect key="frame" x="0.0" y="164" width="382" height="306.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRf-kd-eAk" customClass="CustomView" customModule="Aparto" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="91.5"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Eq-ZR-5jD" customClass="CustomView" customModule="Aparto" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="91.5"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vz-yh-Sp5">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="91.5"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="3Vz-yh-Sp5" secondAttribute="bottom" id="0VJ-kb-f0V"/>
+                                        <constraint firstAttribute="bottom" secondItem="8Eq-ZR-5jD" secondAttribute="bottom" id="CAI-iJ-9DJ"/>
+                                        <constraint firstItem="8Eq-ZR-5jD" firstAttribute="leading" secondItem="GRf-kd-eAk" secondAttribute="leading" id="Ccc-YB-mIE"/>
+                                        <constraint firstAttribute="width" secondItem="GRf-kd-eAk" secondAttribute="height" multiplier="313:75" id="DEL-mQ-amQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="3Vz-yh-Sp5" secondAttribute="trailing" id="Ebx-T9-jLS"/>
+                                        <constraint firstAttribute="trailing" secondItem="8Eq-ZR-5jD" secondAttribute="trailing" id="JLE-6R-coY"/>
+                                        <constraint firstItem="3Vz-yh-Sp5" firstAttribute="leading" secondItem="GRf-kd-eAk" secondAttribute="leading" id="SxR-Qk-Ski"/>
+                                        <constraint firstItem="8Eq-ZR-5jD" firstAttribute="top" secondItem="GRf-kd-eAk" secondAttribute="top" id="uAp-FA-3zq"/>
+                                        <constraint firstItem="3Vz-yh-Sp5" firstAttribute="top" secondItem="GRf-kd-eAk" secondAttribute="top" id="xAa-Vi-DRU"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="KIB-Jr-VJo">
+                                    <rect key="frame" x="0.0" y="107.5" width="382" height="91.5"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLQ-6a-iLb" customClass="CustomView" customModule="Aparto" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="91.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUF-g0-lbc" customClass="CustomView" customModule="Aparto" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="91.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kks-fu-l4E">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="91.5"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Kks-fu-l4E" secondAttribute="bottom" id="3np-oD-bkt"/>
+                                                <constraint firstAttribute="trailing" secondItem="Kks-fu-l4E" secondAttribute="trailing" id="Cuv-uO-Uc8"/>
+                                                <constraint firstAttribute="bottom" secondItem="UUF-g0-lbc" secondAttribute="bottom" id="IRT-Sr-Tzf"/>
+                                                <constraint firstItem="Kks-fu-l4E" firstAttribute="leading" secondItem="dLQ-6a-iLb" secondAttribute="leading" id="No3-Wn-BpX"/>
+                                                <constraint firstItem="Kks-fu-l4E" firstAttribute="top" secondItem="dLQ-6a-iLb" secondAttribute="top" id="VyO-W5-EhK"/>
+                                                <constraint firstItem="UUF-g0-lbc" firstAttribute="leading" secondItem="dLQ-6a-iLb" secondAttribute="leading" id="c5z-gZ-iMX"/>
+                                                <constraint firstItem="UUF-g0-lbc" firstAttribute="top" secondItem="dLQ-6a-iLb" secondAttribute="top" id="nQq-4m-acr"/>
+                                                <constraint firstAttribute="trailing" secondItem="UUF-g0-lbc" secondAttribute="trailing" id="z8A-FN-wk2"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3r-Eg-qW5" customClass="CustomView" customModule="Aparto" customModuleProvider="target">
+                                            <rect key="frame" x="194.5" y="0.0" width="187.5" height="91.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZn-kg-03l" customClass="CustomView" customModule="Aparto" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="91.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFV-cg-hcY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="91.5"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="xFV-cg-hcY" secondAttribute="bottom" id="bBe-cB-J4A"/>
+                                                <constraint firstItem="xFV-cg-hcY" firstAttribute="top" secondItem="l3r-Eg-qW5" secondAttribute="top" id="dJo-tc-5H7"/>
+                                                <constraint firstItem="gZn-kg-03l" firstAttribute="leading" secondItem="l3r-Eg-qW5" secondAttribute="leading" id="eCa-A3-c5y"/>
+                                                <constraint firstAttribute="trailing" secondItem="gZn-kg-03l" secondAttribute="trailing" id="kCE-9M-UPX"/>
+                                                <constraint firstAttribute="bottom" secondItem="gZn-kg-03l" secondAttribute="bottom" id="tSs-gQ-46S"/>
+                                                <constraint firstItem="gZn-kg-03l" firstAttribute="top" secondItem="l3r-Eg-qW5" secondAttribute="top" id="uVZ-k6-NDh"/>
+                                                <constraint firstAttribute="trailing" secondItem="xFV-cg-hcY" secondAttribute="trailing" id="zAp-eh-7XN"/>
+                                                <constraint firstItem="xFV-cg-hcY" firstAttribute="leading" secondItem="l3r-Eg-qW5" secondAttribute="leading" id="zQ3-iI-cvr"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="S5h-n6-fiS">
+                                    <rect key="frame" x="0.0" y="215" width="382" height="91.5"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VW5-yf-9ok" customClass="CustomView" customModule="Aparto" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="91.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2S-L2-3ap" customClass="CustomView" customModule="Aparto" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="91.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iiV-yw-6qO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="91.5"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="d2S-L2-3ap" secondAttribute="bottom" id="Bc1-QY-Pj5"/>
+                                                <constraint firstItem="iiV-yw-6qO" firstAttribute="leading" secondItem="VW5-yf-9ok" secondAttribute="leading" id="aeG-vn-sAX"/>
+                                                <constraint firstAttribute="trailing" secondItem="d2S-L2-3ap" secondAttribute="trailing" id="bQT-d1-kkU"/>
+                                                <constraint firstItem="iiV-yw-6qO" firstAttribute="top" secondItem="VW5-yf-9ok" secondAttribute="top" id="jfj-Tm-bYm"/>
+                                                <constraint firstAttribute="bottom" secondItem="iiV-yw-6qO" secondAttribute="bottom" id="ouP-wZ-cZs"/>
+                                                <constraint firstAttribute="trailing" secondItem="iiV-yw-6qO" secondAttribute="trailing" id="sKf-t1-n00"/>
+                                                <constraint firstItem="d2S-L2-3ap" firstAttribute="top" secondItem="VW5-yf-9ok" secondAttribute="top" id="xgV-nU-Ss1"/>
+                                                <constraint firstItem="d2S-L2-3ap" firstAttribute="leading" secondItem="VW5-yf-9ok" secondAttribute="leading" id="zDI-88-wez"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yap-OZ-TIK" customClass="CustomView" customModule="Aparto" customModuleProvider="target">
+                                            <rect key="frame" x="194.5" y="0.0" width="187.5" height="91.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="he4-cv-eLn" customClass="CustomView" customModule="Aparto" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="91.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhN-Em-t9q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="91.5"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="IhN-Em-t9q" firstAttribute="leading" secondItem="Yap-OZ-TIK" secondAttribute="leading" id="M6R-bg-oZa"/>
+                                                <constraint firstItem="he4-cv-eLn" firstAttribute="leading" secondItem="Yap-OZ-TIK" secondAttribute="leading" id="M9C-Ah-idX"/>
+                                                <constraint firstAttribute="trailing" secondItem="IhN-Em-t9q" secondAttribute="trailing" id="MKP-Wl-xzp"/>
+                                                <constraint firstAttribute="bottom" secondItem="he4-cv-eLn" secondAttribute="bottom" id="Mj1-pu-oVI"/>
+                                                <constraint firstAttribute="trailing" secondItem="he4-cv-eLn" secondAttribute="trailing" id="SKc-oF-8cW"/>
+                                                <constraint firstItem="he4-cv-eLn" firstAttribute="top" secondItem="Yap-OZ-TIK" secondAttribute="top" id="ZVl-90-Tpo"/>
+                                                <constraint firstAttribute="bottom" secondItem="IhN-Em-t9q" secondAttribute="bottom" id="Zbi-ms-nWp"/>
+                                                <constraint firstItem="IhN-Em-t9q" firstAttribute="top" secondItem="Yap-OZ-TIK" secondAttribute="top" id="rDm-Sg-jWl"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rfd-L3-5Qq">
+                    <rect key="frame" x="0.0" y="44" width="414" height="2"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="r8n-rr-IQB"/>
+                    </constraints>
+                    <color key="progressTintColor" name="ApartoBlue"/>
+                </progressView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Jlb-8j-Auo" secondAttribute="trailing" constant="16" id="0m5-jR-gcB"/>
+                <constraint firstItem="rfd-L3-5Qq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4c0-L3-XNg"/>
+                <constraint firstItem="Jlb-8j-Auo" firstAttribute="top" secondItem="rfd-L3-5Qq" secondAttribute="bottom" constant="14" id="7Rq-JD-oM8"/>
+                <constraint firstItem="rfd-L3-5Qq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="A8Q-a6-65l"/>
+                <constraint firstItem="rfd-L3-5Qq" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Of5-Q8-BfW"/>
+                <constraint firstItem="Jlb-8j-Auo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Ubg-ud-JPB"/>
+                <constraint firstItem="rfd-L3-5Qq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VJw-em-eSa"/>
+                <constraint firstItem="Jlb-8j-Auo" firstAttribute="top" secondItem="rfd-L3-5Qq" secondAttribute="bottom" constant="14" id="im1-rC-6aP"/>
+                <constraint firstAttribute="trailing" secondItem="rfd-L3-5Qq" secondAttribute="trailing" id="zJL-7h-14i"/>
+            </constraints>
+            <point key="canvasLocation" x="-13.043478260869566" y="124.55357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="ApartoBlue">
+            <color red="0.039000000804662704" green="0.51399999856948853" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

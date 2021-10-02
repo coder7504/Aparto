@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Semibold.ttf">
+            <string>ProximaNova-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChooseRepairViewController" customModule="Aparto" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="pyT-WI-QPZ" id="ui3-i3-ef1"/>
+                <outlet property="heightForTableView" destination="Air-Eh-NBX" id="hf0-Mg-PFK"/>
+                <outlet property="informationTableView" destination="y5s-h0-Lcl" id="qj4-39-ycW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XL1-ef-6ST">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <connections>
+                        <action selector="dismissButtonTapped:" destination="-1" eventType="touchUpInside" id="HzF-xx-cXv"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyT-WI-QPZ">
+                    <rect key="frame" x="0.0" y="407" width="414" height="489"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="longLine" translatesAutoresizingMaskIntoConstraints="NO" id="xni-ya-u8T">
+                            <rect key="frame" x="181.5" y="12" width="51" height="4"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="4" id="Za3-C2-yly"/>
+                                <constraint firstAttribute="width" constant="51" id="kvt-Gt-ZD0"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bSg-pq-Arb">
+                            <rect key="frame" x="16" y="28" width="386" height="45"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Удобства" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fO-fR-9i7">
+                                    <rect key="frame" x="0.0" y="12" width="80" height="21"/>
+                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDZ-dp-mJ4">
+                                    <rect key="frame" x="341" y="0.0" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="UDZ-dp-mJ4" secondAttribute="height" id="i4Y-P3-G8f"/>
+                                        <constraint firstAttribute="width" constant="45" id="rWO-wP-Bix"/>
+                                    </constraints>
+                                    <state key="normal" image="close"/>
+                                    <connections>
+                                        <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="hZi-sc-TSB"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y5s-h0-Lcl">
+                            <rect key="frame" x="16" y="89" width="382" height="400"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="400" id="Air-Eh-NBX"/>
+                            </constraints>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcn-zv-f4a">
+                            <rect key="frame" x="16" y="406.5" width="382" height="52.5"/>
+                            <color key="backgroundColor" name="ApartoBlue"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="qcn-zv-f4a" secondAttribute="height" multiplier="343:47" id="EYe-Jy-gUL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                            <state key="normal" title="Подтвердить">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="confirmButtonTapped:" destination="-1" eventType="touchUpInside" id="aMV-E6-X49"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="y5s-h0-Lcl" secondAttribute="trailing" constant="16" id="4Hh-9t-k1M"/>
+                        <constraint firstAttribute="trailing" secondItem="bSg-pq-Arb" secondAttribute="trailing" constant="12" id="7pz-s1-qgH"/>
+                        <constraint firstAttribute="bottom" secondItem="qcn-zv-f4a" secondAttribute="bottom" constant="30" id="Brk-gf-3Mf"/>
+                        <constraint firstItem="bSg-pq-Arb" firstAttribute="leading" secondItem="pyT-WI-QPZ" secondAttribute="leading" constant="16" id="ENj-b2-TLL"/>
+                        <constraint firstItem="qcn-zv-f4a" firstAttribute="leading" secondItem="pyT-WI-QPZ" secondAttribute="leading" constant="16" id="IIV-0c-94M"/>
+                        <constraint firstItem="xni-ya-u8T" firstAttribute="top" secondItem="pyT-WI-QPZ" secondAttribute="top" constant="12" id="N1T-qu-SDx"/>
+                        <constraint firstAttribute="bottom" secondItem="y5s-h0-Lcl" secondAttribute="bottom" id="XsQ-hG-upy"/>
+                        <constraint firstItem="y5s-h0-Lcl" firstAttribute="leading" secondItem="pyT-WI-QPZ" secondAttribute="leading" constant="16" id="dt5-dl-FId"/>
+                        <constraint firstAttribute="trailing" secondItem="qcn-zv-f4a" secondAttribute="trailing" constant="16" id="eel-ve-1jv"/>
+                        <constraint firstItem="y5s-h0-Lcl" firstAttribute="top" secondItem="bSg-pq-Arb" secondAttribute="bottom" constant="16" id="fpc-W0-f4M"/>
+                        <constraint firstItem="bSg-pq-Arb" firstAttribute="top" secondItem="xni-ya-u8T" secondAttribute="bottom" constant="12" id="jmd-x7-jkl"/>
+                        <constraint firstItem="xni-ya-u8T" firstAttribute="centerX" secondItem="pyT-WI-QPZ" secondAttribute="centerX" id="tfR-Bt-gun"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XL1-ef-6ST" secondAttribute="bottom" id="2JG-ce-gT9"/>
+                <constraint firstItem="XL1-ef-6ST" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="52Q-73-qYg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XL1-ef-6ST" secondAttribute="trailing" id="9iS-Qy-eOW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pyT-WI-QPZ" secondAttribute="trailing" id="Cqg-xy-TN8"/>
+                <constraint firstItem="XL1-ef-6ST" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aTD-Y3-yoa"/>
+                <constraint firstAttribute="bottom" secondItem="pyT-WI-QPZ" secondAttribute="bottom" id="dki-6B-egm"/>
+                <constraint firstItem="pyT-WI-QPZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tjF-R1-5Cc"/>
+            </constraints>
+            <point key="canvasLocation" x="116" y="102"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="24" height="24"/>
+        <image name="longLine" width="51" height="2"/>
+        <namedColor name="ApartoBlue">
+            <color red="0.039000000804662704" green="0.51399999856948853" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

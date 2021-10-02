@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Semibold.ttf">
+            <string>ProximaNova-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AllConvenienceViewController" customModule="Aparto" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="88F-xL-Ee9" id="6DH-zJ-3jz"/>
+                <outlet property="convenienceTableView" destination="Ddb-ow-7Ct" id="3dR-Y4-DeT"/>
+                <outlet property="heightForTableView" destination="szB-6O-gWc" id="BAY-gJ-Olv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azZ-QD-xZe">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <connections>
+                        <action selector="dismissButtonTapped:" destination="-1" eventType="touchUpInside" id="4Rj-xQ-MZT"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88F-xL-Ee9">
+                    <rect key="frame" x="0.0" y="407" width="414" height="489"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="longLine" translatesAutoresizingMaskIntoConstraints="NO" id="QQP-RN-uso">
+                            <rect key="frame" x="181.5" y="12" width="51" height="4"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="4" id="4rb-WF-Zdt"/>
+                                <constraint firstAttribute="width" constant="51" id="CoL-W7-EmY"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eGt-MX-cFd">
+                            <rect key="frame" x="16" y="28" width="386" height="45"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Удобства" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGZ-3S-DOk">
+                                    <rect key="frame" x="0.0" y="12" width="80" height="21"/>
+                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Re-K0-9i8">
+                                    <rect key="frame" x="341" y="0.0" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="45" id="4QL-i1-XcS"/>
+                                        <constraint firstAttribute="width" secondItem="1Re-K0-9i8" secondAttribute="height" id="gry-wO-l5p"/>
+                                    </constraints>
+                                    <state key="normal" image="close"/>
+                                    <connections>
+                                        <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="RXL-dp-KeU"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ddb-ow-7Ct">
+                            <rect key="frame" x="16" y="89" width="382" height="400"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="400" id="szB-6O-gWc"/>
+                            </constraints>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0h-6p-W1o">
+                            <rect key="frame" x="16" y="406.5" width="382" height="52.5"/>
+                            <color key="backgroundColor" name="ApartoBlue"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="U0h-6p-W1o" secondAttribute="height" multiplier="343:47" id="2St-yM-T7G"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                            <state key="normal" title="Показать телефон">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="showPhoneNumberButtonTapped:" destination="-1" eventType="touchUpInside" id="RCJ-Rg-Ay8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Ddb-ow-7Ct" firstAttribute="top" secondItem="eGt-MX-cFd" secondAttribute="bottom" constant="16" id="71y-qW-TeA"/>
+                        <constraint firstAttribute="trailing" secondItem="U0h-6p-W1o" secondAttribute="trailing" constant="16" id="CA9-0P-S7L"/>
+                        <constraint firstItem="QQP-RN-uso" firstAttribute="centerX" secondItem="88F-xL-Ee9" secondAttribute="centerX" id="DSy-Ll-tbJ"/>
+                        <constraint firstAttribute="bottom" secondItem="Ddb-ow-7Ct" secondAttribute="bottom" id="FMD-ci-Gcc"/>
+                        <constraint firstAttribute="bottom" secondItem="U0h-6p-W1o" secondAttribute="bottom" constant="30" id="K05-s7-OCJ"/>
+                        <constraint firstAttribute="trailing" secondItem="Ddb-ow-7Ct" secondAttribute="trailing" constant="16" id="XWn-QD-J64"/>
+                        <constraint firstItem="eGt-MX-cFd" firstAttribute="top" secondItem="QQP-RN-uso" secondAttribute="bottom" constant="12" id="bkL-JQ-X0Q"/>
+                        <constraint firstItem="QQP-RN-uso" firstAttribute="top" secondItem="88F-xL-Ee9" secondAttribute="top" constant="12" id="eXJ-RB-TVW"/>
+                        <constraint firstAttribute="trailing" secondItem="eGt-MX-cFd" secondAttribute="trailing" constant="12" id="fd4-EN-FMo"/>
+                        <constraint firstItem="U0h-6p-W1o" firstAttribute="leading" secondItem="88F-xL-Ee9" secondAttribute="leading" constant="16" id="hcb-JA-YNl"/>
+                        <constraint firstItem="eGt-MX-cFd" firstAttribute="leading" secondItem="88F-xL-Ee9" secondAttribute="leading" constant="16" id="iso-ku-naj"/>
+                        <constraint firstItem="Ddb-ow-7Ct" firstAttribute="leading" secondItem="88F-xL-Ee9" secondAttribute="leading" constant="16" id="lqJ-vA-DmM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="88F-xL-Ee9" secondAttribute="trailing" id="61n-r5-XIA"/>
+                <constraint firstItem="azZ-QD-xZe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Mu0-fY-V9n"/>
+                <constraint firstItem="88F-xL-Ee9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RFH-KV-DDv"/>
+                <constraint firstAttribute="bottom" secondItem="88F-xL-Ee9" secondAttribute="bottom" id="dC0-hi-Dvd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="azZ-QD-xZe" secondAttribute="trailing" id="gxV-PF-sfQ"/>
+                <constraint firstItem="azZ-QD-xZe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nBe-XR-PjN"/>
+                <constraint firstAttribute="bottom" secondItem="azZ-QD-xZe" secondAttribute="bottom" id="tH0-5D-Aio"/>
+            </constraints>
+            <point key="canvasLocation" x="34.782608695652179" y="112.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="24" height="24"/>
+        <image name="longLine" width="51" height="2"/>
+        <namedColor name="ApartoBlue">
+            <color red="0.039000000804662704" green="0.51399999856948853" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

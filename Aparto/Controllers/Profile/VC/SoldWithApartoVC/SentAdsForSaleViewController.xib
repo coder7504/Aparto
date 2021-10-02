@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SentAdsForSaleViewController" customModule="Aparto" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iPv-4Z-yJD">
+                    <rect key="frame" x="16" y="60" width="382" height="390"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="zNa-Qs-GEK">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="72.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzj-of-fnc">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="37.5"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Заполните анкету, и наша администрация свяжется с вами в ближайшее время">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="ProximaNova-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MB6-iz-PSO">
+                                    <rect key="frame" x="0.0" y="51.5" width="382" height="21"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Объявления о продаже">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="ProximaNova-Semibold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="TWl-kE-9w3">
+                            <rect key="frame" x="0.0" y="102.5" width="382" height="205"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Mak-Jl-tAk">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="19"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8h-rq-EKa">
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="19"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Тип объекта">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.55294117649999996" green="0.59607843140000005" blue="0.61568627450000002" alpha="0.99999989889999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="16" name="ProximaNova-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uE-bD-sqd">
+                                            <rect key="frame" x="206" y="0.0" width="176" height="19"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Тип объекта">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name="ProximaNova-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pxb-Cm-wQN">
+                                    <rect key="frame" x="0.0" y="43" width="382" height="19"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhw-Mp-MQS">
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="19"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Тип недвижимости">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.55294117649999996" green="0.59607843140000005" blue="0.61568627450000002" alpha="0.99999989889999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="16" name="ProximaNova-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZ8-nf-Brr">
+                                            <rect key="frame" x="206" y="0.0" width="176" height="19"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Жилая">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name="ProximaNova-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bdx-nL-C7k">
+                                    <rect key="frame" x="0.0" y="86" width="382" height="33"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiT-Cd-aNz">
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="33"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Адрес">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.55294117649999996" green="0.59607843140000005" blue="0.61568627450000002" alpha="0.99999989889999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="16" name="ProximaNova-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Muw-Rq-ieq">
+                                            <rect key="frame" x="206" y="0.0" width="176" height="33"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Г. Ташкен, Юнусобадский район, Юнусобад 12">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name="ProximaNova-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6Bp-Eh-IDZ">
+                                    <rect key="frame" x="0.0" y="143" width="382" height="19"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Let-N9-juf">
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="19"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Номер телефона">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.55294117649999996" green="0.59607843140000005" blue="0.61568627450000002" alpha="0.99999989889999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="16" name="ProximaNova-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjd-71-z0R">
+                                            <rect key="frame" x="206" y="0.0" width="176" height="19"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="+998 90 422 55 66">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name="ProximaNova-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="FQj-qP-fN5">
+                                    <rect key="frame" x="0.0" y="186" width="382" height="19"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2Z-w9-9n0">
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="19"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Номер телефона">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.55294117649999996" green="0.59607843140000005" blue="0.61568627450000002" alpha="0.99999989889999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="16" name="ProximaNova-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5f-HB-ys9">
+                                            <rect key="frame" x="206" y="0.0" width="176" height="19"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Собиров Ахмед">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name="ProximaNova-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNu-lW-RCS" customClass="CustomBtn" customModule="Aparto" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="337.5" width="382" height="52.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="sNu-lW-RCS" secondAttribute="height" multiplier="343:47" id="tiD-QF-Gub"/>
+                            </constraints>
+                            <state key="normal" title="Отправить заявление"/>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="iPv-4Z-yJD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="EHl-0s-BBD"/>
+                <constraint firstItem="iPv-4Z-yJD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="U8x-a4-eIh"/>
+                <constraint firstAttribute="trailing" secondItem="iPv-4Z-yJD" secondAttribute="trailing" constant="16" id="VPK-iC-Tba"/>
+            </constraints>
+            <point key="canvasLocation" x="115.94202898550725" y="124.55357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

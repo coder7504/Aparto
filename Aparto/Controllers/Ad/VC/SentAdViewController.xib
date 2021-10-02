@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SentAdViewController" customModule="Aparto" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Rw3-Sz-MPg">
+                    <rect key="frame" x="16" y="124" width="382" height="401"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="familyBanner" translatesAutoresizingMaskIntoConstraints="NO" id="MRa-UB-GRk">
+                            <rect key="frame" x="89.5" y="0.0" width="203" height="254"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="MRa-UB-GRk" secondAttribute="height" multiplier="200:250" id="KDQ-se-Paf"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNa-HR-dYo">
+                            <rect key="frame" x="0.0" y="270" width="382" height="63"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Ваше объявление отправлено. В ближайшее время наш коммерческий отдел с вами свяжется">
+                                    <attributes>
+                                        <font key="NSFont" size="18" name="ProximaNova-Semibold"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5e3-G0-4Kj" customClass="CustomBtn" customModule="Aparto" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="349" width="382" height="52"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="5e3-G0-4Kj" secondAttribute="height" multiplier="343:47" id="hPN-gK-7LG"/>
+                            </constraints>
+                            <state key="normal" title="На главную"/>
+                            <connections>
+                                <action selector="bacButtonTapped:" destination="-1" eventType="touchUpInside" id="Lqy-6v-Thu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="5e3-G0-4Kj" firstAttribute="leading" secondItem="Rw3-Sz-MPg" secondAttribute="leading" id="F8o-4Y-uLq"/>
+                        <constraint firstAttribute="trailing" secondItem="5e3-G0-4Kj" secondAttribute="trailing" id="v9U-8m-weA"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Rw3-Sz-MPg" secondAttribute="trailing" constant="16" id="GDO-1r-pHo"/>
+                <constraint firstItem="Rw3-Sz-MPg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="S4W-Vk-4Gd"/>
+                <constraint firstItem="Rw3-Sz-MPg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="tZI-PK-iiF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Rw3-Sz-MPg" secondAttribute="bottom" constant="80" id="yAk-Yc-TXK"/>
+            </constraints>
+            <point key="canvasLocation" x="115.94202898550725" y="101.78571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="familyBanner" width="203" height="252"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="190" id="KGk-i7-Jjw" customClass="BuildingPermitTableViewCell" customModule="Aparto" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="190"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="339" height="190"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKj-kJ-Dgh">
+                        <rect key="frame" x="0.0" y="0.0" width="319" height="185"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zv1-HV-YKg">
+                                <rect key="frame" x="16" y="10" width="287" height="165"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCm-ed-E7A">
+                                        <rect key="frame" x="0.0" y="73" width="108.5" height="19"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="photoname.jpg">
+                                                <attributes>
+                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1g-YX-Nvj">
+                                        <rect key="frame" x="252" y="65" width="35" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="oSm-ke-Ybs"/>
+                                            <constraint firstAttribute="width" secondItem="i1g-YX-Nvj" secondAttribute="height" id="qEc-Jf-Yx3"/>
+                                        </constraints>
+                                        <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="deleteBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6EC-Mr-Kma"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="ApartoBlue"/>
+                        <constraints>
+                            <constraint firstItem="zv1-HV-YKg" firstAttribute="leading" secondItem="rKj-kJ-Dgh" secondAttribute="leading" constant="16" id="450-2e-ecQ"/>
+                            <constraint firstItem="zv1-HV-YKg" firstAttribute="top" secondItem="rKj-kJ-Dgh" secondAttribute="top" constant="10" id="5se-je-TN5"/>
+                            <constraint firstAttribute="bottom" secondItem="zv1-HV-YKg" secondAttribute="bottom" constant="10" id="hW6-H4-5FG"/>
+                            <constraint firstAttribute="trailing" secondItem="zv1-HV-YKg" secondAttribute="trailing" constant="16" id="yCi-xr-ny1"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="rKj-kJ-Dgh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6HJ-47-tFG"/>
+                    <constraint firstItem="rKj-kJ-Dgh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="BhD-22-DsT"/>
+                    <constraint firstAttribute="trailing" secondItem="rKj-kJ-Dgh" secondAttribute="trailing" constant="20" id="urp-tU-aVo"/>
+                    <constraint firstAttribute="bottom" secondItem="rKj-kJ-Dgh" secondAttribute="bottom" constant="5" id="xnG-ye-5ys"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="bacroundView" destination="rKj-kJ-Dgh" id="kZy-un-HFJ"/>
+            </connections>
+            <point key="canvasLocation" x="129.71014492753625" y="173.4375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="close" width="24" height="24"/>
+        <namedColor name="ApartoBlue">
+            <color red="0.039000000804662704" green="0.51399999856948853" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

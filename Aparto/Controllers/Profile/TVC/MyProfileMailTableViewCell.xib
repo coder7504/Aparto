@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Regular.ttf">
+            <string>ProximaNova-Regular</string>
+        </array>
+        <array key="ProximaNova-Semibold.ttf">
+            <string>ProximaNova-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="170" id="KGk-i7-Jjw" customClass="MyProfileMailTableViewCell" customModule="Aparto" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="503" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="503" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcI-Jj-C63">
+                        <rect key="frame" x="0.0" y="4" width="503" height="162"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="l1F-Ug-aNn">
+                                <rect key="frame" x="16" y="12" width="487" height="138"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lmx-lY-zKC">
+                                        <rect key="frame" x="0.0" y="45" width="196.5" height="48"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lucy" translatesAutoresizingMaskIntoConstraints="NO" id="LFB-6u-AU1">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="LFB-6u-AU1" secondAttribute="height" id="X1Z-TD-9gN"/>
+                                                    <constraint firstAttribute="width" constant="48" id="ku3-eo-2IY"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FGs-TZ-u9K">
+                                                <rect key="frame" x="64" y="2.5" width="132.5" height="43"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Акбар Абдуллаев" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaK-3A-8XV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="132.5" height="19.5"/>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мечта просто" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKN-qf-ter">
+                                                        <rect key="frame" x="0.0" y="23.5" width="100.5" height="19.5"/>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                                                        <color key="textColor" red="0.55294117649999996" green="0.59607843140000005" blue="0.61568627450000002" alpha="0.99999989889999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="NBt-78-KRQ">
+                                        <rect key="frame" x="463" y="57" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="Nfo-RX-FV7"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NBt-78-KRQ" firstAttribute="width" secondItem="NBt-78-KRQ" secondAttribute="height" id="JAi-pZ-7Sw"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l1F-Ug-aNn" firstAttribute="top" secondItem="qcI-Jj-C63" secondAttribute="top" constant="12" id="V9i-61-D2G"/>
+                            <constraint firstAttribute="trailing" secondItem="l1F-Ug-aNn" secondAttribute="trailing" id="Wbb-EI-SAV"/>
+                            <constraint firstItem="l1F-Ug-aNn" firstAttribute="leading" secondItem="qcI-Jj-C63" secondAttribute="leading" constant="16" id="hpP-L8-lO6"/>
+                            <constraint firstAttribute="bottom" secondItem="l1F-Ug-aNn" secondAttribute="bottom" constant="12" id="kmB-Bz-1Qv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="qcI-Jj-C63" secondAttribute="bottom" constant="4" id="6YT-Nj-woz"/>
+                    <constraint firstItem="qcI-Jj-C63" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZAE-cK-RB0"/>
+                    <constraint firstItem="qcI-Jj-C63" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="fyg-M8-Bzt"/>
+                    <constraint firstAttribute="trailing" secondItem="qcI-Jj-C63" secondAttribute="trailing" id="zuU-MA-lBo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="103.62318840579711" y="166.07142857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Lucy" width="48" height="48"/>
+        <image name="arrowRight" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

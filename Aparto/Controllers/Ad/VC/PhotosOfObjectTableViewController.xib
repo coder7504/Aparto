@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Semibold.ttf">
+            <string>ProximaNova-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotosOfObjectTableViewController" customModule="Aparto" customModuleProvider="target">
+            <connections>
+                <outlet property="heightForTableView" destination="J2I-is-UPf" id="YKU-u0-eMc"/>
+                <outlet property="tableView" destination="46v-jy-gTW" id="J8E-Ve-0fZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2a-7n-Fw8">
+                    <rect key="frame" x="16" y="305.5" width="382" height="285"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yAu-QZ-GKs">
+                            <rect key="frame" x="10" y="10" width="362" height="135"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bR-PA-R3U">
+                                    <rect key="frame" x="0.0" y="0.0" width="362" height="21"/>
+                                    <attributedString key="attributedText">
+                                        <fragment>
+                                            <string key="content">Фотографии объекта</string>
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="ProximaNova-Semibold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yUY-LF-Pf2">
+                                    <rect key="frame" x="0.0" y="37" width="362" height="98"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1T-kn-y5c">
+                                            <rect key="frame" x="0.0" y="0.0" width="362" height="98"/>
+                                            <attributedString key="attributedText">
+                                                <fragment>
+                                                    <string key="content">Сфотографируйте все комнаты, кухню, ванную, туалет, коридор, балкон, вид из окна, фасад здания, подъезд, прилегающую парковку. 
+
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.55294117649999996" green="0.59607843140000005" blue="0.61568627450000002" alpha="0.99999989889999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="14" name="ProximaNova-Semibold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content">Максимум 30 фото до 10 Мбайт</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.55294117649999996" green="0.59607843140000005" blue="0.61568627450000002" alpha="0.99999989889999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="14" name="ProximaNova-Semibold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="RH5-iH-UTH">
+                            <rect key="frame" x="10" y="156" width="362" height="107"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="6oc-QB-9p9">
+                                    <rect key="frame" x="0.0" y="0.0" width="362" height="107"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="46v-jy-gTW">
+                                            <rect key="frame" x="0.0" y="0.0" width="362" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="J2I-is-UPf"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <integer key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </tableView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGj-vV-pfU" customClass="CustomBtn" customModule="Aparto" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="59" width="362" height="48"/>
+                                            <color key="backgroundColor" name="ApartoLowGrey"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="wGj-vV-pfU" secondAttribute="height" multiplier="342:45" id="b4y-1I-jmk"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                            <state key="normal" title="+ Загрузить фото ">
+                                                <color key="titleColor" red="0.039215686274509803" green="0.51372549019607838" blue="0.42352941176470588" alpha="0.99999989894841679" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="addBtnPressed:" destination="-1" eventType="touchUpInside" id="de8-bn-c9n"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="yAu-QZ-GKs" firstAttribute="leading" secondItem="k2a-7n-Fw8" secondAttribute="leading" constant="10" id="H5i-D6-qp2"/>
+                        <constraint firstItem="RH5-iH-UTH" firstAttribute="top" secondItem="yAu-QZ-GKs" secondAttribute="bottom" constant="11" id="Ndf-Gq-C6D"/>
+                        <constraint firstAttribute="bottom" secondItem="RH5-iH-UTH" secondAttribute="bottom" constant="22" id="PEO-5f-dSN"/>
+                        <constraint firstItem="RH5-iH-UTH" firstAttribute="leading" secondItem="k2a-7n-Fw8" secondAttribute="leading" constant="10" id="bIq-KZ-b5i"/>
+                        <constraint firstAttribute="trailing" secondItem="RH5-iH-UTH" secondAttribute="trailing" constant="10" id="t8N-Is-FBn"/>
+                        <constraint firstItem="yAu-QZ-GKs" firstAttribute="top" secondItem="k2a-7n-Fw8" secondAttribute="top" constant="10" id="vxL-Yn-pT1"/>
+                        <constraint firstAttribute="trailing" secondItem="yAu-QZ-GKs" secondAttribute="trailing" constant="10" id="w8o-I9-hRi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="k2a-7n-Fw8" secondAttribute="trailing" constant="16" id="0H6-gw-y43"/>
+                <constraint firstItem="k2a-7n-Fw8" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="LFe-7x-3uZ"/>
+                <constraint firstItem="k2a-7n-Fw8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Veh-zD-zDK"/>
+                <constraint firstItem="k2a-7n-Fw8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="czm-zh-Ngu"/>
+            </constraints>
+            <point key="canvasLocation" x="116" y="125"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="ApartoLowGrey">
+            <color red="0.9570000171661377" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

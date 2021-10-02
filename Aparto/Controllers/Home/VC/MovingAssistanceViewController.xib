@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Bold.ttf">
+            <string>ProximaNova-Bold</string>
+        </array>
+        <array key="ProximaNova-Semibold.ttf">
+            <string>ProximaNova-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovingAssistanceViewController" customModule="Aparto" customModuleProvider="target">
+            <connections>
+                <outlet property="cleaningApartmentTableView" destination="huE-ar-tuD" id="raL-4O-bbv"/>
+                <outlet property="housingIssuesCollectionView" destination="0o2-Yl-oDu" id="i52-aV-JeH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zta-ZG-qSO">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xSE-9t-tXa">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1507"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zIR-Mc-P4J">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="238"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDw-U0-2bY">
+                                            <rect key="frame" x="16" y="0.0" width="382" height="238"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Urq-OP-FhC">
+                                                    <rect key="frame" x="20" y="20" width="342" height="198"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нужна помощь с переездом?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d9j-1x-vXt">
+                                                            <rect key="frame" x="0.0" y="55" width="163" height="88"/>
+                                                            <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="24"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humanitarian_aid" translatesAutoresizingMaskIntoConstraints="NO" id="EOI-JZ-t8e">
+                                                            <rect key="frame" x="179" y="3" width="163" height="192"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="EOI-JZ-t8e" secondAttribute="height" multiplier="140:165" id="10d-ad-8qR"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.96470588235294119" green="0.92941176470588238" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Urq-OP-FhC" secondAttribute="trailing" constant="20" id="Wgf-k6-YIp"/>
+                                                <constraint firstItem="Urq-OP-FhC" firstAttribute="top" secondItem="bDw-U0-2bY" secondAttribute="top" constant="20" id="lsg-Nn-6HZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="Urq-OP-FhC" secondAttribute="bottom" constant="20" id="tef-vn-Loc"/>
+                                                <constraint firstItem="Urq-OP-FhC" firstAttribute="leading" secondItem="bDw-U0-2bY" secondAttribute="leading" constant="20" id="yRM-Yb-cCY"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <integer key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="bDw-U0-2bY" firstAttribute="leading" secondItem="zIR-Mc-P4J" secondAttribute="leading" constant="16" id="NOr-nU-9Jg"/>
+                                        <constraint firstAttribute="bottom" secondItem="bDw-U0-2bY" secondAttribute="bottom" id="QpF-dQ-DiR"/>
+                                        <constraint firstAttribute="width" secondItem="zIR-Mc-P4J" secondAttribute="height" multiplier="343:197" id="Rc9-VD-XRb"/>
+                                        <constraint firstAttribute="trailing" secondItem="bDw-U0-2bY" secondAttribute="trailing" constant="16" id="XBz-Cs-li5"/>
+                                        <constraint firstItem="bDw-U0-2bY" firstAttribute="top" secondItem="zIR-Mc-P4J" secondAttribute="top" id="hh9-bu-TFO"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lz6-jS-dnt">
+                                    <rect key="frame" x="0.0" y="258" width="414" height="358"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yjY-5J-c0N">
+                                            <rect key="frame" x="16" y="0.0" width="382" height="358"/>
+                                            <subviews>
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="huE-ar-tuD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="310"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="310" id="YaP-Eh-F7a"/>
+                                                    </constraints>
+                                                </tableView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONR-SS-vYJ">
+                                                    <rect key="frame" x="0.0" y="318" width="382" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ONR-SS-vYJ" secondAttribute="height" multiplier="382:40" id="o2n-PF-pYP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
+                                                    <state key="normal" title="Показать все">
+                                                        <color key="titleColor" red="0.55294117647058827" green="0.59607843137254901" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="moreButtonTapped:" destination="-1" eventType="touchUpInside" id="zoG-ZE-alD"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="yjY-5J-c0N" secondAttribute="trailing" constant="16" id="H16-R4-PCl"/>
+                                        <constraint firstItem="yjY-5J-c0N" firstAttribute="leading" secondItem="Lz6-jS-dnt" secondAttribute="leading" constant="16" id="aim-Sn-hYx"/>
+                                        <constraint firstItem="yjY-5J-c0N" firstAttribute="top" secondItem="Lz6-jS-dnt" secondAttribute="top" id="e8b-7b-w2K"/>
+                                        <constraint firstAttribute="bottom" secondItem="yjY-5J-c0N" secondAttribute="bottom" id="eDx-vO-Ezo"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Btx-BM-eo8">
+                                    <rect key="frame" x="0.0" y="636" width="414" height="230"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7u-sC-h8j">
+                                            <rect key="frame" x="16" y="0.0" width="382" height="230"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Станьте партнером" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="un0-qN-2jP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="164.5" height="22"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXp-i3-bqT">
+                                                    <rect key="frame" x="0.0" y="38" width="382" height="192"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pRE-BQ-bhV">
+                                                            <rect key="frame" x="16" y="16" width="350" height="160"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="753" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="LjR-A1-ITF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="332.5" height="89.5"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Свяжитесь с администрацией для сотрудничества" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="1sH-R4-iar">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="323" height="49"/>
+                                                                            <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="20"/>
+                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Мы поможем вам с переездом. Вам не надо будет беспокоиться ибо мы сделаем всё за вас" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vfn-bo-XgB">
+                                                                            <rect key="frame" x="0.0" y="55" width="332.5" height="34.5"/>
+                                                                            <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
+                                                                            <color key="textColor" red="0.55294117647058827" green="0.59607843137254901" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2u7-lI-b1l">
+                                                                    <rect key="frame" x="0.0" y="101.5" width="135" height="58.5"/>
+                                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                                                    <state key="normal" title="Отправить заявку">
+                                                                        <color key="titleColor" red="0.039215686274509803" green="0.51372549019607838" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.95686274509803915" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="pRE-BQ-bhV" firstAttribute="top" secondItem="MXp-i3-bqT" secondAttribute="top" constant="16" id="92f-cN-zwz"/>
+                                                        <constraint firstItem="pRE-BQ-bhV" firstAttribute="leading" secondItem="MXp-i3-bqT" secondAttribute="leading" constant="16" id="ACD-uZ-26b"/>
+                                                        <constraint firstAttribute="bottom" secondItem="pRE-BQ-bhV" secondAttribute="bottom" constant="16" id="Rbh-Cg-3ZJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="pRE-BQ-bhV" secondAttribute="trailing" constant="16" id="xxC-CZ-wb2"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="MXp-i3-bqT" secondAttribute="bottom" id="8A1-mB-tnh"/>
+                                                <constraint firstAttribute="trailing" secondItem="MXp-i3-bqT" secondAttribute="trailing" id="Hli-0W-Zit"/>
+                                                <constraint firstItem="MXp-i3-bqT" firstAttribute="leading" secondItem="R7u-sC-h8j" secondAttribute="leading" id="Q9E-7X-hAi"/>
+                                                <constraint firstItem="un0-qN-2jP" firstAttribute="leading" secondItem="R7u-sC-h8j" secondAttribute="leading" id="YSt-pc-IKB"/>
+                                                <constraint firstItem="un0-qN-2jP" firstAttribute="top" secondItem="R7u-sC-h8j" secondAttribute="top" id="dQt-o5-eFs"/>
+                                                <constraint firstItem="MXp-i3-bqT" firstAttribute="top" secondItem="un0-qN-2jP" secondAttribute="bottom" constant="16" id="xn5-mi-akB"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="R7u-sC-h8j" secondAttribute="bottom" id="OMD-s1-OeG"/>
+                                        <constraint firstItem="R7u-sC-h8j" firstAttribute="top" secondItem="Btx-BM-eo8" secondAttribute="top" id="Sj1-5J-kpO"/>
+                                        <constraint firstAttribute="trailing" secondItem="R7u-sC-h8j" secondAttribute="trailing" constant="16" id="TIa-Ex-m42"/>
+                                        <constraint firstAttribute="width" secondItem="Btx-BM-eo8" secondAttribute="height" multiplier="1.8:1" id="f9Y-4M-z6o"/>
+                                        <constraint firstItem="R7u-sC-h8j" firstAttribute="leading" secondItem="Btx-BM-eo8" secondAttribute="leading" constant="16" id="fI1-T8-Xfw"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkz-XA-OGb">
+                                    <rect key="frame" x="0.0" y="886" width="414" height="532"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWU-S9-QYj">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="532"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Квартирные вопросы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X5f-2Y-wKS">
+                                                    <rect key="frame" x="16" y="0.0" width="247" height="29.5"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0o2-Yl-oDu">
+                                                    <rect key="frame" x="0.0" y="43.5" width="414" height="488.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vOX-HY-LdR">
+                                                        <size key="itemSize" width="128" height="128"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                </collectionView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="0o2-Yl-oDu" secondAttribute="bottom" id="DAD-ND-IKJ"/>
+                                                <constraint firstItem="X5f-2Y-wKS" firstAttribute="top" secondItem="GWU-S9-QYj" secondAttribute="top" id="FcV-RD-zAk"/>
+                                                <constraint firstAttribute="trailing" secondItem="0o2-Yl-oDu" secondAttribute="trailing" id="Fmk-hO-4r5"/>
+                                                <constraint firstItem="0o2-Yl-oDu" firstAttribute="leading" secondItem="GWU-S9-QYj" secondAttribute="leading" id="ThY-2J-hWD"/>
+                                                <constraint firstItem="0o2-Yl-oDu" firstAttribute="top" secondItem="X5f-2Y-wKS" secondAttribute="bottom" constant="14" id="YD2-Ts-MdS"/>
+                                                <constraint firstItem="X5f-2Y-wKS" firstAttribute="leading" secondItem="GWU-S9-QYj" secondAttribute="leading" constant="16" id="Zhr-Pi-psj"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="GWU-S9-QYj" secondAttribute="bottom" id="Pv5-iQ-v66"/>
+                                        <constraint firstItem="GWU-S9-QYj" firstAttribute="leading" secondItem="vkz-XA-OGb" secondAttribute="leading" id="WtG-1E-tIF"/>
+                                        <constraint firstAttribute="trailing" secondItem="GWU-S9-QYj" secondAttribute="trailing" id="cBj-TS-qPl"/>
+                                        <constraint firstItem="GWU-S9-QYj" firstAttribute="top" secondItem="vkz-XA-OGb" secondAttribute="top" id="oW8-45-xef"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycn-xx-OtY">
+                                    <rect key="frame" x="0.0" y="1438" width="414" height="69"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="ycn-xx-OtY" firstAttribute="width" secondItem="ycn-xx-OtY" secondAttribute="height" multiplier="6" id="Nwz-Ke-np3"/>
+                                <constraint firstItem="vkz-XA-OGb" firstAttribute="width" secondItem="vkz-XA-OGb" secondAttribute="height" multiplier="245:315" id="grR-7e-5EO"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="xSE-9t-tXa" firstAttribute="width" secondItem="zta-ZG-qSO" secondAttribute="width" id="dkT-du-SFg"/>
+                        <constraint firstItem="xSE-9t-tXa" firstAttribute="top" secondItem="zta-ZG-qSO" secondAttribute="top" id="eLq-kV-rCA"/>
+                        <constraint firstItem="xSE-9t-tXa" firstAttribute="leading" secondItem="zta-ZG-qSO" secondAttribute="leading" id="f8g-5T-mBQ"/>
+                        <constraint firstAttribute="trailing" secondItem="xSE-9t-tXa" secondAttribute="trailing" id="mHw-oW-2QW"/>
+                        <constraint firstAttribute="bottom" secondItem="xSE-9t-tXa" secondAttribute="bottom" id="wG8-Rc-BIa"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="zta-ZG-qSO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Scc-2r-SYq"/>
+                <constraint firstAttribute="bottom" secondItem="zta-ZG-qSO" secondAttribute="bottom" id="Y3F-57-qSv"/>
+                <constraint firstItem="zta-ZG-qSO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="YJj-qb-E9j"/>
+                <constraint firstAttribute="trailing" secondItem="zta-ZG-qSO" secondAttribute="trailing" id="zJq-Z8-EKO"/>
+            </constraints>
+            <point key="canvasLocation" x="-146.37681159420291" y="83.705357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="humanitarian_aid" width="140" height="165"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Semibold.ttf">
+            <string>ProximaNova-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RentCategoryCollectionViewCell" customModule="Aparto" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="188" height="117"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="188" height="117"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGK-6D-dII">
+                        <rect key="frame" x="0.0" y="0.0" width="176" height="117"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOb-4s-Ivf">
+                                <rect key="frame" x="0.0" y="0.0" width="176" height="117"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sOb-4s-Ivf" firstAttribute="leading" secondItem="VGK-6D-dII" secondAttribute="leading" id="FPg-Et-gxu"/>
+                            <constraint firstItem="sOb-4s-Ivf" firstAttribute="top" secondItem="VGK-6D-dII" secondAttribute="top" id="HYY-RF-Fyt"/>
+                            <constraint firstAttribute="trailing" secondItem="sOb-4s-Ivf" secondAttribute="trailing" id="SrU-g1-baN"/>
+                            <constraint firstAttribute="bottom" secondItem="sOb-4s-Ivf" secondAttribute="bottom" id="kDi-EC-euU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="VGK-6D-dII" secondAttribute="bottom" id="T7E-Sc-s7G"/>
+                <constraint firstItem="VGK-6D-dII" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aZE-VQ-bCH"/>
+                <constraint firstItem="VGK-6D-dII" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="d6V-fd-jUB"/>
+                <constraint firstAttribute="trailing" secondItem="VGK-6D-dII" secondAttribute="trailing" constant="12" id="j9T-1c-RAn"/>
+            </constraints>
+            <size key="customSize" width="188" height="117"/>
+            <connections>
+                <outlet property="titleLabel" destination="sOb-4s-Ivf" id="T0c-Kx-NgZ"/>
+            </connections>
+            <point key="canvasLocation" x="69.565217391304358" y="106.13839285714285"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

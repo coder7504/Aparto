@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrentPaymentViewController" customModule="Aparto" customModuleProvider="target">
+            <connections>
+                <outlet property="currentSumLabel" destination="0s4-6o-OPW" id="WLU-8S-WzW"/>
+                <outlet property="paymentMethodLabel" destination="Cl9-Bb-82h" id="TLb-az-LYe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gB-vd-uYc">
+                    <rect key="frame" x="16" y="54" width="382" height="82"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jgW-Ee-7kA">
+                            <rect key="frame" x="16" y="16" width="350" height="50"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="5xc-tT-9wy">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="19"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqj-v0-3BG">
+                                            <rect key="frame" x="0.0" y="0.0" width="144" height="19"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Сумма пополнения">
+                                                    <attributes>
+                                                        <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0s4-6o-OPW">
+                                            <rect key="frame" x="282" y="0.0" width="68" height="19"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="8000 сум">
+                                                    <attributes>
+                                                        <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="sL3-ll-ZKv">
+                                    <rect key="frame" x="0.0" y="31" width="350" height="19"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlA-Dh-1Qb">
+                                            <rect key="frame" x="0.0" y="0.0" width="107.5" height="19"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Метод оплаты">
+                                                    <attributes>
+                                                        <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cl9-Bb-82h">
+                                            <rect key="frame" x="300.5" y="0.0" width="49.5" height="19"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="PayMe">
+                                                    <attributes>
+                                                        <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="ApartoLowGrey"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="jgW-Ee-7kA" secondAttribute="trailing" constant="16" id="ARy-CE-oTm"/>
+                        <constraint firstAttribute="bottom" secondItem="jgW-Ee-7kA" secondAttribute="bottom" constant="16" id="SUy-Mm-y3l"/>
+                        <constraint firstItem="jgW-Ee-7kA" firstAttribute="top" secondItem="1gB-vd-uYc" secondAttribute="top" constant="16" id="idN-AT-aw2"/>
+                        <constraint firstItem="jgW-Ee-7kA" firstAttribute="leading" secondItem="1gB-vd-uYc" secondAttribute="leading" constant="16" id="kys-fi-zaH"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3AK-Mu-Vtg">
+                    <rect key="frame" x="16" y="785.5" width="382" height="52.5"/>
+                    <color key="backgroundColor" name="ApartoBlue"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="3AK-Mu-Vtg" secondAttribute="height" multiplier="342:47" id="fxG-0J-sNw"/>
+                    </constraints>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="Пополнить">
+                                <attributes>
+                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <font key="NSFont" size="18" name="ProximaNova-Semibold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3AK-Mu-Vtg" secondAttribute="bottom" constant="24" id="4Za-xa-UKl"/>
+                <constraint firstItem="1gB-vd-uYc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="7dQ-xs-vdt"/>
+                <constraint firstItem="3AK-Mu-Vtg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="KiC-Rl-7wG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3AK-Mu-Vtg" secondAttribute="trailing" constant="16" id="p3g-Oh-2ix"/>
+                <constraint firstItem="1gB-vd-uYc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="vI2-z6-045"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1gB-vd-uYc" secondAttribute="trailing" constant="16" id="xmg-bd-Dbb"/>
+            </constraints>
+            <point key="canvasLocation" x="-19" y="129"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="ApartoBlue">
+            <color red="0.039000000804662704" green="0.51399999856948853" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ApartoLowGrey">
+            <color red="0.9570000171661377" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

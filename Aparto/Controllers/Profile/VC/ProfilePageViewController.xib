@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfilePageViewController" customModule="Aparto" customModuleProvider="target">
+            <connections>
+                <outlet property="balancContainerView" destination="5Jc-2j-8LE" id="3FC-CE-XSB"/>
+                <outlet property="fullNameLabel" destination="H8R-aJ-OLB" id="BYK-Hn-HYf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcw-dc-sG5">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="zG1-iu-SIg">
+                            <rect key="frame" x="16" y="16" width="382" height="1678.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4IH-9L-KPD">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="309"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Fcr-IV-7y8">
+                                            <rect key="frame" x="16" y="18" width="350" height="275"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gfB-MW-WBY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="204"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="661-Xh-Xb9">
+                                                            <rect key="frame" x="0.0" y="53" width="240" height="98.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qkF-P3-Rub">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="49"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="Войдите или зарегестрируйтесь ">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.99999989894841679" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" size="20" name="ProximaNova-Semibold"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQo-jl-J9A">
+                                                                    <rect key="frame" x="0.0" y="57" width="240" height="41.5"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="Войдите для доступа ко всем функциям приложения">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.55294117647058827" green="0.59607843137254901" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" size="17" name="ProximaNova-Semibold"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="3cg-MC-ZKz">
+                                                            <rect key="frame" x="250" y="52" width="100" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="3cg-MC-ZKz" secondAttribute="height" id="y6K-vO-AIa"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BUN-6g-vbR">
+                                                    <rect key="frame" x="0.0" y="222" width="350" height="53"/>
+                                                    <color key="backgroundColor" name="ApartoBlue"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="BUN-6g-vbR" secondAttribute="height" multiplier="311:47" id="IHL-gz-Fs5"/>
+                                                    </constraints>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Войти или зарегестрироваться">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="FhO-Hx-wUM"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="ApartoGray"/>
+                                    <constraints>
+                                        <constraint firstItem="Fcr-IV-7y8" firstAttribute="leading" secondItem="4IH-9L-KPD" secondAttribute="leading" constant="16" id="CIB-bS-mwB"/>
+                                        <constraint firstItem="Fcr-IV-7y8" firstAttribute="top" secondItem="4IH-9L-KPD" secondAttribute="top" constant="18" id="K6I-uu-B2F"/>
+                                        <constraint firstAttribute="trailing" secondItem="Fcr-IV-7y8" secondAttribute="trailing" constant="16" id="Q9e-4R-0QN"/>
+                                        <constraint firstAttribute="bottom" secondItem="Fcr-IV-7y8" secondAttribute="bottom" constant="16" id="dCs-7r-ljG"/>
+                                        <constraint firstItem="3cg-MC-ZKz" firstAttribute="width" secondItem="4IH-9L-KPD" secondAttribute="width" multiplier="0.26178" id="oiL-Cy-2c7"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <integer key="value" value="18"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ama-4k-2gA">
+                                    <rect key="frame" x="0.0" y="327" width="382" height="76"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="fSw-Fu-MKr">
+                                            <rect key="frame" x="12" y="16" width="350" height="44"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="44q-TF-xX2">
+                                                    <rect key="frame" x="0.0" y="1" width="254" height="42"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8R-aJ-OLB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="254" height="22"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Собиров Вохид">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="18" name="ProximaNova-Bold"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6S-sy-lJh">
+                                                            <rect key="frame" x="0.0" y="26" width="254" height="16"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Смотреть профиль">
+                                                                    <attributes>
+                                                                        <color key="NSColor" name="ApartoBlue"/>
+                                                                        <font key="NSFont" size="16" name="ProximaNova-Medium"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="JU4-mI-jhE">
+                                                    <rect key="frame" x="326" y="10" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="7Jv-T2-DIX"/>
+                                                        <constraint firstAttribute="width" secondItem="JU4-mI-jhE" secondAttribute="height" id="M4k-Bo-mtf"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nok-8a-jiM">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="76"/>
+                                            <connections>
+                                                <action selector="myProfileButtonTApped:" destination="-1" eventType="touchUpInside" id="DjZ-ur-NkC"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" name="ApartoLowGrey"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="nok-8a-jiM" secondAttribute="trailing" id="14b-wS-4ao"/>
+                                        <constraint firstAttribute="trailing" secondItem="fSw-Fu-MKr" secondAttribute="trailing" constant="20" id="CZ4-25-f9Z"/>
+                                        <constraint firstItem="nok-8a-jiM" firstAttribute="leading" secondItem="Ama-4k-2gA" secondAttribute="leading" id="DFO-xW-eN7"/>
+                                        <constraint firstItem="fSw-Fu-MKr" firstAttribute="leading" secondItem="Ama-4k-2gA" secondAttribute="leading" constant="12" id="PzT-nU-BqD"/>
+                                        <constraint firstItem="fSw-Fu-MKr" firstAttribute="top" secondItem="Ama-4k-2gA" secondAttribute="top" constant="16" id="jCJ-4M-Vpe"/>
+                                        <constraint firstAttribute="bottom" secondItem="fSw-Fu-MKr" secondAttribute="bottom" constant="16" id="jwn-aU-CyD"/>
+                                        <constraint firstAttribute="bottom" secondItem="nok-8a-jiM" secondAttribute="bottom" id="q2c-es-XpK"/>
+                                        <constraint firstItem="nok-8a-jiM" firstAttribute="top" secondItem="Ama-4k-2gA" secondAttribute="top" id="rby-f7-mRw"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <integer key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Jc-2j-8LE">
+                                    <rect key="frame" x="0.0" y="421" width="382" height="290.5"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="yvx-nj-HWx">
+                                            <rect key="frame" x="0.0" y="16" width="382" height="258.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rHl-pc-YDQ">
+                                                    <rect key="frame" x="123.5" y="0.0" width="135" height="129"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSv-Kv-F4b">
+                                                            <rect key="frame" x="37.5" y="0.0" width="60" height="95.5"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Баланс">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.99999989894841679" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" size="18" name="ProximaNova-Semibold"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbk-gM-3uz">
+                                                            <rect key="frame" x="0.0" y="99.5" width="135" height="29.5"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="125 000 сум">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.99999989894841679" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" size="24" name="ProximaNova-Semibold"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Xu5-jq-XZ5">
+                                                    <rect key="frame" x="0.0" y="143" width="382" height="115.5"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZO-UU-0ar">
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="58"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="AZO-UU-0ar" secondAttribute="height" multiplier="311:47" id="puP-el-fkc"/>
+                                                            </constraints>
+                                                            <state key="normal">
+                                                                <attributedString key="attributedTitle">
+                                                                    <fragment content="История">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.55294117647058827" green="0.59607843137254901" blue="0.61568627450980395" alpha="0.99999989894841679" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="myProfileHistoryButtonTapped:" destination="-1" eventType="touchUpInside" id="GD3-xG-dwR"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1v6-aF-94j">
+                                                            <rect key="frame" x="0.0" y="58" width="382" height="57.5"/>
+                                                            <state key="normal">
+                                                                <attributedString key="attributedTitle">
+                                                                    <fragment content="Пополнить счет">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.039215686274509803" green="0.51372549019607838" blue="0.42352941176470588" alpha="0.99999989894841679" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="myProfileRefilButtonTapped:" destination="-1" eventType="touchUpInside" id="oBE-B3-78k"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Xu5-jq-XZ5" secondAttribute="trailing" id="4NC-bc-gYe"/>
+                                                <constraint firstItem="Xu5-jq-XZ5" firstAttribute="leading" secondItem="yvx-nj-HWx" secondAttribute="leading" id="5ek-ZG-WsP"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="yvx-nj-HWx" firstAttribute="top" secondItem="5Jc-2j-8LE" secondAttribute="top" constant="16" id="0l6-a6-jun"/>
+                                        <constraint firstAttribute="trailing" secondItem="yvx-nj-HWx" secondAttribute="trailing" id="Khn-DB-cuy"/>
+                                        <constraint firstAttribute="bottom" secondItem="yvx-nj-HWx" secondAttribute="bottom" constant="16" id="NZ6-74-NJT"/>
+                                        <constraint firstItem="yvx-nj-HWx" firstAttribute="leading" secondItem="5Jc-2j-8LE" secondAttribute="leading" id="wST-jW-PJ5"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <integer key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMY-3J-RZN">
+                                    <rect key="frame" x="0.0" y="729.5" width="382" height="668"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlF-2H-HKG">
+                                            <rect key="frame" x="0.0" y="4" width="140" height="24.5"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Недвижимость">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="ProximaNova-Semibold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HiC-fw-TBp">
+                                            <rect key="frame" x="0.0" y="44.5" width="382" height="623.5"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3eC-hb-5fj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="62.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="3eC-hb-5fj" secondAttribute="height" multiplier="343:56" id="5eu-rn-wSg"/>
+                                                    </constraints>
+                                                    <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="archive">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Мои объявления ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="myProfileMyAnnouncementsButtonTapped:" destination="-1" eventType="touchUpInside" id="wja-oT-h0i"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5N-G4-pLg">
+                                                    <rect key="frame" x="0.0" y="62.5" width="382" height="62"/>
+                                                    <color key="tintColor" name="ApartoBlue"/>
+                                                    <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="bellGreen">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Уведомления">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="myProfileNotificationButtonTapped:" destination="-1" eventType="touchUpInside" id="XNO-08-v14"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dw5-2K-vBY">
+                                                    <rect key="frame" x="0.0" y="124.5" width="382" height="62.5"/>
+                                                    <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="email">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Сообщения">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="myProfileMailButtonTapped:" destination="-1" eventType="touchUpInside" id="dll-5x-DuE"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YN7-o6-tyX">
+                                                    <rect key="frame" x="0.0" y="187" width="382" height="62.5"/>
+                                                    <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="heartGreen">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Избранные">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="myProfileFavoriteButtonTapped:" destination="-1" eventType="touchUpInside" id="XGj-H8-G1G"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eaa-qU-BNz">
+                                                    <rect key="frame" x="0.0" y="249.5" width="382" height="62.5"/>
+                                                    <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="cube">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Реклама на сайте">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9fF-fe-7Kh">
+                                                    <rect key="frame" x="0.0" y="312" width="382" height="62"/>
+                                                    <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="bookmark">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Подписки на изменения цен">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="myProfilePriceChangesButtonTapped:" destination="-1" eventType="touchUpInside" id="uPR-Fu-GwV"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QmP-xd-Q00">
+                                                    <rect key="frame" x="0.0" y="374" width="382" height="62.5"/>
+                                                    <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="copy">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Matching">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="myProfileMatchingButtonTapped:" destination="-1" eventType="touchUpInside" id="jEZ-Z3-UwY"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHH-Nr-r6E">
+                                                    <rect key="frame" x="0.0" y="436.5" width="382" height="62.5"/>
+                                                    <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="clipboard">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Продать с Aparto">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="saleWithApartoButtonTapped:" destination="-1" eventType="touchUpInside" id="91S-jR-SdN"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LgL-u8-lvp">
+                                                    <rect key="frame" x="0.0" y="499" width="382" height="62.5"/>
+                                                    <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="searchGreen">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Найди меня">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="myProfileFindMeButtonTapped:" destination="-1" eventType="touchUpInside" id="cE6-9g-kcC"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mli-zv-IOb">
+                                                    <rect key="frame" x="0.0" y="561.5" width="382" height="62"/>
+                                                    <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="log-out">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Выйти">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="logOutButtonTapped:" destination="-1" eventType="touchUpInside" id="SPf-Y4-ODp"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="HiC-fw-TBp" secondAttribute="bottom" id="4Ay-X3-eyg"/>
+                                        <constraint firstItem="xlF-2H-HKG" firstAttribute="leading" secondItem="oMY-3J-RZN" secondAttribute="leading" id="4TU-Ok-Dgu"/>
+                                        <constraint firstAttribute="trailing" secondItem="HiC-fw-TBp" secondAttribute="trailing" id="D9Q-6Y-u7k"/>
+                                        <constraint firstItem="HiC-fw-TBp" firstAttribute="top" secondItem="xlF-2H-HKG" secondAttribute="bottom" constant="16" id="fpM-7Q-hB7"/>
+                                        <constraint firstItem="xlF-2H-HKG" firstAttribute="top" secondItem="oMY-3J-RZN" secondAttribute="top" constant="4" id="oJp-cE-a8j"/>
+                                        <constraint firstItem="HiC-fw-TBp" firstAttribute="leading" secondItem="oMY-3J-RZN" secondAttribute="leading" id="q4b-n6-Eig"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7D-Jm-U6l">
+                                    <rect key="frame" x="0.0" y="1415.5" width="382" height="263"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87J-tz-3uf">
+                                            <rect key="frame" x="0.0" y="35" width="68" height="25"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Другое">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="ProximaNova-Semibold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qCu-SZ-qm0">
+                                            <rect key="frame" x="0.0" y="76" width="382" height="187"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgL-hS-krZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="62.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="MgL-hS-krZ" secondAttribute="height" multiplier="343:56" id="bUD-24-Xrc"/>
+                                                    </constraints>
+                                                    <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="question-mark">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Помощь">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="helpButtonTapped:" destination="-1" eventType="touchUpInside" id="eqN-DQ-Vwg"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lIb-xU-hco">
+                                                    <rect key="frame" x="0.0" y="62.5" width="382" height="62.5"/>
+                                                    <color key="tintColor" name="ApartoBlue"/>
+                                                    <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="info">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="О нас">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="aboutUsButtonTapped:" destination="-1" eventType="touchUpInside" id="p55-dQ-hyE"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5U-fk-HQ6">
+                                                    <rect key="frame" x="0.0" y="125" width="382" height="62"/>
+                                                    <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="settings">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Настройки">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="myProfileSettingsButtonTapped:" destination="-1" eventType="touchUpInside" id="yCK-fe-gvl"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="qCu-SZ-qm0" secondAttribute="trailing" id="6ZT-BF-m1p"/>
+                                        <constraint firstItem="87J-tz-3uf" firstAttribute="leading" secondItem="v7D-Jm-U6l" secondAttribute="leading" id="R0q-MW-De7"/>
+                                        <constraint firstItem="qCu-SZ-qm0" firstAttribute="top" secondItem="87J-tz-3uf" secondAttribute="bottom" constant="16" id="kkC-Fh-x14"/>
+                                        <constraint firstItem="87J-tz-3uf" firstAttribute="top" secondItem="v7D-Jm-U6l" secondAttribute="top" constant="35" id="le9-HH-kwb"/>
+                                        <constraint firstAttribute="bottom" secondItem="qCu-SZ-qm0" secondAttribute="bottom" id="tJb-Xm-WBH"/>
+                                        <constraint firstItem="qCu-SZ-qm0" firstAttribute="leading" secondItem="v7D-Jm-U6l" secondAttribute="leading" id="zcg-YD-adU"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="zG1-iu-SIg" secondAttribute="bottom" id="2hW-BX-4xS"/>
+                        <constraint firstAttribute="trailing" secondItem="zG1-iu-SIg" secondAttribute="trailing" constant="16" id="7aT-kF-L0Y"/>
+                        <constraint firstItem="zG1-iu-SIg" firstAttribute="top" secondItem="Kcw-dc-sG5" secondAttribute="top" constant="16" id="ExG-MV-Ezq"/>
+                        <constraint firstItem="zG1-iu-SIg" firstAttribute="width" secondItem="Kcw-dc-sG5" secondAttribute="width" constant="-32" id="W4i-hd-vS0"/>
+                        <constraint firstItem="zG1-iu-SIg" firstAttribute="leading" secondItem="Kcw-dc-sG5" secondAttribute="leading" constant="16" id="uTA-Sa-WUr"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Kcw-dc-sG5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Bls-I8-BqV"/>
+                <constraint firstAttribute="bottom" secondItem="Kcw-dc-sG5" secondAttribute="bottom" id="g3J-Ky-vlc"/>
+                <constraint firstItem="Kcw-dc-sG5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hew-pL-5ks"/>
+                <constraint firstItem="Kcw-dc-sG5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="lea-Ay-8Bz"/>
+            </constraints>
+            <point key="canvasLocation" x="115.94202898550725" y="83.705357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="archive" width="24" height="24"/>
+        <image name="arrowRight" width="24" height="24"/>
+        <image name="bellGreen" width="24" height="24"/>
+        <image name="bookmark" width="24" height="24"/>
+        <image name="clipboard" width="24" height="24"/>
+        <image name="copy" width="24" height="24"/>
+        <image name="cube" width="24" height="24"/>
+        <image name="email" width="24" height="24"/>
+        <image name="heartGreen" width="24" height="24"/>
+        <image name="info" width="24" height="24"/>
+        <image name="log-out" width="24" height="24"/>
+        <image name="phone" width="100" height="100"/>
+        <image name="question-mark" width="24" height="24"/>
+        <image name="searchGreen" width="24" height="24"/>
+        <image name="settings" width="24" height="24"/>
+        <namedColor name="ApartoBlue">
+            <color red="0.039000000804662704" green="0.51399999856948853" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ApartoGray">
+            <color red="0.9570000171661377" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ApartoLowGrey">
+            <color red="0.9570000171661377" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

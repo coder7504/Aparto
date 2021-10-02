@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyProfileNotificationsViewController" customModule="Aparto" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="vBl-YM-wkB" id="xF4-3g-9Eb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vBl-YM-wkB">
+                    <rect key="frame" x="0.0" y="54" width="414" height="842"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mz-S2-ZyV">
+                    <rect key="frame" x="96" y="194" width="222" height="118.5"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell" translatesAutoresizingMaskIntoConstraints="NO" id="NN6-n2-V2L">
+                            <rect key="frame" x="81" y="0.0" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="PFT-wj-qDf"/>
+                                <constraint firstAttribute="width" secondItem="NN6-n2-V2L" secondAttribute="height" id="vid-aN-Exh"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBa-uz-wbg">
+                            <rect key="frame" x="0.0" y="81" width="222" height="37.5"/>
+                            <attributedString key="attributedText">
+                                <fragment>
+                                    <string key="content">Пока у вас нет никаких 
+уведомлений</string>
+                                    <attributes>
+                                        <color key="NSColor" red="0.55294117649999996" green="0.59607843140000005" blue="0.61568627450000002" alpha="0.99999989889999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <font key="NSFont" size="16" name="ProximaNova-Semibold"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="cBa-uz-wbg" secondAttribute="trailing" id="2QA-dm-vhD"/>
+                        <constraint firstAttribute="bottom" secondItem="cBa-uz-wbg" secondAttribute="bottom" id="56y-Ml-QLA"/>
+                        <constraint firstItem="NN6-n2-V2L" firstAttribute="centerX" secondItem="6mz-S2-ZyV" secondAttribute="centerX" id="VbD-N7-szo"/>
+                        <constraint firstItem="NN6-n2-V2L" firstAttribute="top" secondItem="6mz-S2-ZyV" secondAttribute="top" id="XEx-nO-6t2"/>
+                        <constraint firstItem="cBa-uz-wbg" firstAttribute="top" secondItem="NN6-n2-V2L" secondAttribute="bottom" constant="21" id="on9-lg-aM6"/>
+                        <constraint firstAttribute="width" secondItem="6mz-S2-ZyV" secondAttribute="height" multiplier="15:8" id="rWJ-VD-Gpy"/>
+                        <constraint firstItem="cBa-uz-wbg" firstAttribute="leading" secondItem="6mz-S2-ZyV" secondAttribute="leading" id="wkR-pG-PEc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vBl-YM-wkB" secondAttribute="bottom" id="FaX-9V-Ti4"/>
+                <constraint firstItem="6mz-S2-ZyV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="Mq8-IS-Vtt"/>
+                <constraint firstItem="vBl-YM-wkB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="XVc-es-529"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vBl-YM-wkB" secondAttribute="trailing" id="Y0X-yh-FIa"/>
+                <constraint firstItem="vBl-YM-wkB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="evr-6X-Qe9"/>
+                <constraint firstItem="6mz-S2-ZyV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sFO-cZ-I96"/>
+            </constraints>
+            <point key="canvasLocation" x="115.94202898550725" y="124.55357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bell" width="28" height="28"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
