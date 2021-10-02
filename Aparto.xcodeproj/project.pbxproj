@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		634D8C09270828AC001A533C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634D8C08270828AC001A533C /* Assets.xcassets */; };
 		635B06BF2708175E0031C974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B06BE2708175E0031C974 /* AppDelegate.swift */; };
 		635B06CB2708176F0031C974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635B06C92708176F0031C974 /* LaunchScreen.storyboard */; };
-		635B06D3270817A40031C974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635B06D2270817A40031C974 /* Assets.xcassets */; };
 		635B06D6270817B40031C974 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B06D5270817B40031C974 /* AuthManager.swift */; };
 		635B0789270817ED0031C974 /* HousingIssuesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635B06DA270817ED0031C974 /* HousingIssuesCollectionViewCell.xib */; };
 		635B078A270817ED0031C974 /* ResidentalComplexCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B06DB270817ED0031C974 /* ResidentalComplexCollectionViewCell.swift */; };
@@ -219,11 +219,11 @@
 /* Begin PBXFileReference section */
 		2C179B8D298E9148DDA149E6 /* Pods_Aparto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aparto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41315E493710D3C3676A5572 /* Pods-Aparto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aparto.debug.xcconfig"; path = "Target Support Files/Pods-Aparto/Pods-Aparto.debug.xcconfig"; sourceTree = "<group>"; };
+		634D8C08270828AC001A533C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		635B06BB2708175E0031C974 /* Aparto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aparto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		635B06BE2708175E0031C974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		635B06CA2708176F0031C974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		635B06CC2708176F0031C974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		635B06D2270817A40031C974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Aparto1/Aparto/Assets.xcassets; sourceTree = "<group>"; };
 		635B06D5270817B40031C974 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		635B06DA270817ED0031C974 /* HousingIssuesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HousingIssuesCollectionViewCell.xib; sourceTree = "<group>"; };
 		635B06DB270817ED0031C974 /* ResidentalComplexCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResidentalComplexCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -478,7 +478,7 @@
 				635B0860270818040031C974 /* Loader */,
 				635B0825270817FC0031C974 /* Helpers */,
 				635B06D7270817ED0031C974 /* Controllers */,
-				635B06D2270817A40031C974 /* Assets.xcassets */,
+				634D8C08270828AC001A533C /* Assets.xcassets */,
 				635B06CC2708176F0031C974 /* Info.plist */,
 				635B0888270818C80031C974 /* GoogleService-Info.plist */,
 			);
@@ -1026,7 +1026,6 @@
 				635B07D3270817ED0031C974 /* PruductViewController.xib in Resources */,
 				635B07F5270817ED0031C974 /* MyProfileMatchingViewController.xib in Resources */,
 				635B081A270817ED0031C974 /* MyAnnouncementsTableViewCell.xib in Resources */,
-				635B06D3270817A40031C974 /* Assets.xcassets in Resources */,
 				635B07B9270817ED0031C974 /* UserTypeViewController.xib in Resources */,
 				635B07F3270817ED0031C974 /* MyProfilePaymentViewController.xib in Resources */,
 				635B0853270817FD0031C974 /* ProximaNova-BoldIt.ttf in Resources */,
@@ -1085,6 +1084,7 @@
 				635B080F270817ED0031C974 /* GetVerificationCodeViewController.xib in Resources */,
 				635B07B4270817ED0031C974 /* RegisterViewController.xib in Resources */,
 				635B07CE270817ED0031C974 /* PageContrllerCollectionViewCell.xib in Resources */,
+				634D8C09270828AC001A533C /* Assets.xcassets in Resources */,
 				635B0812270817ED0031C974 /* BackProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1385,7 +1385,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 41315E493710D3C3676A5572 /* Pods-Aparto.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Aparto/Info.plist;
@@ -1404,7 +1403,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BD08F4D213967057D2EB2A97 /* Pods-Aparto.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Aparto/Info.plist;
