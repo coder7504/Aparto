@@ -10,6 +10,7 @@ import UIKit
 class MyProfileSettingsViewController: UIViewController {
     
     @IBOutlet weak var locationSwitchButton: UISwitch!
+    @IBOutlet weak var regionButton: UIButton!
     @IBOutlet weak var notificationSwitchButton: UISwitch!
     
     override func viewDidLoad() {
@@ -48,6 +49,23 @@ class MyProfileSettingsViewController: UIViewController {
     }
     
     
+    @IBAction func selectCityButtonTapped(_ sender: Any) {
+        let vc = UserTypeViewController(nibName: "UserTypeViewController", bundle: nil)
+        vc.modalPresentationStyle = .overFullScreen
+        vc.isRegion = true
+        vc.delegate = self
+        present(vc, animated: false, completion: nil)
+    }
     
     
+    
+}
+
+
+
+extension MyProfileSettingsViewController: UserTypeDelegate {
+    func userType(type: String, id: String) {
+        print(type)
+        regionButton.setTitle(type, for: .normal)
+    }
 }

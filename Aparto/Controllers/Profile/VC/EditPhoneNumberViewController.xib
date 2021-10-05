@@ -34,7 +34,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="70.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hx-FM-z64">
-                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="47"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="47.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Старый номер телефона">
                                                             <attributes>
@@ -47,7 +47,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTs-U5-sHe">
-                                                    <rect key="frame" x="0.0" y="51" width="350" height="19.5"/>
+                                                    <rect key="frame" x="0.0" y="51.5" width="350" height="19"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="9989">
                                                             <attributes>

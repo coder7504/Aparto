@@ -27,6 +27,7 @@ class UserTypeViewController: UIViewController {
     
     var delegate: UserTypeDelegate!
     var userTyp: [UserType] = []
+    var isRegion = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,11 @@ class UserTypeViewController: UIViewController {
        super.viewDidLayoutSubviews()
        setCornerRadius()
         Loader.start()
-        getUserType()
+        if isRegion {
+            getRegion()
+        } else {
+            getUserType()
+        }
    }
     
     
@@ -88,6 +93,17 @@ class UserTypeViewController: UIViewController {
             self.userTyp = types
              tableView.reloadData()
             tableViewHeight.constant = CGFloat( min(CGFloat(types.count*50), 0.8*screenHeight))
+        }
+    }
+    
+    func getRegion() {
+        let screenHeight = UIScreen.main.bounds.height
+        API.getAllRegion { [self] typ in
+            Loader.stop()
+            guard let typ = typ else { return }
+            self.userTyp = typ
+            tableView.reloadData()
+            tableViewHeight.constant = CGFloat( min(CGFloat(typ.count*50), 0.8*screenHeight))
         }
     }
 

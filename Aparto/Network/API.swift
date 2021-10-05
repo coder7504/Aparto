@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class API {
     
-    static let baseUrl: String = "http://3.36.86.22/api"
+    static let baseUrl: String = "https://aparto.albison.software/api"
     
     struct EndPoints {
         static var signIn = "/v1/user/is-user-active"
@@ -29,6 +29,8 @@ class API {
         static var news = "/v1/news"
         static var sellTpye = "/v1/sell-type"
         static var resetPassword = "/v1/user/reset-password/\(Cache.getToken())"
+        static var randomAdvertisement = "/v1/income/random"
+        static var allRegion = "/v1/region"
     }
     
     static private var signInUrl: URL = URL(string: baseUrl + EndPoints.signIn)!
@@ -46,6 +48,8 @@ class API {
     static private var newsUrl: URL = URL(string: baseUrl + EndPoints.news)!
     static private var sellTypeUrl: URL = URL(string: baseUrl + EndPoints.sellTpye)!
     static private var resetPassworUrl: URL = URL(string: baseUrl + EndPoints.resetPassword)!
+    static private var randomAdvertisementUrl: URL = URL(string: baseUrl + EndPoints.randomAdvertisement)!
+    static private var allRegionUrl: URL = URL(string: baseUrl + EndPoints.allRegion)!
     
     
 //    APIs
@@ -318,12 +322,13 @@ class API {
     
     class func getNews(completion: @escaping ([News]?) -> Void ) {
         
-//        let params: [String: Any] = [
-//            "populate" : "newsCategory"
-//        ]
+        let params: [String: Any] = [
+            "popOptions" : "newsCategory"
+        ]
         
-        NET.simpleRequest(from: newsUrl, method: .get, params: nil) { (data) in
+        NET.simpleRequestWithoutEncoding(from: newsUrl, method: .get, params: params) { (data) in
             guard let data = data else { completion(nil); return }
+//            print("news ⛑⛑⛑⛑⛑", data)
             if data["status"].stringValue == "success" {
                if let newsCategory = data["data"].array {
                     let allData = newsCategory.map{ News(json: $0) }
@@ -375,5 +380,49 @@ class API {
             }
         }
     }
+    
+    
+//    get Random Advertisement
+    
+    class func getRandomAdvertisement(addType: String, completion: @escaping ([RandomAdvertisement]?) -> Void) {
+        
+        let params = [
+            "addType": addType
+        ]
+        print(randomAdvertisementUrl, "URL")
+        NET.simpleRequest(from: randomAdvertisementUrl, method: .get, params: params) { data in
+            guard let data = data else { completion(nil); return }
+            print("getRandomAdvertisement 👀👀👀👀👀 = ", data)
+            if data["status"].stringValue == "success" {
+                if let subData = data["data"].array {
+                    let ad = subData.map{ RandomAdvertisement(json: $0) }
+                    completion(ad)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+//    get AllRegion
+    
+    class func getAllRegion(completion: @escaping ([UserType]?) -> Void ) {
+        
+        
+        NET.simpleRequest(from: allRegionUrl, method: .get, params: nil) { data in
+            guard let data = data else { completion(nil); return }
+            print("Region = ", data)
+            if data["status"].stringValue == "success" {
+                if let subData = data["data"].array {
+                    let region = subData.map{ UserType(json: $0) }
+                    completion(region)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+        
+    }
+    
     
 }

@@ -107,7 +107,7 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
         
     }
-
+    
     
     func translateTitle(title: Population) -> String {
         switch Cache.getAppLanguage() {
@@ -117,25 +117,42 @@ extension UIViewController {
         }
     }
     
+    func convertToOrdinary(fromJSForm date: String) -> String {
+          
+          let formatter = DateFormatter()
+          formatter.dateFormat = "dd / MM / yyyy"
+          
+          //"yyyy-MM-dd'T'HH:mm:ssZ"
+          
+          let iso8601DateFormatter = ISO8601DateFormatter()
+          iso8601DateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+          
+          if let dat = iso8601DateFormatter.date(from: date) {
+              return formatter.string(from: dat)
+          } else {
+              return ""
+          }
+          
+      }
     
-//    
-//    //    MARK: -- Scroll Direction
-//    
-//    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if(scrollView.panGestureRecognizer.translation(in: scrollView.superview).y > 0) {
-//            UIView.animate(withDuration: 0.3) {
-//                self.hideStackView.transform = .identity
-//                self.hideStackView.isHidden = false
-//            }
-//        }
-//        else {
-//            UIView.animate(withDuration: 0.3) {
-//                self.hideStackView.isHidden = true
-//                self.hideStackView.transform = CGAffineTransform(translationX: 0, y: -200)
-//            }
-//        }
-//    }
-//    
+    //
+    //    //    MARK: -- Scroll Direction
+    //
+    //    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    //        if(scrollView.panGestureRecognizer.translation(in: scrollView.superview).y > 0) {
+    //            UIView.animate(withDuration: 0.3) {
+    //                self.hideStackView.transform = .identity
+    //                self.hideStackView.isHidden = false
+    //            }
+    //        }
+    //        else {
+    //            UIView.animate(withDuration: 0.3) {
+    //                self.hideStackView.isHidden = true
+    //                self.hideStackView.transform = CGAffineTransform(translationX: 0, y: -200)
+    //            }
+    //        }
+    //    }
+    //
     
 }
 

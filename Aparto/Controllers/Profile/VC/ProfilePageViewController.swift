@@ -20,7 +20,7 @@ class ProfilePageViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
         setDetails()
         setShadow()
-        print("🐹 ", Cache.getUserName()! + " " + Cache.getUserSurname()!)
+        print("🐹 ", (Cache.getUserName() ?? "") + " " + (Cache.getUserSurname() ?? ""))
     }
     
     func setDetails() {
@@ -33,7 +33,7 @@ class ProfilePageViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fullNameLabel.text = Cache.getUserName()! + " " + Cache.getUserSurname()!
+        fullNameLabel.text = (Cache.getUserName() ?? "") + " " + (Cache.getUserSurname() ?? "")
     }
     
     func setBackroundImageForNavigation(){

@@ -52,6 +52,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This deno applecation displays user location now</string>
 	<key>FirebaseAppdelegateProxyEnabled</key>
 	<false/>
 	<key>UIAppFonts</key>
@@ -60,5 +62,7 @@
 		<string>ProximaNova-Semibold.ttf</string>
 		<string>ProximaNova-RegularIt.ttf</string>
 	</array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 </dict>
 </plist>

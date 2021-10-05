@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -304,16 +303,16 @@
                                             </userDefinedRuntimeAttributes>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfH-cq-w8e">
-                                            <rect key="frame" x="30" y="150" width="30" height="30"/>
+                                            <rect key="frame" x="30" y="155" width="20" height="20"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="Y1Y-8z-2Mt"/>
-                                                <constraint firstAttribute="width" constant="30" id="e2d-l7-jbB"/>
+                                                <constraint firstAttribute="height" constant="20" id="Y1Y-8z-2Mt"/>
+                                                <constraint firstAttribute="width" constant="20" id="e2d-l7-jbB"/>
                                             </constraints>
                                             <state key="normal" image="arrowRight"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <integer key="value" value="15"/>
+                                                    <integer key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
@@ -321,16 +320,16 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pud-Mw-2Fg">
-                                            <rect key="frame" x="354" y="150" width="30" height="30"/>
+                                            <rect key="frame" x="364" y="155" width="20" height="20"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="ujb-5r-iO0"/>
-                                                <constraint firstAttribute="width" constant="30" id="w8G-En-89t"/>
+                                                <constraint firstAttribute="height" constant="20" id="ujb-5r-iO0"/>
+                                                <constraint firstAttribute="width" constant="20" id="w8G-En-89t"/>
                                             </constraints>
                                             <state key="normal" image="arrowRight"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <integer key="value" value="15"/>
+                                                    <integer key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
@@ -508,16 +507,16 @@
                                     <rect key="frame" x="0.0" y="3329" width="414" height="306"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новости" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iO-9U-Qwr">
-                                            <rect key="frame" x="16" y="30" width="95.5" height="30.5"/>
+                                            <rect key="frame" x="16" y="30" width="95.5" height="76"/>
                                             <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="24"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Jvv-yu-GtI">
-                                            <rect key="frame" x="0.0" y="77.5" width="414" height="158.5"/>
+                                            <rect key="frame" x="0.0" y="123" width="414" height="113"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="Jvv-yu-GtI" secondAttribute="height" multiplier="300:115" id="b2W-D1-S3u"/>
+                                                <constraint firstAttribute="width" secondItem="Jvv-yu-GtI" secondAttribute="height" multiplier="330:90" id="b2W-D1-S3u"/>
                                             </constraints>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o9f-3A-q05">
                                                 <size key="itemSize" width="128" height="128"/>

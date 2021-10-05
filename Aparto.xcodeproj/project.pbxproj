@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		634D8C09270828AC001A533C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634D8C08270828AC001A533C /* Assets.xcassets */; };
+		634D8C0D27098AD4001A533C /* SearchFromMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D8C0B27098AD4001A533C /* SearchFromMapViewController.swift */; };
+		634D8C0E27098AD4001A533C /* SearchFromMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634D8C0C27098AD4001A533C /* SearchFromMapViewController.xib */; };
 		635B06BF2708175E0031C974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B06BE2708175E0031C974 /* AppDelegate.swift */; };
 		635B06CB2708176F0031C974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635B06C92708176F0031C974 /* LaunchScreen.storyboard */; };
 		635B06D6270817B40031C974 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B06D5270817B40031C974 /* AuthManager.swift */; };
@@ -213,6 +215,10 @@
 		635B0882270818190031C974 /* NET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B087F270818190031C974 /* NET.swift */; };
 		635B0886270818210031C974 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B0884270818210031C974 /* MainTabBarViewController.swift */; };
 		635B0889270818C80031C974 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 635B0888270818C80031C974 /* GoogleService-Info.plist */; };
+		637EE9DE270BC36D00F4C374 /* RandomAdvertisement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637EE9DD270BC36D00F4C374 /* RandomAdvertisement.swift */; };
+		63A9B914270D10F900DCDB27 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B913270D10F900DCDB27 /* Contact.swift */; };
+		63B58E1E270BAB6E00B70A88 /* SelectNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B58E1C270BAB6E00B70A88 /* SelectNewsViewController.swift */; };
+		63B58E1F270BAB6E00B70A88 /* SelectNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B58E1D270BAB6E00B70A88 /* SelectNewsViewController.xib */; };
 		94205723E0AF597EC2E50E61 /* Pods_Aparto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C179B8D298E9148DDA149E6 /* Pods_Aparto.framework */; };
 /* End PBXBuildFile section */
 
@@ -220,6 +226,8 @@
 		2C179B8D298E9148DDA149E6 /* Pods_Aparto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aparto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41315E493710D3C3676A5572 /* Pods-Aparto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aparto.debug.xcconfig"; path = "Target Support Files/Pods-Aparto/Pods-Aparto.debug.xcconfig"; sourceTree = "<group>"; };
 		634D8C08270828AC001A533C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		634D8C0B27098AD4001A533C /* SearchFromMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFromMapViewController.swift; sourceTree = "<group>"; };
+		634D8C0C27098AD4001A533C /* SearchFromMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchFromMapViewController.xib; sourceTree = "<group>"; };
 		635B06BB2708175E0031C974 /* Aparto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aparto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		635B06BE2708175E0031C974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		635B06CA2708176F0031C974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -427,6 +435,10 @@
 		635B087F270818190031C974 /* NET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NET.swift; sourceTree = "<group>"; };
 		635B0884270818210031C974 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		635B0888270818C80031C974 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		637EE9DD270BC36D00F4C374 /* RandomAdvertisement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAdvertisement.swift; sourceTree = "<group>"; };
+		63A9B913270D10F900DCDB27 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		63B58E1C270BAB6E00B70A88 /* SelectNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNewsViewController.swift; sourceTree = "<group>"; };
+		63B58E1D270BAB6E00B70A88 /* SelectNewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectNewsViewController.xib; sourceTree = "<group>"; };
 		BD08F4D213967057D2EB2A97 /* Pods-Aparto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aparto.release.xcconfig"; path = "Target Support Files/Pods-Aparto/Pods-Aparto.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -448,6 +460,15 @@
 				2C179B8D298E9148DDA149E6 /* Pods_Aparto.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		634D8C0A27098AAC001A533C /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				634D8C0B27098AD4001A533C /* SearchFromMapViewController.swift */,
+				634D8C0C27098AD4001A533C /* SearchFromMapViewController.xib */,
+			);
+			path = Maps;
 			sourceTree = "<group>";
 		};
 		635B06B22708175E0031C974 = {
@@ -496,6 +517,7 @@
 		635B06D7270817ED0031C974 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				634D8C0A27098AAC001A533C /* Maps */,
 				635B06D8270817ED0031C974 /* Home */,
 				635B06FC270817ED0031C974 /* Registration */,
 				635B0710270817ED0031C974 /* Ad */,
@@ -510,8 +532,8 @@
 			isa = PBXGroup;
 			children = (
 				635B06D9270817ED0031C974 /* CVC */,
-				635B06EC270817ED0031C974 /* VC */,
 				635B06F7270817ED0031C974 /* TVC */,
+				635B06EC270817ED0031C974 /* VC */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -552,8 +574,10 @@
 				635B06F3270817ED0031C974 /* SellBannerViewController.xib */,
 				635B06F4270817ED0031C974 /* MovingAssistanceViewController.swift */,
 				635B06ED270817ED0031C974 /* MovingAssistanceViewController.xib */,
-				635B06EF270817ED0031C974 /* ProfileViewController.xib */,
 				635B06F6270817ED0031C974 /* ProfileViewController.swift */,
+				635B06EF270817ED0031C974 /* ProfileViewController.xib */,
+				63B58E1C270BAB6E00B70A88 /* SelectNewsViewController.swift */,
+				63B58E1D270BAB6E00B70A88 /* SelectNewsViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -888,7 +912,6 @@
 			isa = PBXGroup;
 			children = (
 				635B08662708180D0031C974 /* UserType.swift */,
-				635B08672708180D0031C974 /* NewsCategory.swift */,
 				635B08682708180D0031C974 /* HelpFromUs.swift */,
 				635B08692708180D0031C974 /* AboutUs.swift */,
 				635B086A2708180D0031C974 /* Currency.swift */,
@@ -897,7 +920,10 @@
 				635B086D2708180D0031C974 /* SellType.swift */,
 				635B086E2708180D0031C974 /* Models.swift */,
 				635B086F2708180D0031C974 /* News.swift */,
+				635B08672708180D0031C974 /* NewsCategory.swift */,
 				635B08702708180D0031C974 /* ComplainCategory.swift */,
+				637EE9DD270BC36D00F4C374 /* RandomAdvertisement.swift */,
+				63A9B913270D10F900DCDB27 /* Contact.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -943,6 +969,7 @@
 				635B06B82708175E0031C974 /* Frameworks */,
 				635B06B92708175E0031C974 /* Resources */,
 				BDF77702E0CCDF94B2A30E46 /* [CP] Embed Pods Frameworks */,
+				98BFCEA831843DFBB27F7A28 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1025,6 +1052,7 @@
 				635B07C2270817ED0031C974 /* BuildingPermitViewController.xib in Resources */,
 				635B07D3270817ED0031C974 /* PruductViewController.xib in Resources */,
 				635B07F5270817ED0031C974 /* MyProfileMatchingViewController.xib in Resources */,
+				63B58E1F270BAB6E00B70A88 /* SelectNewsViewController.xib in Resources */,
 				635B081A270817ED0031C974 /* MyAnnouncementsTableViewCell.xib in Resources */,
 				635B07B9270817ED0031C974 /* UserTypeViewController.xib in Resources */,
 				635B07F3270817ED0031C974 /* MyProfilePaymentViewController.xib in Resources */,
@@ -1057,6 +1085,7 @@
 				635B0794270817ED0031C974 /* ProfileCategoryCollectionViewCell.xib in Resources */,
 				635B07C3270817ED0031C974 /* SentAdViewController.xib in Resources */,
 				635B0797270817ED0031C974 /* CategoryCollectionViewCell.xib in Resources */,
+				634D8C0E27098AD4001A533C /* SearchFromMapViewController.xib in Resources */,
 				635B078E270817ED0031C974 /* RentCategoryCollectionViewCell.xib in Resources */,
 				635B07AF270817ED0031C974 /* GoogleSignInViewController.xib in Resources */,
 				635B0802270817ED0031C974 /* EditPhoneNumberViewController.xib in Resources */,
@@ -1112,6 +1141,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98BFCEA831843DFBB27F7A28 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aparto/Pods-Aparto-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aparto/Pods-Aparto-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aparto/Pods-Aparto-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BDF77702E0CCDF94B2A30E46 /* [CP] Embed Pods Frameworks */ = {
@@ -1207,10 +1253,12 @@
 				635B084F270817FD0031C974 /* WormTabStripButton.swift in Sources */,
 				635B07D5270817ED0031C974 /* AllInformationViewController.swift in Sources */,
 				635B07C5270817ED0031C974 /* PhotosOfObjectTableViewController.swift in Sources */,
+				63B58E1E270BAB6E00B70A88 /* SelectNewsViewController.swift in Sources */,
 				635B07AB270817ED0031C974 /* OTPViewController.swift in Sources */,
 				635B07EF270817ED0031C974 /* MyProfilePaymentViewController.swift in Sources */,
 				635B07E5270817ED0031C974 /* BannerTVC.swift in Sources */,
 				635B0845270817FD0031C974 /* Alert.swift in Sources */,
+				634D8C0D27098AD4001A533C /* SearchFromMapViewController.swift in Sources */,
 				635B07C1270817ED0031C974 /* PlansViewController.swift in Sources */,
 				635B0864270818040031C974 /* Loader.swift in Sources */,
 				635B08772708180D0031C974 /* RentCategory.swift in Sources */,
@@ -1229,8 +1277,10 @@
 				635B08722708180D0031C974 /* NewsCategory.swift in Sources */,
 				635B07A2270817ED0031C974 /* MovingAssistanceViewController.swift in Sources */,
 				635B07CD270817ED0031C974 /* PageContrllerCollectionViewCell.swift in Sources */,
+				637EE9DE270BC36D00F4C374 /* RandomAdvertisement.swift in Sources */,
 				635B07E0270817ED0031C974 /* SearchVC.swift in Sources */,
 				635B0811270817ED0031C974 /* HistoryOfBalanceViewController.swift in Sources */,
+				63A9B914270D10F900DCDB27 /* Contact.swift in Sources */,
 				635B07AD270817ED0031C974 /* RegistrationGoBackViewController.swift in Sources */,
 				635B06D6270817B40031C974 /* AuthManager.swift in Sources */,
 				635B0791270817ED0031C974 /* RentCategoryCollectionViewCell.swift in Sources */,
@@ -1387,6 +1437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G38SYJ38NM;
 				INFOPLIST_FILE = Aparto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1405,6 +1456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G38SYJ38NM;
 				INFOPLIST_FILE = Aparto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

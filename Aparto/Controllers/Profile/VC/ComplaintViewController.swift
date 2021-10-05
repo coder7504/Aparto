@@ -82,7 +82,6 @@ class ComplaintViewController: UIViewController {
             tableView.reloadData()
             tableViewHeight.constant = CGFloat( min(CGFloat(category!.count*50), 0.8*screenHeight))
         }
-        
     }
     
     func getAllCurrency() {

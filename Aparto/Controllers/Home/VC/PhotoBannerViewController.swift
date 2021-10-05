@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PhotoBannerViewController: UIViewController {
     
@@ -21,12 +22,43 @@ class PhotoBannerViewController: UIViewController {
     }
     
     var imageArray: [String] = ["home","home","home","home","home","home"]
+    var ad: RandomAdvertisement!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCornerRadius()
+        hideContainerView()
+    }
+   
+   override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
+       UIView.animate(withDuration: 0.4) { [self] in
+           containerView.transform = .identity
+           self.view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+       }
+   }
+   
+   override func viewDidLayoutSubviews() {
+       super.viewDidLayoutSubviews()
+       setCornerRadius()
+   }
+    
+    
+    func hideContainerView() {
+        UIView.animate(withDuration: 0.0000001) { [self] in
+            containerView.transform = CGAffineTransform(translationX: 0, y: containerView.frame.height)
+        }
     }
 
+   @IBAction func dismissButtonTapped(_ sender: Any) {
+       UIView.animate(withDuration: 0.4) {
+           self.view.alpha = 0
+           self.containerView.transform = CGAffineTransform(translationX: 0, y: self.containerView.frame.height)
+       } completion: { (_) in
+           self.dismiss(animated: true, completion: nil)
+       }
+   }
+        
+        
     fileprivate
     func setCornerRadius() {
         containerView.layer.cornerRadius = 8
@@ -35,8 +67,20 @@ class PhotoBannerViewController: UIViewController {
         sellButtonOutlet.layer.cornerRadius = 12
         imageCollectionView.layer.cornerRadius = 8
     }
+    
     @IBAction func notNowButtonTapped(_ sender: Any) {
-      
+        UIView.animate(withDuration: 0.4) {
+            self.view.alpha = 0
+            self.containerView.transform = CGAffineTransform(translationX: 0, y: self.containerView.frame.height)
+        } completion: { (_) in
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func continueButtonTapped(_ sender: Any) {
+//        let vc = PruductViewController(nibName: "PruductViewController", bundle: nil)
+//        vc.modalPresentationStyle = .overFullScreen
+//        present(vc, animated: true, completion: nil)
     }
     
 }
@@ -74,7 +118,7 @@ extension PhotoBannerViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoBannerCollectionViewCell.identifire, for: indexPath) as? PhotoBannerCollectionViewCell else {
             return UICollectionViewCell()
         }
-        
+//        cell.imageVIewOutlet.sd_setImage(with: URL(string: API.baseUrl + ad.image), placeholderImage: UIImage(named: "ad"))
         cell.imageVIewOutlet.image = UIImage(named: imageArray[indexPath.row])
         
         return cell

@@ -10,16 +10,17 @@ import IQKeyboardManagerSwift
 import GoogleSignIn
 import Firebase
 import FirebaseAuth
+import YandexMapsMobile
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    
+//    Yandex Key :   0bf89780-7a7b-462f-ab2c-8923aa2434d3
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        YMKMapKit.setApiKey("0bf89780-7a7b-462f-ab2c-8923aa2434d3")
 //        Firebase Configure
         FirebaseApp.configure()
         
@@ -29,10 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-//        let vc = MainTabBarViewController()
+        let vc = MainTabBarViewController()
      //        let vc = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
      //        let nav = UINavigationController(rootViewController: vc)
-             let vc = GoogleSignInViewController(nibName: "GoogleSignInViewController", bundle: nil)
+//             let vc = GoogleSignInViewController(nibName: "GoogleSignInViewController", bundle: nil)
+//        let vc = SearchFromMapViewController(nibName: "SearchFromMapViewController", bundle: nil)
      //        let vc = OTPViewController(nibName: "OTPViewController", bundle: nil)
              window?.rootViewController = vc
              window?.makeKeyAndVisible()

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,26 +18,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="NewsCollectionViewCell" customModule="Aparto" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="356" height="165"/>
+            <rect key="frame" x="0.0" y="0.0" width="356" height="129"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="356" height="165"/>
+                <rect key="frame" x="0.0" y="0.0" width="356" height="129"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORJ-28-CMr">
-                        <rect key="frame" x="0.0" y="0.0" width="348" height="165"/>
+                        <rect key="frame" x="0.0" y="0.0" width="348" height="129"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Eui-5z-ZRq">
-                                <rect key="frame" x="16" y="16" width="316" height="133"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Eui-5z-ZRq">
+                                <rect key="frame" x="16" y="16" width="316" height="97"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" horizontalCompressionResistancePriority="752" text="Недвижимость" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAG-VW-zIj">
-                                        <rect key="frame" x="0.0" y="0.0" width="316" height="17.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="316" height="16.5"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
                                         <color key="textColor" red="0.55294117647058827" green="0.59607843137254901" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="DLl-h6-PFO">
-                                        <rect key="frame" x="0.0" y="27.5" width="316" height="105.5"/>
+                                        <rect key="frame" x="0.0" y="16.5" width="316" height="80.5"/>
                                         <string key="text">Количество споров о кадастровой оценке недвижимости сократилось вдвое
 </string>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
@@ -65,13 +64,13 @@
                 <constraint firstItem="ORJ-28-CMr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Fks-9V-yX1"/>
                 <constraint firstItem="ORJ-28-CMr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aoX-gH-apH"/>
             </constraints>
-            <size key="customSize" width="356" height="165"/>
+            <size key="customSize" width="356" height="129"/>
             <connections>
                 <outlet property="categoryLabel" destination="wAG-VW-zIj" id="OVf-q7-eqh"/>
                 <outlet property="containerView" destination="ORJ-28-CMr" id="fSa-b1-PVQ"/>
                 <outlet property="titleLabel" destination="DLl-h6-PFO" id="EOP-2a-j6P"/>
             </connections>
-            <point key="canvasLocation" x="191.30434782608697" y="122.20982142857142"/>
+            <point key="canvasLocation" x="191.30434782608697" y="110.15625"/>
         </collectionViewCell>
     </objects>
 </document>

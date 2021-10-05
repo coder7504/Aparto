@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeViewController: UIViewController {
 
@@ -145,6 +146,7 @@ class HomeViewController: UIViewController {
     var newsCategoryData: [NewsCategory] = []
     var newsCategoryID: [String] = []
     var sellTypeData: [SellType] = []
+    var carusellAdver: [RandomAdvertisement] = []
     var sellTypePhoto: [String] = ["buy","rent"]
     
     override func viewDidLoad() {
@@ -157,8 +159,9 @@ class HomeViewController: UIViewController {
         print("token 🐱 = ",Cache.getToken())
         Loader.start()
         getRentCategoryData()
-        getNewsCategory()
+        getNews()
         getSellTypeData()
+        getRandomAdvertisenment()
     }
 
     func setDetails() {
@@ -168,6 +171,7 @@ class HomeViewController: UIViewController {
     }
     
     func setRightButtonForNav() {
+        navigationItem.backButtonTitle = ""
         let bell = UIBarButtonItem(image: UIImage(named: "bell"), style: .done, target: self, action: #selector(bellTapped))
         navigationItem.rightBarButtonItem = bell
     }
@@ -242,6 +246,22 @@ extension HomeViewController: UICollectionViewDelegate {
             categoryForRent[indexPath.row].isTapped = true
             categoryRentCollectionView.reloadData()
             saleCollectionView.reloadData()
+        } else if collectionView == newsCollectionView {
+            let vc = SelectNewsViewController(nibName: "SelectNewsViewController", bundle: nil)
+            for i in 0...newsData.count-1 {
+                if i != indexPath.row {
+                    vc.newsDatas.append(newsData[i])
+                }
+            }
+            vc.newsData = self.newsData[indexPath.row]
+            navigationController?.pushViewController(vc, animated: true)
+        } else if collectionView == adCollectionView {
+            let vc = PhotoBannerViewController(nibName: "PhotoBannerViewController", bundle: nil)
+            vc.modalPresentationStyle = .overFullScreen
+            if !carusellAdver.isEmpty {
+                vc.ad = carusellAdver[indexPath.row]
+            }
+            present(vc, animated: false, completion: nil)
         }
     }
     
@@ -293,7 +313,7 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == adCollectionView {
-            return adPhotoArr.count
+            return !carusellAdver.isEmpty ? carusellAdver.count : 2
         } else if collectionView == newsCollectionView {
             return newsData.count
         } else if collectionView == categoryCollectionView {
@@ -324,7 +344,11 @@ extension HomeViewController: UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
             cell.imageViewOutlet.layer.cornerRadius = 8
-            cell.imageViewOutlet.image = UIImage(named: "ad")
+            if carusellAdver.isEmpty {
+                cell.imageViewOutlet.image = UIImage(named: "ad")
+            } else {
+                cell.imageViewOutlet.sd_setImage(with: URL(string: API.baseUrl + "/" + carusellAdver[indexPath.row].image), placeholderImage: UIImage(named: "ad"))
+            }
             return cell
         }  else if collectionView == companiesCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CompaniesCollectionViewCell.identifire, for: indexPath) as? CompaniesCollectionViewCell else {
@@ -342,7 +366,7 @@ extension HomeViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsCollectionViewCell.identifire, for: indexPath) as? NewsCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.updateCell(title: newsData[indexPath.row].title , category: translateTitle(title: getCategoryNews(id: newsData[indexPath.row].newsCategory)))
+            cell.updateCell(title: newsData[indexPath.row].title , category: translateTitle(title: newsData[indexPath.row].newsCategory.name))
             return cell
         } else if collectionView == categoryRentCollectionView || collectionView == saleCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RentCategoryCollectionViewCell.identifire, for: indexPath) as? RentCategoryCollectionViewCell else {
@@ -453,23 +477,24 @@ extension HomeViewController {
         }
     }
 
-    func getNewsCategory() {
-        if Reachability.isConnectedToNetwork() {
-            API.getNewsCategory { [self] (newsCat) in
-                newsCategoryData = newsCat!
-                getNews()
-            }
-        } else {
-            AlertNET.showAlert(title: Keys.a_internet, message: Keys.a_goOnline) { (_) in }
-        }
-    }
-
     func getSellTypeData() {
         if Reachability.isConnectedToNetwork() {
             API.getSellType { [self] (type) in
                 Loader.stop()
                 sellTypeData = type!
                 categoryCollectionView.reloadData()
+            }
+        } else {
+            AlertNET.showAlert(title: Keys.a_internet, message: Keys.a_goOnline) { (_) in }
+        }
+    }
+    
+    func getRandomAdvertisenment() {
+        if Reachability.isConnectedToNetwork() {
+            API.getRandomAdvertisement(addType: "main-banner") { [self] (ad) in
+                Loader.stop()
+                carusellAdver = ad ?? []
+                adCollectionView.reloadData()
             }
         } else {
             AlertNET.showAlert(title: Keys.a_internet, message: Keys.a_goOnline) { (_) in }

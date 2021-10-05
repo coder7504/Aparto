@@ -37,10 +37,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="350" height="204"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="661-Xh-Xb9">
-                                                            <rect key="frame" x="0.0" y="53" width="240" height="98.5"/>
+                                                            <rect key="frame" x="0.0" y="54.5" width="240" height="95"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qkF-P3-Rub">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="49"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="47"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Войдите или зарегестрируйтесь ">
                                                                             <attributes>
@@ -53,7 +53,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQo-jl-J9A">
-                                                                    <rect key="frame" x="0.0" y="57" width="240" height="41.5"/>
+                                                                    <rect key="frame" x="0.0" y="55" width="240" height="40"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Войдите для доступа ко всем функциям приложения">
                                                                             <attributes>
@@ -125,10 +125,10 @@
                                             <rect key="frame" x="12" y="16" width="350" height="44"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="44q-TF-xX2">
-                                                    <rect key="frame" x="0.0" y="1" width="254" height="42"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="44"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8R-aJ-OLB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="254" height="22"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="254" height="21"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Собиров Вохид">
                                                                     <attributes>
@@ -140,7 +140,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6S-sy-lJh">
-                                                            <rect key="frame" x="0.0" y="26" width="254" height="16"/>
+                                                            <rect key="frame" x="0.0" y="25" width="254" height="19"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Смотреть профиль">
                                                                     <attributes>
@@ -196,7 +196,7 @@
                                                     <rect key="frame" x="123.5" y="0.0" width="135" height="129"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSv-Kv-F4b">
-                                                            <rect key="frame" x="37.5" y="0.0" width="60" height="95.5"/>
+                                                            <rect key="frame" x="37" y="0.0" width="61.5" height="97"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Баланс">
                                                                     <attributes>
@@ -209,7 +209,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbk-gM-3uz">
-                                                            <rect key="frame" x="0.0" y="99.5" width="135" height="29.5"/>
+                                                            <rect key="frame" x="0.0" y="101" width="135" height="28"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="125 000 сум">
                                                                     <attributes>
@@ -289,7 +289,7 @@
                                     <rect key="frame" x="0.0" y="729.5" width="382" height="668"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlF-2H-HKG">
-                                            <rect key="frame" x="0.0" y="4" width="140" height="24.5"/>
+                                            <rect key="frame" x="0.0" y="4" width="142" height="24.5"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Недвижимость">
                                                     <attributes>
@@ -304,7 +304,7 @@
                                             <rect key="frame" x="0.0" y="44.5" width="382" height="623.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3eC-hb-5fj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="62.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="62"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="3eC-hb-5fj" secondAttribute="height" multiplier="343:56" id="5eu-rn-wSg"/>
                                                     </constraints>
@@ -326,7 +326,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5N-G4-pLg">
-                                                    <rect key="frame" x="0.0" y="62.5" width="382" height="62"/>
+                                                    <rect key="frame" x="0.0" y="62" width="382" height="62.5"/>
                                                     <color key="tintColor" name="ApartoBlue"/>
                                                     <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -384,7 +384,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eaa-qU-BNz">
-                                                    <rect key="frame" x="0.0" y="249.5" width="382" height="62.5"/>
+                                                    <rect key="frame" x="0.0" y="249.5" width="382" height="62"/>
                                                     <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <state key="normal" image="cube">
@@ -400,7 +400,7 @@
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9fF-fe-7Kh">
-                                                    <rect key="frame" x="0.0" y="312" width="382" height="62"/>
+                                                    <rect key="frame" x="0.0" y="311.5" width="382" height="62.5"/>
                                                     <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <state key="normal" image="bookmark">
@@ -457,7 +457,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LgL-u8-lvp">
-                                                    <rect key="frame" x="0.0" y="499" width="382" height="62.5"/>
+                                                    <rect key="frame" x="0.0" y="499" width="382" height="62"/>
                                                     <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <state key="normal" image="searchGreen">
@@ -476,7 +476,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mli-zv-IOb">
-                                                    <rect key="frame" x="0.0" y="561.5" width="382" height="62"/>
+                                                    <rect key="frame" x="0.0" y="561" width="382" height="62.5"/>
                                                     <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <state key="normal" image="log-out">
@@ -511,7 +511,7 @@
                                     <rect key="frame" x="0.0" y="1415.5" width="382" height="263"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87J-tz-3uf">
-                                            <rect key="frame" x="0.0" y="35" width="68" height="25"/>
+                                            <rect key="frame" x="0.0" y="35" width="67.5" height="25"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Другое">
                                                     <attributes>
@@ -548,7 +548,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lIb-xU-hco">
-                                                    <rect key="frame" x="0.0" y="62.5" width="382" height="62.5"/>
+                                                    <rect key="frame" x="0.0" y="62.5" width="382" height="62"/>
                                                     <color key="tintColor" name="ApartoBlue"/>
                                                     <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -568,7 +568,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5U-fk-HQ6">
-                                                    <rect key="frame" x="0.0" y="125" width="382" height="62"/>
+                                                    <rect key="frame" x="0.0" y="124.5" width="382" height="62.5"/>
                                                     <inset key="titleEdgeInsets" minX="29" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <state key="normal" image="settings">
