@@ -112,6 +112,21 @@ class Cache {
         UserDefaults.standard.string(forKey: Keys.CURRENTUSERTYPE)
     }
     
+    static func save(nwesLength: Int) {
+        UserDefaults.standard.setValue(nwesLength, forKey: Keys.news_length)
+    }
     
+    static func getNewsLength()-> Int? {
+        UserDefaults.standard.integer(forKey: Keys.news_length)
+    }
+    
+    
+    static func save(announcementLength: Int) {
+        UserDefaults.standard.setValue(announcementLength, forKey: Keys.get_top_announcement_length)
+    }
+    
+    static func getTopAnnouncementLength()-> Int? {
+        UserDefaults.standard.integer(forKey: Keys.get_top_announcement_length)
+    }
     
 }

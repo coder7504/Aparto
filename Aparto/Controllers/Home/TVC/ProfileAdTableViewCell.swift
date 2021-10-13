@@ -119,7 +119,7 @@ extension ProfileAdTableViewCell: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ResidentalComplexCollectionViewCell.identifire, for: indexPath) as? ResidentalComplexCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.updateCell(isHide: false, top: 20)
+            cell.updateCell(isHide: false, top: 20, title: "title", desc: "description", price: 0)
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCategoryCollectionViewCell.identifire, for: indexPath) as? ProfileCategoryCollectionViewCell else {

@@ -12,6 +12,9 @@ class ResidentalComplexCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var heartView: UIView!
     @IBOutlet weak var heightForResidentalComplexCell: NSLayoutConstraint!
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -26,7 +29,10 @@ class ResidentalComplexCollectionViewCell: UICollectionViewCell {
         imageView.layer.cornerRadius = 6
     }
     
-    func updateCell(isHide: Bool, top: CGFloat) {
+    func updateCell(isHide: Bool, top: CGFloat, title: String, desc: String, price: Double) {
+        titleLabel.text = title
+        descLabel.text = desc
+        priceLabel.text = "\(price)"
         heightForResidentalComplexCell.constant = top
         heartView.isHidden = isHide
     }

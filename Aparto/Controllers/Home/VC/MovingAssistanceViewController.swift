@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MovingAssistanceViewController: UIViewController {
 
     
+    @IBOutlet weak var pricesTableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var cleaningApartmentTableView: UITableView! {
         didSet {
             cleaningApartmentTableView.delegate = self
@@ -29,11 +31,23 @@ class MovingAssistanceViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var selectServise: Service!
+    
     override func viewDidLoad() {
            super.viewDidLoad()
            setDetails()
+        titleLabel.text = selectServise.serviceType
+        imageView.sd_setImage(with: URL(string: API.baseUrl+selectServise.image), placeholderImage: #imageLiteral(resourceName: "humanitarian_aid"))
        }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        pricesTableViewHeight.constant = 110 //  * selectServise.price.count
+    }
+    
     func setDetails() {
         navigationItem.leftBarButtonItem?.tintColor = .black
         navigationController?.navigationBar.tintColor = UIColor.black
@@ -62,9 +76,7 @@ class MovingAssistanceViewController: UIViewController {
     
     
     @IBAction func moreButtonTapped(_ sender: Any) {
-        let vc = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-        vc.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(vc, animated: true)
+       print("more")
     }
     
 }
@@ -161,7 +173,7 @@ extension MovingAssistanceViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HousingIssuesCollectionViewCell.identifire, for: indexPath) as? HousingIssuesCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.updateCell()
+        cell.updateCell(image: "", title: "", desc: "")
             return cell
     }
     

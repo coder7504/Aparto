@@ -12,6 +12,7 @@ import SwiftyJSON
 class API {
     
     static let baseUrl: String = "https://aparto.albison.software/api"
+    static let imageBaseUrl: String = "https://aparto.albison.software/"
     
     struct EndPoints {
         static var signIn = "/v1/user/is-user-active"
@@ -31,6 +32,10 @@ class API {
         static var resetPassword = "/v1/user/reset-password/\(Cache.getToken())"
         static var randomAdvertisement = "/v1/income/random"
         static var allRegion = "/v1/region"
+        static var allAnnouncement = "/v1/announcement"
+        static var allCompany = "/v1/developer"
+        static var service = "/v1/service"
+        static var randomTopAnnouncement = "/v1/announcement/random-top"
     }
     
     static private var signInUrl: URL = URL(string: baseUrl + EndPoints.signIn)!
@@ -50,6 +55,10 @@ class API {
     static private var resetPassworUrl: URL = URL(string: baseUrl + EndPoints.resetPassword)!
     static private var randomAdvertisementUrl: URL = URL(string: baseUrl + EndPoints.randomAdvertisement)!
     static private var allRegionUrl: URL = URL(string: baseUrl + EndPoints.allRegion)!
+    static private var allAnnouncementUrl: URL = URL(string: baseUrl + EndPoints.allAnnouncement)!
+    static private var allCompanyUrl: URL = URL(string: baseUrl + EndPoints.allCompany)!
+    static private var serviceUrl: URL = URL(string: baseUrl + EndPoints.service)!
+    static private var randomTopAnnouncementUrl: URL = URL(string: baseUrl + EndPoints.randomTopAnnouncement)!
     
     
 //    APIs
@@ -75,6 +84,7 @@ class API {
                 Cache.saveUser(gender: data["user"]["gender"].stringValue)
                 Cache.saveUser(email: data["user"]["email"].stringValue)
                 Cache.save(_id: data["user"]["_id"].stringValue)
+                Cache.saveUser(type: data["user"]["userType"].stringValue)
 //                save token
                 Cache.save(token: token)
                 completion(true)
@@ -320,16 +330,19 @@ class API {
     
 //     get News
     
-    class func getNews(completion: @escaping ([News]?) -> Void ) {
+    class func getNews(limit: Int, skip: Int, completion: @escaping ([News]?) -> Void ) {
         
         let params: [String: Any] = [
-            "popOptions" : "newsCategory"
+            "popOptions" : "newsCategory",
+            "limit": "\(limit)",
+            "skip":"\(skip)"
         ]
         
         NET.simpleRequestWithoutEncoding(from: newsUrl, method: .get, params: params) { (data) in
             guard let data = data else { completion(nil); return }
 //            print("news ⛑⛑⛑⛑⛑", data)
             if data["status"].stringValue == "success" {
+                Cache.save(nwesLength: data["length"].intValue)
                if let newsCategory = data["data"].array {
                     let allData = newsCategory.map{ News(json: $0) }
                     completion(allData)
@@ -416,6 +429,128 @@ class API {
                 if let subData = data["data"].array {
                     let region = subData.map{ UserType(json: $0) }
                     completion(region)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+        
+    }
+    
+    
+//    get All  Announcement
+    
+    class func getAllAnnouncement(completion: @escaping ([Announcement]?) -> Void) {
+        
+        let params = [
+            "popOptions" : "comfortType userType sellType realEstateType object region district paymentHistory"
+        ]
+        
+        NET.requestWithoutEncoding(from: allAnnouncementUrl, method: .get, params: params) { data in
+            guard let data = data else { completion(nil); return }
+//            print("Announcement 😂🥳🙈🤙😂🥳🙈🤙😂🥳🙈🤙 = ", data)
+            if data["status"] == "success" {
+                if let subData = data["data"].array {
+                    let announcement = subData.map{ Announcement(json: $0) }
+                    completion(announcement)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+        
+    }
+    
+    
+//    get Companies
+    
+    class func getAllcompanies(limit: Int, skill: Int, completion: @escaping ([Company]?) -> Void) {
+        
+        let params = [
+            "limit": limit,
+            "skill": skill
+        ]
+        
+        NET.requestWithURLEncoding(from: allCompanyUrl, method: .get, params: params) { data in
+            guard let data = data else { completion(nil); return }
+//            print("🎩🎩🎩")
+//            print(data)
+            if data["status"] == "success" {
+                if let subData = data["data"].array {
+                    let comp = subData.map{ Company(json: $0) }
+                    completion(comp)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    
+    }
+    
+    
+//    get PublicUser
+    
+    class func getPublicUser(_id: String, completion: @escaping((PublicUser)?) -> Void ) {
+      
+        let publicUserUrl = baseUrl+"/v1/user/public/\(_id)"
+        print("_id = ",_id)
+        NET.requestWithURLEncoding(from: URL(string: publicUserUrl)!, method: .post, params: nil) { data in
+            guard let data = data else { completion(nil); return }
+            print("👑👑👑👑")
+            print(data)//["data"][0]["announcements"][0]["coordinates"][0])
+            if data["status"] == "success" {
+                let subData = data["data"][0]
+                completion(PublicUser(json: subData))
+            } else {
+                completion(nil)
+            }
+        }
+        
+    }
+    
+    
+//     get Service
+    
+    class func getService(completion: @escaping ([Service]?) -> Void) {
+        
+        
+        NET.simpleRequest(from: serviceUrl, method: .get, params: nil) { data in
+            guard let data = data else { completion(nil); return }
+//            print("🐬🐬🐬")
+//            print(data)
+            if data["status"] == "success" {
+                if let subData = data["data"].array {
+                    let dat = subData.map{ Service(json: $0) }
+                    completion(dat)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+        
+    }
+    
+    
+//    get Random Top Announcement
+    
+    
+    class func getRandomBottomAnnouncement(limit: Int, skip: Int, completion: @escaping ([Announcement]?) -> Void ) {
+        
+        let params: [String : Any] = [
+            "popOptions": "sellType comfortType district rentType",
+            "limit": limit,
+            "skip": skip
+        ]
+        
+        NET.requestWithURLEncoding(from: randomTopAnnouncementUrl, method: .get, params: params) { data in
+            guard let data = data else {  completion(nil); return }
+            print("🦈🦈🦈🦈🦈")
+            print(data)
+            if data["status"].stringValue == "success" {
+                Cache.save(announcementLength: data["length"].intValue)
+               if let subData = data["data"].array {
+                let announcement = subData.map{ Announcement(json: $0) }
+                completion(announcement)
                 }
             } else {
                 completion(nil)

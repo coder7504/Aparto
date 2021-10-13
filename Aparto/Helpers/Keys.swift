@@ -38,4 +38,7 @@ struct Keys {
     static let a_emailCorrectly = "Iltimos, nomeringgizni to'g'ri kiriting"
     static let a_passwordCorrectly = "Iltimos, parolingizni to'g'ri kiriting"
     
+    static let news_length = "newsLength"
+    static let get_top_announcement_length = "topAnnouncementLength"
+    
 }

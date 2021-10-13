@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CompaniesCollectionViewCell: UICollectionViewCell {
     
@@ -27,7 +28,9 @@ class CompaniesCollectionViewCell: UICollectionViewCell {
         
     }
 
-    func setCell() {
+    func setCell(title: String, image: String) {
+        titleLabel.text = title
+        imageViewOutlet.sd_setImage(with: URL(string: API.imageBaseUrl+image), placeholderImage: #imageLiteral(resourceName: "user"))
         containerView.layer.cornerRadius = 16
         containerView.layer.borderWidth = 1
         containerView.layer.borderColor = #colorLiteral(red: 0.9568627451, green: 0.968627451, blue: 0.968627451, alpha: 1)

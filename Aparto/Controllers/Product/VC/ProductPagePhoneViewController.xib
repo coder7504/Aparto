@@ -20,6 +20,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductPagePhoneViewController" customModule="Aparto" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="oTG-eH-u8K" id="b55-yh-aU8"/>
+                <outlet property="dateLabel" destination="sdg-q4-R4t" id="CYV-zW-aiF"/>
+                <outlet property="nameLabel" destination="YKd-sC-ysq" id="OD6-OE-YPe"/>
+                <outlet property="phoneNumberButton" destination="PE7-xj-Sip" id="9rl-dK-lls"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -108,6 +111,9 @@
                                                             <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="phoneButtonTapped:" destination="-1" eventType="touchUpInside" id="gQy-LA-b2h"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8x-1n-gmH">
                                                     <rect key="frame" x="0.0" y="68.5" width="382" height="52.5"/>
@@ -121,6 +127,9 @@
                                                             <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="messageButtonTspped:" destination="-1" eventType="touchUpInside" id="ax8-CA-oHz"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>

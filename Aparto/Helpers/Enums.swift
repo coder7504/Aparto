@@ -13,3 +13,9 @@ enum AppLanguage: String {
     case ru = "ru"
     case en = "en"
 }
+
+enum UserTypeEnum: String {
+    case user = "User"
+    case agent = "Agent"
+    case developer = "Developer"
+}

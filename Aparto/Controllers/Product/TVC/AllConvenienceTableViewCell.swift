@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AllConvenienceTableViewCell: UITableViewCell {
 
@@ -16,6 +17,7 @@ class AllConvenienceTableViewCell: UITableViewCell {
         return UINib(nibName: "AllConvenienceTableViewCell", bundle: nil)
     }
     
+    @IBOutlet weak var imagView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
@@ -30,8 +32,9 @@ class AllConvenienceTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func updateCell(title: String) {
+    func updateCell(title: String, image: String) {
         titleLabel.text = title
+        imageView?.sd_setImage(with: URL(string: API.imageBaseUrl+image), placeholderImage: #imageLiteral(resourceName: "collaps"))
     }
     
 }

@@ -16,26 +16,23 @@ class UserType {
     var color: UIColor
     var isSelected: Bool
     var status: String
-    var isCapital: Bool
     
     init() {
         _id         = ""
         color       = UIColor.hovered
         isSelected  = false
         status      = ""
-        isCapital = false
         name        = Population(en: "",
                                  ru: "",
                                  uz: "")
     }
     
-    init(id: String, name: Population, color: UIColor, isSelected: Bool, status: String, isCapital: Bool) {
+    init(id: String, name: Population, color: UIColor, isSelected: Bool, status: String) {
         self._id        = id
         self.name       = name
         self.color      = color
         self.isSelected = isSelected
         self.status     = status
-        self.isCapital  = isCapital
     }
     
     init(json: JSON) {
@@ -43,7 +40,6 @@ class UserType {
         self.color = UIColor.hovered
         self.isSelected = false
         self.status = json["status"].stringValue
-        self.isCapital = json["isCapital"].boolValue
         self.name = Population(en: json["name"]["en"].stringValue,
                                ru: json["name"]["ru"].stringValue,
                                uz: json["name"]["uz"].stringValue)

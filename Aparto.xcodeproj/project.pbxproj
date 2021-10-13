@@ -143,7 +143,6 @@
 		635B0808270817ED0031C974 /* GetVerificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B076B270817ED0031C974 /* GetVerificationCodeViewController.swift */; };
 		635B0809270817ED0031C974 /* MyProfileSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635B076C270817ED0031C974 /* MyProfileSettingsViewController.xib */; };
 		635B080A270817ED0031C974 /* MyProfileNotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635B076D270817ED0031C974 /* MyProfileNotificationsViewController.xib */; };
-		635B080B270817ED0031C974 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635B076E270817ED0031C974 /* AboutUsViewController.xib */; };
 		635B080C270817ED0031C974 /* MyProfileFavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635B076F270817ED0031C974 /* MyProfileFavoriteViewController.xib */; };
 		635B080D270817ED0031C974 /* MyProfileFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B0770270817ED0031C974 /* MyProfileFavoriteViewController.swift */; };
 		635B080E270817ED0031C974 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B0771270817ED0031C974 /* MyProfileViewController.swift */; };
@@ -217,6 +216,39 @@
 		635B0889270818C80031C974 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 635B0888270818C80031C974 /* GoogleService-Info.plist */; };
 		637EE9DE270BC36D00F4C374 /* RandomAdvertisement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637EE9DD270BC36D00F4C374 /* RandomAdvertisement.swift */; };
 		63A9B914270D10F900DCDB27 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B913270D10F900DCDB27 /* Contact.swift */; };
+		63A9B916270E3ABE00DCDB27 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B915270E3ABE00DCDB27 /* Announcement.swift */; };
+		63A9B918270E3B3B00DCDB27 /* NewBuildingValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B917270E3B3B00DCDB27 /* NewBuildingValue.swift */; };
+		63A9B91A270E3BA300DCDB27 /* PlanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B919270E3BA300DCDB27 /* PlanType.swift */; };
+		63A9B91C270E3C2C00DCDB27 /* SmallDetailsApartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B91B270E3C2C00DCDB27 /* SmallDetailsApartment.swift */; };
+		63A9B91E270E41FA00DCDB27 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B91D270E41FA00DCDB27 /* Price.swift */; };
+		63A9B920270E48D400DCDB27 /* ComfortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B91F270E48D400DCDB27 /* ComfortType.swift */; };
+		63A9B922270E49C400DCDB27 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B921270E49C400DCDB27 /* Icons.swift */; };
+		63A9B924270E4D9C00DCDB27 /* BadgeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B923270E4D9C00DCDB27 /* BadgeType.swift */; };
+		63A9B926270E4E4000DCDB27 /* ObjectPermissionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B925270E4E4000DCDB27 /* ObjectPermissionType.swift */; };
+		63A9B928270E533A00DCDB27 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B927270E533A00DCDB27 /* Object.swift */; };
+		63A9B92A270E542D00DCDB27 /* RealEstateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B929270E542D00DCDB27 /* RealEstateType.swift */; };
+		63A9B92C270E5B0000DCDB27 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B92B270E5B0000DCDB27 /* Filter.swift */; };
+		63A9B92F270E5C2800DCDB27 /* InputValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B92E270E5C2800DCDB27 /* InputValue.swift */; };
+		63A9B931270E5D4C00DCDB27 /* RadioValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B930270E5D4C00DCDB27 /* RadioValue.swift */; };
+		63A9B933270E63BB00DCDB27 /* SelectValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B932270E63BB00DCDB27 /* SelectValue.swift */; };
+		63A9B935270E65A800DCDB27 /* RangeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B934270E65A800DCDB27 /* RangeValue.swift */; };
+		63A9B937270E669600DCDB27 /* UploadValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B936270E669600DCDB27 /* UploadValue.swift */; };
+		63A9B939270E679E00DCDB27 /* CheckValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B938270E679E00DCDB27 /* CheckValue.swift */; };
+		63A9B93C270E73D400DCDB27 /* UseIdAndName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B93B270E73D400DCDB27 /* UseIdAndName.swift */; };
+		63A9B93E270E798D00DCDB27 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B93D270E798D00DCDB27 /* Region.swift */; };
+		63A9B940270E7A3100DCDB27 /* District.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B93F270E7A3100DCDB27 /* District.swift */; };
+		63A9B942270E7D3E00DCDB27 /* PaymentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B941270E7D3E00DCDB27 /* PaymentType.swift */; };
+		63A9B944270E84FA00DCDB27 /* PaymentHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B943270E84FA00DCDB27 /* PaymentHistory.swift */; };
+		63A9B9472710EE6500DCDB27 /* AllNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B9452710EE6500DCDB27 /* AllNewsViewController.swift */; };
+		63A9B9482710EE6500DCDB27 /* AllNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A9B9462710EE6500DCDB27 /* AllNewsViewController.xib */; };
+		63A9B94B2710F01C00DCDB27 /* PhotoUnderTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B9492710F01C00DCDB27 /* PhotoUnderTitleCollectionViewCell.swift */; };
+		63A9B94C2710F01C00DCDB27 /* PhotoUnderTitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A9B94A2710F01C00DCDB27 /* PhotoUnderTitleCollectionViewCell.xib */; };
+		63A9B9532710FA8300DCDB27 /* AdForNewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B9512710FA8300DCDB27 /* AdForNewsCollectionViewCell.swift */; };
+		63A9B9542710FA8300DCDB27 /* AdForNewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A9B9522710FA8300DCDB27 /* AdForNewsCollectionViewCell.xib */; };
+		63A9B9562712592D00DCDB27 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A9B9552712592D00DCDB27 /* AboutUsViewController.xib */; };
+		63A9B9582714C6D400DCDB27 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B9572714C6D400DCDB27 /* Company.swift */; };
+		63A9B95A2714D79000DCDB27 /* PublicUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B9592714D79000DCDB27 /* PublicUser.swift */; };
+		63A9B95C27150FEB00DCDB27 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9B95B27150FEB00DCDB27 /* Service.swift */; };
 		63B58E1E270BAB6E00B70A88 /* SelectNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B58E1C270BAB6E00B70A88 /* SelectNewsViewController.swift */; };
 		63B58E1F270BAB6E00B70A88 /* SelectNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B58E1D270BAB6E00B70A88 /* SelectNewsViewController.xib */; };
 		94205723E0AF597EC2E50E61 /* Pods_Aparto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C179B8D298E9148DDA149E6 /* Pods_Aparto.framework */; };
@@ -363,7 +395,6 @@
 		635B076B270817ED0031C974 /* GetVerificationCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVerificationCodeViewController.swift; sourceTree = "<group>"; };
 		635B076C270817ED0031C974 /* MyProfileSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProfileSettingsViewController.xib; sourceTree = "<group>"; };
 		635B076D270817ED0031C974 /* MyProfileNotificationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProfileNotificationsViewController.xib; sourceTree = "<group>"; };
-		635B076E270817ED0031C974 /* AboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
 		635B076F270817ED0031C974 /* MyProfileFavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProfileFavoriteViewController.xib; sourceTree = "<group>"; };
 		635B0770270817ED0031C974 /* MyProfileFavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileFavoriteViewController.swift; sourceTree = "<group>"; };
 		635B0771270817ED0031C974 /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
@@ -437,6 +468,39 @@
 		635B0888270818C80031C974 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		637EE9DD270BC36D00F4C374 /* RandomAdvertisement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAdvertisement.swift; sourceTree = "<group>"; };
 		63A9B913270D10F900DCDB27 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		63A9B915270E3ABE00DCDB27 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
+		63A9B917270E3B3B00DCDB27 /* NewBuildingValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBuildingValue.swift; sourceTree = "<group>"; };
+		63A9B919270E3BA300DCDB27 /* PlanType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanType.swift; sourceTree = "<group>"; };
+		63A9B91B270E3C2C00DCDB27 /* SmallDetailsApartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallDetailsApartment.swift; sourceTree = "<group>"; };
+		63A9B91D270E41FA00DCDB27 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		63A9B91F270E48D400DCDB27 /* ComfortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComfortType.swift; sourceTree = "<group>"; };
+		63A9B921270E49C400DCDB27 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		63A9B923270E4D9C00DCDB27 /* BadgeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeType.swift; sourceTree = "<group>"; };
+		63A9B925270E4E4000DCDB27 /* ObjectPermissionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPermissionType.swift; sourceTree = "<group>"; };
+		63A9B927270E533A00DCDB27 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		63A9B929270E542D00DCDB27 /* RealEstateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealEstateType.swift; sourceTree = "<group>"; };
+		63A9B92B270E5B0000DCDB27 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		63A9B92E270E5C2800DCDB27 /* InputValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValue.swift; sourceTree = "<group>"; };
+		63A9B930270E5D4C00DCDB27 /* RadioValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioValue.swift; sourceTree = "<group>"; };
+		63A9B932270E63BB00DCDB27 /* SelectValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectValue.swift; sourceTree = "<group>"; };
+		63A9B934270E65A800DCDB27 /* RangeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeValue.swift; sourceTree = "<group>"; };
+		63A9B936270E669600DCDB27 /* UploadValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadValue.swift; sourceTree = "<group>"; };
+		63A9B938270E679E00DCDB27 /* CheckValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckValue.swift; sourceTree = "<group>"; };
+		63A9B93B270E73D400DCDB27 /* UseIdAndName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseIdAndName.swift; sourceTree = "<group>"; };
+		63A9B93D270E798D00DCDB27 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		63A9B93F270E7A3100DCDB27 /* District.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = District.swift; sourceTree = "<group>"; };
+		63A9B941270E7D3E00DCDB27 /* PaymentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentType.swift; sourceTree = "<group>"; };
+		63A9B943270E84FA00DCDB27 /* PaymentHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistory.swift; sourceTree = "<group>"; };
+		63A9B9452710EE6500DCDB27 /* AllNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNewsViewController.swift; sourceTree = "<group>"; };
+		63A9B9462710EE6500DCDB27 /* AllNewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllNewsViewController.xib; sourceTree = "<group>"; };
+		63A9B9492710F01C00DCDB27 /* PhotoUnderTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUnderTitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		63A9B94A2710F01C00DCDB27 /* PhotoUnderTitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoUnderTitleCollectionViewCell.xib; sourceTree = "<group>"; };
+		63A9B9512710FA8300DCDB27 /* AdForNewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdForNewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		63A9B9522710FA8300DCDB27 /* AdForNewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdForNewsCollectionViewCell.xib; sourceTree = "<group>"; };
+		63A9B9552712592D00DCDB27 /* AboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		63A9B9572714C6D400DCDB27 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		63A9B9592714D79000DCDB27 /* PublicUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicUser.swift; sourceTree = "<group>"; };
+		63A9B95B27150FEB00DCDB27 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		63B58E1C270BAB6E00B70A88 /* SelectNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNewsViewController.swift; sourceTree = "<group>"; };
 		63B58E1D270BAB6E00B70A88 /* SelectNewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectNewsViewController.xib; sourceTree = "<group>"; };
 		BD08F4D213967057D2EB2A97 /* Pods-Aparto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aparto.release.xcconfig"; path = "Target Support Files/Pods-Aparto/Pods-Aparto.release.xcconfig"; sourceTree = "<group>"; };
@@ -559,6 +623,10 @@
 				635B06E9270817ED0031C974 /* NewsCollectionViewCell.xib */,
 				635B06EB270817ED0031C974 /* HousingIssuesCollectionViewCell.swift */,
 				635B06DA270817ED0031C974 /* HousingIssuesCollectionViewCell.xib */,
+				63A9B9492710F01C00DCDB27 /* PhotoUnderTitleCollectionViewCell.swift */,
+				63A9B94A2710F01C00DCDB27 /* PhotoUnderTitleCollectionViewCell.xib */,
+				63A9B9512710FA8300DCDB27 /* AdForNewsCollectionViewCell.swift */,
+				63A9B9522710FA8300DCDB27 /* AdForNewsCollectionViewCell.xib */,
 			);
 			path = CVC;
 			sourceTree = "<group>";
@@ -578,6 +646,8 @@
 				635B06EF270817ED0031C974 /* ProfileViewController.xib */,
 				63B58E1C270BAB6E00B70A88 /* SelectNewsViewController.swift */,
 				63B58E1D270BAB6E00B70A88 /* SelectNewsViewController.xib */,
+				63A9B9452710EE6500DCDB27 /* AllNewsViewController.swift */,
+				63A9B9462710EE6500DCDB27 /* AllNewsViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -629,8 +699,8 @@
 		635B0710270817ED0031C974 /* Ad */ = {
 			isa = PBXGroup;
 			children = (
-				635B0711270817ED0031C974 /* VC */,
 				635B0720270817ED0031C974 /* TVC */,
+				635B0711270817ED0031C974 /* VC */,
 			);
 			path = Ad;
 			sourceTree = "<group>";
@@ -799,9 +869,9 @@
 				635B0773270817ED0031C974 /* EditPhoneNumberViewController.swift */,
 				635B0765270817ED0031C974 /* EditPhoneNumberViewController.xib */,
 				635B0777270817ED0031C974 /* AboutUsViewController.swift */,
-				635B076E270817ED0031C974 /* AboutUsViewController.xib */,
-				635B076F270817ED0031C974 /* MyProfileFavoriteViewController.xib */,
+				63A9B9552712592D00DCDB27 /* AboutUsViewController.xib */,
 				635B0770270817ED0031C974 /* MyProfileFavoriteViewController.swift */,
+				635B076F270817ED0031C974 /* MyProfileFavoriteViewController.xib */,
 				635B076B270817ED0031C974 /* GetVerificationCodeViewController.swift */,
 				635B0772270817ED0031C974 /* GetVerificationCodeViewController.xib */,
 				635B0768270817ED0031C974 /* HelpOnTheSiteViewController.swift */,
@@ -923,7 +993,20 @@
 				635B08672708180D0031C974 /* NewsCategory.swift */,
 				635B08702708180D0031C974 /* ComplainCategory.swift */,
 				637EE9DD270BC36D00F4C374 /* RandomAdvertisement.swift */,
-				63A9B913270D10F900DCDB27 /* Contact.swift */,
+				63A9B91F270E48D400DCDB27 /* ComfortType.swift */,
+				63A9B921270E49C400DCDB27 /* Icons.swift */,
+				63A9B923270E4D9C00DCDB27 /* BadgeType.swift */,
+				63A9B925270E4E4000DCDB27 /* ObjectPermissionType.swift */,
+				63A9B927270E533A00DCDB27 /* Object.swift */,
+				63A9B93D270E798D00DCDB27 /* Region.swift */,
+				63A9B93F270E7A3100DCDB27 /* District.swift */,
+				63A9B941270E7D3E00DCDB27 /* PaymentType.swift */,
+				63A9B943270E84FA00DCDB27 /* PaymentHistory.swift */,
+				63A9B93A270E70DE00DCDB27 /* Announcement */,
+				63A9B92D270E5B5500DCDB27 /* RealEstateType */,
+				63A9B9572714C6D400DCDB27 /* Company.swift */,
+				63A9B9592714D79000DCDB27 /* PublicUser.swift */,
+				63A9B95B27150FEB00DCDB27 /* Service.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -946,6 +1029,35 @@
 				635B0884270818210031C974 /* MainTabBarViewController.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		63A9B92D270E5B5500DCDB27 /* RealEstateType */ = {
+			isa = PBXGroup;
+			children = (
+				63A9B929270E542D00DCDB27 /* RealEstateType.swift */,
+				63A9B92B270E5B0000DCDB27 /* Filter.swift */,
+				63A9B92E270E5C2800DCDB27 /* InputValue.swift */,
+				63A9B930270E5D4C00DCDB27 /* RadioValue.swift */,
+				63A9B932270E63BB00DCDB27 /* SelectValue.swift */,
+				63A9B934270E65A800DCDB27 /* RangeValue.swift */,
+				63A9B936270E669600DCDB27 /* UploadValue.swift */,
+				63A9B938270E679E00DCDB27 /* CheckValue.swift */,
+				63A9B93B270E73D400DCDB27 /* UseIdAndName.swift */,
+			);
+			path = RealEstateType;
+			sourceTree = "<group>";
+		};
+		63A9B93A270E70DE00DCDB27 /* Announcement */ = {
+			isa = PBXGroup;
+			children = (
+				63A9B915270E3ABE00DCDB27 /* Announcement.swift */,
+				63A9B913270D10F900DCDB27 /* Contact.swift */,
+				63A9B917270E3B3B00DCDB27 /* NewBuildingValue.swift */,
+				63A9B919270E3BA300DCDB27 /* PlanType.swift */,
+				63A9B91B270E3C2C00DCDB27 /* SmallDetailsApartment.swift */,
+				63A9B91D270E41FA00DCDB27 /* Price.swift */,
+			);
+			path = Announcement;
 			sourceTree = "<group>";
 		};
 		8AED1DBBC7B24D2AF391CA32 /* Pods */ = {
@@ -1038,7 +1150,7 @@
 				635B07CF270817ED0031C974 /* AllConvenienceViewController.xib in Resources */,
 				635B078D270817ED0031C974 /* CompaniesCollectionViewCell.xib in Resources */,
 				635B07AA270817ED0031C974 /* OTPViewController.xib in Resources */,
-				635B080B270817ED0031C974 /* AboutUsViewController.xib in Resources */,
+				63A9B9542710FA8300DCDB27 /* AdForNewsCollectionViewCell.xib in Resources */,
 				635B07FB270817ED0031C974 /* AdressForSaleViewController.xib in Resources */,
 				635B079D270817ED0031C974 /* ProfileViewController.xib in Resources */,
 				635B07F0270817ED0031C974 /* ComplaintViewController.xib in Resources */,
@@ -1048,6 +1160,7 @@
 				635B0863270818040031C974 /* pulse.json in Resources */,
 				635B07A9270817ED0031C974 /* RegistrationPersonalAreaViewController.xib in Resources */,
 				635B07A5270817ED0031C974 /* CleaningApartmentTableViewCell.xib in Resources */,
+				63A9B94C2710F01C00DCDB27 /* PhotoUnderTitleCollectionViewCell.xib in Resources */,
 				635B07A8270817ED0031C974 /* ProfileAdTableViewCell.xib in Resources */,
 				635B07C2270817ED0031C974 /* BuildingPermitViewController.xib in Resources */,
 				635B07D3270817ED0031C974 /* PruductViewController.xib in Resources */,
@@ -1074,6 +1187,7 @@
 				635B07DB270817ED0031C974 /* SearchVC.xib in Resources */,
 				635B079E270817ED0031C974 /* HomeViewController.xib in Resources */,
 				635B07BB270817ED0031C974 /* PhotosOfObjectTableViewController.xib in Resources */,
+				63A9B9482710EE6500DCDB27 /* AllNewsViewController.xib in Resources */,
 				635B079B270817ED0031C974 /* MovingAssistanceViewController.xib in Resources */,
 				635B085F270817FD0031C974 /* ProximaNova-LightIt.ttf in Resources */,
 				635B0795270817ED0031C974 /* ResidentalComplexCollectionViewCell.xib in Resources */,
@@ -1098,6 +1212,7 @@
 				635B07A3270817ED0031C974 /* PhotoBannerViewController.xib in Resources */,
 				635B07CB270817ED0031C974 /* ProductPhotoCollectionViewCell.xib in Resources */,
 				635B0819270817ED0031C974 /* HelpOnTheSiteTableViewCell.xib in Resources */,
+				63A9B9562712592D00DCDB27 /* AboutUsViewController.xib in Resources */,
 				635B0818270817ED0031C974 /* MyProfileMailTableViewCell.xib in Resources */,
 				635B078F270817ED0031C974 /* AdCollectionViewCell.xib in Resources */,
 				635B07CA270817ED0031C974 /* BuildingPermitTableViewCell.xib in Resources */,
@@ -1190,6 +1305,7 @@
 				635B08742708180D0031C974 /* AboutUs.swift in Sources */,
 				635B07D8270817ED0031C974 /* AlllInformationTableViewCell.swift in Sources */,
 				635B081B270817ED0031C974 /* MyProfileMatchingTableViewCell.swift in Sources */,
+				63A9B92F270E5C2800DCDB27 /* InputValue.swift in Sources */,
 				635B07BA270817ED0031C974 /* RegisterViewController.swift in Sources */,
 				635B0805270817ED0031C974 /* HelpOnTheSiteViewController.swift in Sources */,
 				635B0880270818190031C974 /* Reachability.swift in Sources */,
@@ -1199,13 +1315,18 @@
 				635B07B7270817ED0031C974 /* GoogleSignInViewController.swift in Sources */,
 				635B07AE270817ED0031C974 /* RecoveryPasswordViewController.swift in Sources */,
 				635B07A7270817ED0031C974 /* CleaningApartmentTableViewCell.swift in Sources */,
+				63A9B937270E669600DCDB27 /* UploadValue.swift in Sources */,
 				635B0792270817ED0031C974 /* CategoryCollectionViewCell.swift in Sources */,
 				635B07C6270817ED0031C974 /* NewBuildingAnnouncementViewController.swift in Sources */,
+				63A9B92C270E5B0000DCDB27 /* Filter.swift in Sources */,
 				635B0804270817ED0031C974 /* MyAnnouncementsViewController.swift in Sources */,
 				635B0822270817ED0031C974 /* MyProfileMailTableViewCell.swift in Sources */,
 				635B087A2708180D0031C974 /* News.swift in Sources */,
 				635B0808270817ED0031C974 /* GetVerificationCodeViewController.swift in Sources */,
 				635B07ED270817ED0031C974 /* MyProfileMailViewController.swift in Sources */,
+				63A9B928270E533A00DCDB27 /* Object.swift in Sources */,
+				63A9B91E270E41FA00DCDB27 /* Price.swift in Sources */,
+				63A9B93C270E73D400DCDB27 /* UseIdAndName.swift in Sources */,
 				635B0848270817FD0031C974 /* Extensions.swift in Sources */,
 				635B0850270817FD0031C974 /* Cache.swift in Sources */,
 				635B0807270817ED0031C974 /* MyProfileMatchingViewController.swift in Sources */,
@@ -1216,8 +1337,10 @@
 				635B07A6270817ED0031C974 /* ProfileAdTableViewCell.swift in Sources */,
 				635B08792708180D0031C974 /* Models.swift in Sources */,
 				635B0817270817ED0031C974 /* HistoryOfBalanceTableViewCell.swift in Sources */,
+				63A9B94B2710F01C00DCDB27 /* PhotoUnderTitleCollectionViewCell.swift in Sources */,
 				635B0823270817ED0031C974 /* MyProfileNotificationsTableViewCell.swift in Sources */,
 				635B0846270817FD0031C974 /* Keys.swift in Sources */,
+				63A9B9582714C6D400DCDB27 /* Company.swift in Sources */,
 				635B0844270817FD0031C974 /* Language.swift in Sources */,
 				635B0881270818190031C974 /* API.swift in Sources */,
 				635B079F270817ED0031C974 /* SellBannerViewController.swift in Sources */,
@@ -1227,15 +1350,21 @@
 				635B07F7270817ED0031C974 /* MyProfileSettingsViewController.swift in Sources */,
 				635B084A270817FD0031C974 /* CustomBtn.swift in Sources */,
 				635B0800270817ED0031C974 /* MyProfileNotificationsViewController.swift in Sources */,
+				63A9B944270E84FA00DCDB27 /* PaymentHistory.swift in Sources */,
 				635B07B5270817ED0031C974 /* RepeatPasswordViewController.swift in Sources */,
 				635B07A0270817ED0031C974 /* HomeViewController.swift in Sources */,
 				635B07A4270817ED0031C974 /* ProfileViewController.swift in Sources */,
+				63A9B942270E7D3E00DCDB27 /* PaymentType.swift in Sources */,
 				635B07F9270817ED0031C974 /* AdressForSaleViewController.swift in Sources */,
+				63A9B926270E4E4000DCDB27 /* ObjectPermissionType.swift in Sources */,
+				63A9B920270E48D400DCDB27 /* ComfortType.swift in Sources */,
 				635B080E270817ED0031C974 /* MyProfileViewController.swift in Sources */,
 				635B0849270817FD0031C974 /* CustomView.swift in Sources */,
 				635B084E270817FD0031C974 /* AlertView.swift in Sources */,
 				635B07D1270817ED0031C974 /* AllConvenienceViewController.swift in Sources */,
+				63A9B933270E63BB00DCDB27 /* SelectValue.swift in Sources */,
 				635B07DD270817ED0031C974 /* FilterVC.swift in Sources */,
+				63A9B940270E7A3100DCDB27 /* District.swift in Sources */,
 				635B07D0270817ED0031C974 /* ProductPagePhoneViewController.swift in Sources */,
 				635B07C9270817ED0031C974 /* BuildingPermitTableViewCell.swift in Sources */,
 				635B084B270817FD0031C974 /* OTPTextFieldDelegate.swift in Sources */,
@@ -1246,8 +1375,10 @@
 				635B07C4270817ED0031C974 /* ApproxMapViewController.swift in Sources */,
 				635B08782708180D0031C974 /* SellType.swift in Sources */,
 				635B078B270817ED0031C974 /* AdCollectionViewCell.swift in Sources */,
+				63A9B93E270E798D00DCDB27 /* Region.swift in Sources */,
 				635B084C270817FD0031C974 /* WormTabStrip.swift in Sources */,
 				635B084D270817FD0031C974 /* CustomTextFieldView.swift in Sources */,
+				63A9B92A270E542D00DCDB27 /* RealEstateType.swift in Sources */,
 				635B08752708180D0031C974 /* Currency.swift in Sources */,
 				635B07E4270817ED0031C974 /* SearchPaymentTableViewCell.swift in Sources */,
 				635B084F270817FD0031C974 /* WormTabStripButton.swift in Sources */,
@@ -1255,19 +1386,26 @@
 				635B07C5270817ED0031C974 /* PhotosOfObjectTableViewController.swift in Sources */,
 				63B58E1E270BAB6E00B70A88 /* SelectNewsViewController.swift in Sources */,
 				635B07AB270817ED0031C974 /* OTPViewController.swift in Sources */,
+				63A9B95A2714D79000DCDB27 /* PublicUser.swift in Sources */,
+				63A9B935270E65A800DCDB27 /* RangeValue.swift in Sources */,
 				635B07EF270817ED0031C974 /* MyProfilePaymentViewController.swift in Sources */,
 				635B07E5270817ED0031C974 /* BannerTVC.swift in Sources */,
 				635B0845270817FD0031C974 /* Alert.swift in Sources */,
 				634D8C0D27098AD4001A533C /* SearchFromMapViewController.swift in Sources */,
+				63A9B924270E4D9C00DCDB27 /* BadgeType.swift in Sources */,
 				635B07C1270817ED0031C974 /* PlansViewController.swift in Sources */,
 				635B0864270818040031C974 /* Loader.swift in Sources */,
 				635B08772708180D0031C974 /* RentCategory.swift in Sources */,
+				63A9B918270E3B3B00DCDB27 /* NewBuildingValue.swift in Sources */,
+				63A9B931270E5D4C00DCDB27 /* RadioValue.swift in Sources */,
 				635B07FD270817ED0031C974 /* PropertyTypeForSaleViewController.swift in Sources */,
 				635B07D4270817ED0031C974 /* PruductViewController.swift in Sources */,
 				635B0813270817ED0031C974 /* CurrentPaymentViewController.swift in Sources */,
+				63A9B939270E679E00DCDB27 /* CheckValue.swift in Sources */,
 				635B0810270817ED0031C974 /* EditPhoneNumberViewController.swift in Sources */,
 				635B07E9270817ED0031C974 /* MyAnnouncementsBigPhotoCollectionViewCell.swift in Sources */,
 				635B07EE270817ED0031C974 /* ComplaintViewController.swift in Sources */,
+				63A9B91C270E3C2C00DCDB27 /* SmallDetailsApartment.swift in Sources */,
 				635B06BF2708175E0031C974 /* AppDelegate.swift in Sources */,
 				635B08732708180D0031C974 /* HelpFromUs.swift in Sources */,
 				635B07C7270817ED0031C974 /* BuildingPermitViewController.swift in Sources */,
@@ -1277,11 +1415,14 @@
 				635B08722708180D0031C974 /* NewsCategory.swift in Sources */,
 				635B07A2270817ED0031C974 /* MovingAssistanceViewController.swift in Sources */,
 				635B07CD270817ED0031C974 /* PageContrllerCollectionViewCell.swift in Sources */,
+				63A9B9532710FA8300DCDB27 /* AdForNewsCollectionViewCell.swift in Sources */,
 				637EE9DE270BC36D00F4C374 /* RandomAdvertisement.swift in Sources */,
+				63A9B95C27150FEB00DCDB27 /* Service.swift in Sources */,
 				635B07E0270817ED0031C974 /* SearchVC.swift in Sources */,
 				635B0811270817ED0031C974 /* HistoryOfBalanceViewController.swift in Sources */,
 				63A9B914270D10F900DCDB27 /* Contact.swift in Sources */,
 				635B07AD270817ED0031C974 /* RegistrationGoBackViewController.swift in Sources */,
+				63A9B916270E3ABE00DCDB27 /* Announcement.swift in Sources */,
 				635B06D6270817B40031C974 /* AuthManager.swift in Sources */,
 				635B0791270817ED0031C974 /* RentCategoryCollectionViewCell.swift in Sources */,
 				635B081C270817ED0031C974 /* MyAnnouncementsTableViewCell.swift in Sources */,
@@ -1294,10 +1435,13 @@
 				635B0796270817ED0031C974 /* NewsCollectionViewCell.swift in Sources */,
 				635B0801270817ED0031C974 /* BackProfileViewController.swift in Sources */,
 				635B078C270817ED0031C974 /* CompaniesCollectionViewCell.swift in Sources */,
+				63A9B922270E49C400DCDB27 /* Icons.swift in Sources */,
 				635B087B2708180D0031C974 /* ComplainCategory.swift in Sources */,
 				635B07FE270817ED0031C974 /* SentAdsForSaleViewController.swift in Sources */,
 				635B07F1270817ED0031C974 /* ProfilePageViewController.swift in Sources */,
+				63A9B91A270E3BA300DCDB27 /* PlanType.swift in Sources */,
 				635B07B3270817ED0031C974 /* UserTypeViewController.swift in Sources */,
+				63A9B9472710EE6500DCDB27 /* AllNewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

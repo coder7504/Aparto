@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -42,19 +41,19 @@
                                         <rect key="frame" x="0.0" y="310" width="367" height="98"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iuI-U2-fiS">
-                                                <rect key="frame" x="0.0" y="0.0" width="367" height="73"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="367" height="74"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k7d-qg-sja">
-                                                        <rect key="frame" x="0.0" y="0.0" width="367" height="58"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="367" height="56.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="255" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="754" text="Жилой комплекс Cambridge Lux от Murad Buildings" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VnC-O6-CFm">
-                                                                <rect key="frame" x="0.0" y="7" width="321" height="44"/>
+                                                                <rect key="frame" x="0.0" y="7" width="321" height="42"/>
                                                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buB-OJ-Wpx">
-                                                                <rect key="frame" x="321" y="6" width="46" height="46"/>
+                                                                <rect key="frame" x="321" y="5" width="46" height="46"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09q-ha-mbj">
                                                                         <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
@@ -76,7 +75,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="253" horizontalCompressionResistancePriority="900" verticalCompressionResistancePriority="751" text="Шайхонтахурский район, ул.Алишера На..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Buk-x2-GVC">
-                                                        <rect key="frame" x="0.0" y="58" width="367" height="15"/>
+                                                        <rect key="frame" x="0.0" y="56.5" width="367" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Medium" family="Proxima Nova" pointSize="15"/>
                                                         <color key="textColor" cyan="0.55000000000000004" magenta="0.59999999999999998" yellow="0.62" black="1" alpha="0.5" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -84,7 +83,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="254" horizontalCompressionResistancePriority="1000" text="от 2 500 000 сум / м²" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cSy-3X-jPe">
-                                                <rect key="frame" x="0.0" y="76" width="367" height="22"/>
+                                                <rect key="frame" x="0.0" y="77" width="367" height="21"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -114,9 +113,12 @@
             </constraints>
             <size key="customSize" width="383" height="428"/>
             <connections>
+                <outlet property="descLabel" destination="Buk-x2-GVC" id="mrQ-wJ-1Ea"/>
                 <outlet property="heartView" destination="buB-OJ-Wpx" id="VFi-Yy-NTp"/>
                 <outlet property="heightForResidentalComplexCell" destination="vaX-y9-NRT" id="8zD-64-NvR"/>
                 <outlet property="imageView" destination="WSx-dz-e5Y" id="vvV-jm-v02"/>
+                <outlet property="priceLabel" destination="cSy-3X-jPe" id="DfL-QG-4QB"/>
+                <outlet property="titleLabel" destination="VnC-O6-CFm" id="TUL-Ta-hvk"/>
             </connections>
             <point key="canvasLocation" x="142.75362318840581" y="245.75892857142856"/>
         </collectionViewCell>

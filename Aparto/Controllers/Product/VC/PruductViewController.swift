@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SDWebImage
+import YandexMapsMobile
 
 class PruductViewController: UIViewController {
     
@@ -53,9 +55,19 @@ class PruductViewController: UIViewController {
     
     @IBOutlet weak var hidePhoneButtonOutlet: UIButton!
     @IBOutlet weak var bottomPhoneButtonOutlet: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var squareLabel: UILabel!
+    @IBOutlet weak var numberOfRoomLabel: UILabel!
+    @IBOutlet weak var floorLabel: UILabel!
+    @IBOutlet weak var heightOfCeilingLabel: UILabel!
+    @IBOutlet weak var allPriceLabel: UILabel!
+    @IBOutlet weak var smallPriceLabel: UILabel!
+    @IBOutlet weak var districtLabel: UILabel!
+    
     
     var bell = UIBarButtonItem()
     var heart = UIBarButtonItem()
+    var data: Announcement!
     
     @IBOutlet weak var scrollView: UIScrollView! {
         didSet {
@@ -74,19 +86,29 @@ class PruductViewController: UIViewController {
         }
     }
     
-    var pageContArray: [CategoryName] = [
-        CategoryName(title: "sdw", isTapped: true),
-        CategoryName(title: "erq", isTapped: false),
-        CategoryName(title: "ddf", isTapped: false),
-        CategoryName(title: "ddf", isTapped: false)
-        ]
+    var pageContArray: [CategoryName] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        for _ in 0...data.images.count-1 {
+           let d = CategoryName(title: "sdw", isTapped: true)
+               pageContArray.append(d)
+        }
         setBackroundImageForNavigation()
         setRightButtonForNav()
-        
+        setLabelText()
+    }
+    
+    func setLabelText() {
+        titleLabel.text = data.title
+//        squareLabel.text = "\(data.newBuildingValues.planTypes[0].area.from*data.newBuildingValues.planTypes[0].area.to)"
+//        numberOfRoomLabel.text = "\(data.newBuildingValues.planTypes[0].apartmentQuantity)"
+//        floorLabel.text = "\(data.newBuildingValues.planTypes[0].cost.from) из \(data.newBuildingValues.planTypes[0].cost.to)"
+//        heightOfCeilingLabel.text = "\(data.newBuildingValues.planTypes[0].area.from*data.newBuildingValues.planTypes[0].area.to)"
+        allPriceLabel.text = "\(data.price.currency.currencyRate*data.price.amount)"
+        smallPriceLabel.text = "\(data.price.currency.currencyRate)"
+        districtLabel.text = translateTitle(title: data.district.name)
     }
     
     func setRightButtonForNav() {
@@ -128,6 +150,7 @@ class PruductViewController: UIViewController {
     
     @IBAction func showAllConvenienceButtonTaped(_ sender: Any) {
         let vc = AllConvenienceViewController(nibName: "AllConvenienceViewController", bundle: nil)
+        vc.titleArray = data.comfortType
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: false, completion: nil)
     }
@@ -159,6 +182,14 @@ class PruductViewController: UIViewController {
         }
     }
     
+    @IBAction func openMapButtonTapped(_ sender: Any) {
+        let vc = SearchFromMapViewController(nibName: "SearchFromMapViewController", bundle: nil)
+        vc.modalPresentationStyle = .overFullScreen
+        vc.largeTitle = "Предложения рядом"
+        vc.coordinate = YMKPoint(latitude: data.coordinates[0], longitude: data.coordinates[1])
+        present(vc, animated: false, completion: nil    )
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.tintColor = UIColor.black
@@ -180,12 +211,14 @@ extension PruductViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("didselect")
         if collectionView == pageControllerCollectionView {
-            for i in 0...pageContArray.count-1 {
-                pageContArray[i].isTapped = false
+            if !pageContArray.isEmpty {
+                for i in 0...pageContArray.count-1 {
+                    pageContArray[i].isTapped = false
+                }
+                productPhotoCollectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
+                pageContArray[indexPath.row].isTapped = true
+                pageControllerCollectionView.reloadData()
             }
-            productPhotoCollectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
-            pageContArray[indexPath.row].isTapped = true
-            pageControllerCollectionView.reloadData()
         }
         
     }
@@ -201,7 +234,7 @@ extension PruductViewController: UICollectionViewDelegateFlowLayout {
         if collectionView == pageControllerCollectionView {
             return CGSize(width: (self.pageControllerCollectionView.frame.width-16)/CGFloat(pageContArray.count), height: self.pageControllerCollectionView.frame.height)
         } else if collectionView == productPhotoCollectionView {
-            return CGSize(width: self.productPhotoCollectionView.frame.width, height: self.productPhotoCollectionView.frame.height)
+            return CGSize(width: self.productPhotoCollectionView.frame.width, height: self.productPhotoCollectionView.frame.height*1.5)
         } else if collectionView == adCollectionView {
             return CGSize(width: self.adCollectionView.frame.width, height: self.adCollectionView.frame.height)
           } else if collectionView == saleAdsCollectionView {
@@ -231,7 +264,7 @@ extension PruductViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == pageControllerCollectionView || collectionView == productPhotoCollectionView {
-            return pageContArray.count
+            return data.images.count
         } else {
             return 10
         }
@@ -259,13 +292,13 @@ extension PruductViewController: UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
             cell.imageViewOutlet.layer.cornerRadius = 8
-            cell.imageViewOutlet.image = UIImage(named: "ad")
+            cell.imageViewOutlet.sd_setImage(with: URL(string: API.imageBaseUrl+data.images[indexPath.row]), placeholderImage: #imageLiteral(resourceName: "home-1"))
             return cell
         }  else if collectionView == saleAdsCollectionView || collectionView == recentlyViewedAdsCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ResidentalComplexCollectionViewCell.identifire, for: indexPath) as? ResidentalComplexCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.updateCell(isHide: true,top: 0)
+            cell.updateCell(isHide: true, top: 0, title: "title", desc: "description", price: 0)
             return cell
         }
         

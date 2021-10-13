@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import YandexMapsMobile
+import MapKit
 
 class ProfileViewController: UIViewController {
 
@@ -26,12 +28,17 @@ class ProfileViewController: UIViewController {
             adTableView.register(ProfileAdTableViewCell.nib(), forCellReuseIdentifier: ProfileAdTableViewCell.identifire)
         }
     }
+    @IBOutlet weak var FullNameLabel: UILabel!
+    @IBOutlet weak var mailLabel: UILabel!
     
+    var selectId: String = ""
+    var publicUser: PublicUser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Loader.start()
         setDetails()
+        getPublicUser(id: selectId)
     }
     
     override func viewDidLayoutSubviews() {
@@ -71,12 +78,20 @@ class ProfileViewController: UIViewController {
     
     
     @IBAction func showPhoneButtonTapped(_ sender: UIButton) {
-        let vc = PruductViewController(nibName: "PruductViewController", bundle: nil)
-        navigationItem.backButtonTitle  = ""
-        navigationItem.backBarButtonItem?.tintColor = .black
-        navigationController?.pushViewController(vc, animated: true)
+        let vc = ProductPagePhoneViewController(nibName: "ProductPagePhoneViewController", bundle: nil)
+        vc.name = publicUser.firstName+" "+publicUser.lastName
+        vc.phoneNumber = publicUser.phoneNumber
+//        vc.dateLabel.isHidden = true
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: false, completion: nil)
     }
     
+    @IBAction func searchFromMapButtonTapped(_ sender: Any) {
+        let vc = SearchFromMapViewController(nibName: "SearchFromMapViewController", bundle: nil)
+        vc.coordinate = YMKPoint(latitude: publicUser.announcement[0].coordinates[0], longitude: publicUser.announcement[0].coordinates[1])
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: false, completion: nil)
+    }
     
     
 }
@@ -112,5 +127,30 @@ extension ProfileViewController: UITableViewDataSource {
         return cell
     }
     
+    
+}
+
+
+
+//      MARK: -- API
+
+extension ProfileViewController {
+    
+    func getPublicUser(id: String) {
+        if Reachability.isConnectedToNetwork() {
+            API.getPublicUser(_id: id) { user in
+                Loader.stop()
+                if let user = user {
+                    self.FullNameLabel.text = user.firstName+" "+user.lastName
+                    self.mailLabel.text = user.email
+                    print("👨‍👩‍👦👨‍👩‍👦👨‍👩‍👦")
+                    print(user.announcement[0].coordinates)
+                    self.publicUser = user
+                }
+            }
+        } else {
+            AlertNET.showAlert(title: Keys.a_internet, message: Keys.a_goOnline) { _ in }
+        }
+    }
     
 }

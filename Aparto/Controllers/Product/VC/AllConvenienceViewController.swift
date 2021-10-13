@@ -24,16 +24,7 @@ class AllConvenienceViewController: UIViewController {
     
     @IBOutlet weak var heightForTableView: NSLayoutConstraint!
     
-    var titleArray: [String] = [
-        "Быстрый лифт",
-        "Метро рядом",
-        "Спортивная площадка",
-        "Балкон",
-        "Быстрый лифт",
-        "Метро рядом",
-        "Спортивная площадка",
-        "Спортивная площадка"
-    ]
+    var titleArray: [ComfortType] = []
     
     
     let deviceHeight = UIScreen.main.bounds.height
@@ -136,7 +127,7 @@ extension AllConvenienceViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AllConvenienceTableViewCell.identifire, for: indexPath) as? AllConvenienceTableViewCell else {
             return UITableViewCell()
         }
-        cell.updateCell(title: titleArray[indexPath.row])
+        cell.updateCell(title: translateTitle(title: titleArray[indexPath.row].name), image: titleArray[indexPath.row].iconName)
         return cell
     }
     

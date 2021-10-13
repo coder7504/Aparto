@@ -11,6 +11,14 @@ class ProductPagePhoneViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var phoneNumberButton: UIButton!
+    
+    var name: String = ""
+    var phoneNumber: String = ""
+    var date: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        hideContainerView()
@@ -18,12 +26,14 @@ class ProductPagePhoneViewController: UIViewController {
     
     func hideContainerView() {
         UIView.animate(withDuration: 0.00001) { [self] in
-            
             containerView.transform = CGAffineTransform(translationX: 0, y: containerView.frame.height)
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        nameLabel.text = name
+        dateLabel.text = date
+        phoneNumberButton.setTitle(phoneNumber, for: .normal)
         super.viewWillAppear(animated)
         UIView.animate(withDuration: 0.4) { [self] in
             containerView.transform = .identity
@@ -61,5 +71,20 @@ class ProductPagePhoneViewController: UIViewController {
     }
     
     
+    @IBAction func phoneButtonTapped(_ sender: Any) {
+        callNumber(phoneNumber: phoneNumber)
+    }
+    
+    @IBAction func messageButtonTspped(_ sender: Any) {
+    }
+    
+    
+    private func callNumber(phoneNumber: String) {
+        guard let url = URL(string: "telprompt://\(phoneNumber)"),
+            UIApplication.shared.canOpenURL(url) else {
+            return
+        }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
     
 }

@@ -67,24 +67,6 @@ class HomeViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var saleCollectionView: UICollectionView! {
-        didSet {
-            saleCollectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
-            saleCollectionView.delegate = self
-            saleCollectionView.dataSource = self
-            saleCollectionView.register(RentCategoryCollectionViewCell.nib(), forCellWithReuseIdentifier: RentCategoryCollectionViewCell.identifire)
-        }
-    }
-    
-    @IBOutlet weak var salePhotoCollectionView: UICollectionView! {
-        didSet {
-            salePhotoCollectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
-            salePhotoCollectionView.delegate = self
-            salePhotoCollectionView.dataSource = self
-            salePhotoCollectionView.register(ResidentalComplexCollectionViewCell.nib(), forCellWithReuseIdentifier: ResidentalComplexCollectionViewCell.identifire)
-        }
-    }
-    
     @IBOutlet weak var housingIssuesCollectionView: UICollectionView! {
         didSet {
             housingIssuesCollectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
@@ -108,9 +90,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var rentTitleLabel: UILabel!
     
     @IBOutlet weak var builderTitleLabel: UILabel!
-    
-    @IBOutlet weak var saleTitleLabel: UILabel!
-    
+        
     @IBOutlet weak var housingIssuseTitleLabel: UILabel!
     
     @IBOutlet weak var newsTitleLabel: UILabel!
@@ -144,10 +124,14 @@ class HomeViewController: UIViewController {
     var adPhotoArr: [String] = ["sd","sd","cv","sd"]
     var newsData: [News] = []
     var newsCategoryData: [NewsCategory] = []
-    var newsCategoryID: [String] = []
+    var dataLimit = 4
+    var newsIsNextPage: Bool = true
     var sellTypeData: [SellType] = []
     var carusellAdver: [RandomAdvertisement] = []
     var sellTypePhoto: [String] = ["buy","rent"]
+    var developrsData: [Company] = []
+    var serviceData: [Service] = []
+    var bottomAnnouncementData: [Announcement] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -159,15 +143,28 @@ class HomeViewController: UIViewController {
         print("token 🐱 = ",Cache.getToken())
         Loader.start()
         getRentCategoryData()
-        getNews()
+        getNews(limit: dataLimit, skip: 0)
+        getDevelopers(limit: dataLimit, skill: 0)
         getSellTypeData()
         getRandomAdvertisenment()
+//        getAllAnnouncement()
+        getService()
+        getBottomAnnouncement(limit: dataLimit, skip: 0)
     }
 
     func setDetails() {
         navigationItem.title = "Главная"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(descriptor: UIFontDescriptor(name: "ProximaNova-Semibold", size: 16), size: 16)]
         setRightButtonForNav()
+        removeButtomLineNavigation()
+    }
+    
+    func removeButtomLineNavigation() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
     }
     
     func setRightButtonForNav() {
@@ -189,7 +186,6 @@ class HomeViewController: UIViewController {
         residentalComplexLabel.font = UIFont(name: "ProximaNova-Semibold", size: 20)
         rentTitleLabel.font = UIFont(name: "ProximaNova-Semibold", size: 20)
         builderTitleLabel.font = UIFont(name: "ProximaNova-Semibold", size: 20)
-        saleTitleLabel.font = UIFont(name: "ProximaNova-Semibold", size: 20)
         housingIssuseTitleLabel.font = UIFont(name: "ProximaNova-Semibold", size: 20)
         newsTitleLabel.font = UIFont(name: "ProximaNova-Semibold", size: 20)
     }
@@ -209,6 +205,19 @@ class HomeViewController: UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func seeAllNewsButtonTapped(_ sender: Any) {
+        let vc = AllNewsViewController(nibName: "AllNewsViewController", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func sellWithApartoButtonTapped(_ sender: Any) {
+        let vc = SellBannerViewController(nibName: "SellBannerViewController", bundle: nil)
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: false, completion: nil)
+    }
+    
     
 }
 
@@ -235,17 +244,16 @@ extension HomeViewController: UICollectionViewDelegate {
                 vc.hidesBottomBarWhenPushed = true
                 navigationController?.pushViewController(vc, animated: true)
             }
-        } else if collectionView == categoryRentCollectionView || collectionView == saleCollectionView {
+        } else if collectionView == categoryRentCollectionView {
+            
             for i in 0...categoryForRent.count-1 {
                 categoryForRent[i].isTapped = false
             }
             categoryRentCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-            saleCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
             print("keldi")
             print(" frame = ", categoryCollectionView.cellForItem(at: indexPath)?.frame)
             categoryForRent[indexPath.row].isTapped = true
             categoryRentCollectionView.reloadData()
-            saleCollectionView.reloadData()
         } else if collectionView == newsCollectionView {
             let vc = SelectNewsViewController(nibName: "SelectNewsViewController", bundle: nil)
             for i in 0...newsData.count-1 {
@@ -255,14 +263,42 @@ extension HomeViewController: UICollectionViewDelegate {
             }
             vc.newsData = self.newsData[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
+            
         } else if collectionView == adCollectionView {
+            
             let vc = PhotoBannerViewController(nibName: "PhotoBannerViewController", bundle: nil)
             vc.modalPresentationStyle = .overFullScreen
             if !carusellAdver.isEmpty {
                 vc.ad = carusellAdver[indexPath.row]
             }
             present(vc, animated: false, completion: nil)
+            
+        }  else if collectionView == companiesCollectionView {
+            
+            let vc = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+            if !developrsData.isEmpty {
+                vc.selectId = developrsData[indexPath.row]._id
+            }
+            navigationController?.pushViewController(vc, animated: true)
+            
+        } else if collectionView == housingIssuesCollectionView {
+            
+            let vc = MovingAssistanceViewController(nibName: "MovingAssistanceViewController", bundle: nil)
+            if !developrsData.isEmpty {
+                vc.selectServise = serviceData[indexPath.row]
+            }
+            navigationController?.pushViewController(vc, animated: true)
+            
+        } else if collectionView == residentalComplexCollectionView {
+            
+            let vc = PruductViewController(nibName: "PruductViewController", bundle: nil)
+            if !bottomAnnouncementData.isEmpty {
+                vc.data = bottomAnnouncementData[indexPath.row]
+            }
+            navigationController?.pushViewController(vc, animated: true)
+            
         }
+        
     }
     
 }
@@ -275,13 +311,11 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == categoryCollectionView {
            return CGSize(width: (self.categoryCollectionView.frame.width-16)/2.3, height: self.categoryCollectionView.frame.height)
-        } else if collectionView == categoryRentCollectionView || collectionView == saleCollectionView {
+        } else if collectionView == categoryRentCollectionView {
             return CGSize(width: categoryForRent[indexPath.row].title.widthOfString(usingFont: .systemFont(ofSize: 16, weight: .semibold))+40, height: 35)
          } else if collectionView == residentalComplexCollectionView {
            return CGSize(width: self.residentalComplexCollectionView.frame.width-70, height: self.residentalComplexCollectionView.frame.height)
-         }  else if collectionView == salePhotoCollectionView {
-            return CGSize(width: self.salePhotoCollectionView.frame.width-70, height: self.salePhotoCollectionView.frame.height)
-          } else if collectionView == adCollectionView {
+         } else if collectionView == adCollectionView {
             return CGSize(width: self.adCollectionView.frame.width, height: self.adCollectionView.frame.height)
           }  else if collectionView == companiesCollectionView {
             return CGSize(width: self.companiesCollectionView.frame.width/2.5, height: self.companiesCollectionView.frame.height)
@@ -318,6 +352,12 @@ extension HomeViewController: UICollectionViewDataSource {
             return newsData.count
         } else if collectionView == categoryCollectionView {
             return sellTypeData.count+1
+        }  else if collectionView == companiesCollectionView {
+            return developrsData.count
+        } else if collectionView == housingIssuesCollectionView {
+            return serviceData.count
+        } else if collectionView == residentalComplexCollectionView {
+            return bottomAnnouncementData.count
         }
         return categoryForRent.count
     }
@@ -333,11 +373,17 @@ extension HomeViewController: UICollectionViewDataSource {
                 }
             }
             return cell
-        } else if collectionView == residentalComplexCollectionView || collectionView == rentPhotoCollectionView || collectionView == salePhotoCollectionView {
+        } else if collectionView == residentalComplexCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ResidentalComplexCollectionViewCell.identifire, for: indexPath) as? ResidentalComplexCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.updateCell(isHide: true,top: 0)
+            cell.updateCell(isHide: true, top: 0, title: bottomAnnouncementData[indexPath.row].title, desc: bottomAnnouncementData[indexPath.row].description, price: Double(bottomAnnouncementData[indexPath.row].price.amount))
+            return cell
+        } else if collectionView == rentPhotoCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ResidentalComplexCollectionViewCell.identifire, for: indexPath) as? ResidentalComplexCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.updateCell(isHide: true, top: 0, title: "", desc: "", price: 0)
             return cell
         }  else if collectionView == adCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AdCollectionViewCell.identifire, for: indexPath) as? AdCollectionViewCell else {
@@ -354,21 +400,21 @@ extension HomeViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CompaniesCollectionViewCell.identifire, for: indexPath) as? CompaniesCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.setCell()
+            cell.setCell(title: developrsData[indexPath.row].firstName+"\n"+developrsData[indexPath.row].lastName, image: developrsData[indexPath.row].image)
             return cell
         }  else if collectionView == housingIssuesCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HousingIssuesCollectionViewCell.identifire, for: indexPath) as? HousingIssuesCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.updateCell()
+            cell.updateCell(image: serviceData[indexPath.row].image, title: serviceData[indexPath.row].serviceType, desc: serviceData[indexPath.row].title)
             return cell
         }  else if collectionView == newsCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsCollectionViewCell.identifire, for: indexPath) as? NewsCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.updateCell(title: newsData[indexPath.row].title , category: translateTitle(title: newsData[indexPath.row].newsCategory.name))
+            cell.updateCell(title: newsData[indexPath.row].title , category: translateTitle(title: newsData[indexPath.row].newsCategory.name), isTimeYes: false)
             return cell
-        } else if collectionView == categoryRentCollectionView || collectionView == saleCollectionView {
+        } else if collectionView == categoryRentCollectionView  {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RentCategoryCollectionViewCell.identifire, for: indexPath) as? RentCategoryCollectionViewCell else {
                 return UICollectionViewCell()
             }
@@ -387,6 +433,25 @@ extension HomeViewController: UICollectionViewDataSource {
        return UICollectionViewCell()
     }
     
+//    MARK: -- Pagination
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if collectionView == newsCollectionView {
+            if indexPath.item % dataLimit == dataLimit-1 && (indexPath.item+1 == newsData.count) {
+                print(indexPath.item,"😱😱😱😱😱 ",Cache.getNewsLength())
+                    if (Cache.getNewsLength() ?? 0) != indexPath.row+1 {
+                        self.getNews(limit: dataLimit, skip: indexPath.item+1)
+                    }
+                }
+        } else if collectionView == residentalComplexCollectionView {
+            if indexPath.item % dataLimit == dataLimit-1 && (indexPath.item+1 == bottomAnnouncementData.count) {
+                    if (Cache.getTopAnnouncementLength() ?? 0) != indexPath.row+1 {
+                        self.getBottomAnnouncement(limit: dataLimit, skip: indexPath.item+1)
+                    }
+                }
+        }
+        
+    }
     
 }
 
@@ -466,10 +531,14 @@ extension HomeViewController {
         }
     }
     
-    func getNews() {
+    func getNews(limit: Int, skip: Int) {
         if Reachability.isConnectedToNetwork() {
-            API.getNews { [self] (news) in
-                newsData = news!
+            API.getNews(limit: limit, skip: skip) { [self] (news) in
+                if let new = news {
+                    print("")
+                    print("new = ", new)
+                    newsData.append(contentsOf: new)
+                }
                 newsCollectionView.reloadData()
             }
         } else {
@@ -480,7 +549,7 @@ extension HomeViewController {
     func getSellTypeData() {
         if Reachability.isConnectedToNetwork() {
             API.getSellType { [self] (type) in
-                Loader.stop()
+//                Loader.stop()
                 sellTypeData = type!
                 categoryCollectionView.reloadData()
             }
@@ -491,8 +560,8 @@ extension HomeViewController {
     
     func getRandomAdvertisenment() {
         if Reachability.isConnectedToNetwork() {
-            API.getRandomAdvertisement(addType: "main-banner") { [self] (ad) in
-                Loader.stop()
+            API.getRandomAdvertisement(addType: "carousel-card") { [self] (ad) in
+//                Loader.stop()
                 carusellAdver = ad ?? []
                 adCollectionView.reloadData()
             }
@@ -501,6 +570,63 @@ extension HomeViewController {
         }
     }
     
+//    func getAllAnnouncement() {
+//        if Reachability.isConnectedToNetwork() {
+//            API.getAllAnnouncement { [self] (announcement) in
+////                Loader.stop()
+//                print("✅")
+//                print(announcement)
+////                carusellAdver = ad ?? []
+////                adCollectionView.reloadData()
+//            }
+//        } else {
+//            AlertNET.showAlert(title: Keys.a_internet, message: Keys.a_goOnline) { (_) in }
+//        }
+//    }
+    
+    
+    func getDevelopers(limit: Int, skill: Int) {
+        if Reachability.isConnectedToNetwork() {
+            API.getAllcompanies(limit: limit, skill: skill) { [self] comp in
+                guard let comp = comp else { return }
+                developrsData = comp
+                Loader.stop()
+                companiesCollectionView.reloadData()
+            }
+        } else {
+            AlertNET.showAlert(title: Keys.a_internet, message: Keys.a_goOnline) { _ in }
+        }
+    }
+    
+    
+    func getService() {
+        if Reachability.isConnectedToNetwork() {
+            API.getService { [self] service in
+                if let ser = service {
+                    serviceData = ser
+                    housingIssuesCollectionView.reloadData()
+                }
+            }
+        }  else {
+            AlertNET.showAlert(title: Keys.a_internet, message: Keys.a_goOnline) { _ in }
+        }
+    }
+    
+    
+    func getBottomAnnouncement(limit: Int, skip: Int) {
+        if Reachability.isConnectedToNetwork() {
+            API.getRandomBottomAnnouncement(limit: limit, skip: skip) { [self] announcement in
+                if let ann = announcement {
+                    bottomAnnouncementData.append(contentsOf: ann)
+                    self.residentalComplexCollectionView.reloadData()
+                }
+            }
+        }  else {
+            AlertNET.showAlert(title: Keys.a_internet, message: Keys.a_goOnline) { _ in }
+        }
+    }
+    
+   
 }
 
 

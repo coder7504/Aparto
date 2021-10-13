@@ -8,6 +8,9 @@
 import Foundation
 import SwiftyJSON
 
+
+
+
 class RentCategory {
     
     var name: Population

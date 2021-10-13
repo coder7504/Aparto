@@ -121,7 +121,7 @@ extension SelectNewsViewController: UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
         cell.containerView.backgroundColor = .white
-            cell.updateCell(title: newsDatas[indexPath.row].title , category: translateTitle(title: newsDatas[indexPath.row].newsCategory.name))
+        cell.updateCell(title: newsDatas[indexPath.row].title , category: translateTitle(title: newsDatas[indexPath.row].newsCategory.name), isTimeYes: false)
             return cell
     }
     

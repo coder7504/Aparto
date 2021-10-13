@@ -135,6 +135,14 @@ extension UIViewController {
           
       }
     
+    
+    func getUserTypeName(id: String) -> UserTypeEnum {
+        if id == "611bee90a8bc783d3439e079" { return .user }
+        if id == "611bee91a8bc783d3439e07b" { return .agent }
+        if id == "611bee91a8bc783d3439e07d" { return .developer }
+        return .user
+    }
+    
     //
     //    //    MARK: -- Scroll Direction
     //

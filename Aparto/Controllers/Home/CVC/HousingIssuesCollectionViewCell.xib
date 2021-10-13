@@ -35,7 +35,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="753" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="eTI-QV-1Ue">
-                                        <rect key="frame" x="1.5" y="276.5" width="296.5" height="112.5"/>
+                                        <rect key="frame" x="0.0" y="276.5" width="299" height="112.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="CKM-8m-Hai">
                                                 <rect key="frame" x="0.0" y="0.0" width="296.5" height="76.5"/>
@@ -67,6 +67,10 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="eTI-QV-1Ue" secondAttribute="trailing" id="MAL-XU-54e"/>
+                                    <constraint firstItem="eTI-QV-1Ue" firstAttribute="leading" secondItem="NiE-VM-BeP" secondAttribute="leading" id="ulJ-Kc-L28"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -89,6 +93,9 @@
             <size key="customSize" width="347" height="413"/>
             <connections>
                 <outlet property="containerView" destination="spG-dJ-rLN" id="diI-fA-fq6"/>
+                <outlet property="descLabel" destination="EFr-dB-hsu" id="fjk-1P-cF0"/>
+                <outlet property="imageView" destination="jIc-JN-RIS" id="A15-CW-QVq"/>
+                <outlet property="titleLabel" destination="AG0-GO-tTs" id="tZz-xF-6r8"/>
             </connections>
             <point key="canvasLocation" x="18" y="243"/>
         </collectionViewCell>
