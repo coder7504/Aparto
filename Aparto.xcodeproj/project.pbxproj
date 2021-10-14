@@ -1006,7 +1006,6 @@
 				63A9B92D270E5B5500DCDB27 /* RealEstateType */,
 				63A9B9572714C6D400DCDB27 /* Company.swift */,
 				63A9B9592714D79000DCDB27 /* PublicUser.swift */,
-				63A9B95B27150FEB00DCDB27 /* Service.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1052,6 +1051,7 @@
 			children = (
 				63A9B915270E3ABE00DCDB27 /* Announcement.swift */,
 				63A9B913270D10F900DCDB27 /* Contact.swift */,
+				63A9B95B27150FEB00DCDB27 /* Service.swift */,
 				63A9B917270E3B3B00DCDB27 /* NewBuildingValue.swift */,
 				63A9B919270E3BA300DCDB27 /* PlanType.swift */,
 				63A9B91B270E3C2C00DCDB27 /* SmallDetailsApartment.swift */,

@@ -40,5 +40,6 @@ struct Keys {
     
     static let news_length = "newsLength"
     static let get_top_announcement_length = "topAnnouncementLength"
+    static let get_recommended_announcement_Length = "recommendedAnnouncementLength"
     
 }

@@ -61,7 +61,7 @@ class OTPViewController: UIViewController {
     }
     
     func setTime() {
-        if !isSignIn {
+        if !isSignIn {  
             repButton.isEnabled = false
             timeLabel.textColor = .gr
             repeatButtonOutlet.setTitleColor(.gr, for: .normal)
@@ -78,7 +78,7 @@ class OTPViewController: UIViewController {
                     timeLabel.textColor = .black
                     repeatButtonOutlet.setTitleColor(.black, for: .normal)
                 }
-                timeLabel.text = "\(time)c"
+                timeLabel.text = "(\(time))c"
             }
         }
     }

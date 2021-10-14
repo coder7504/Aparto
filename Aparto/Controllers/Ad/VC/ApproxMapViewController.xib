@@ -19,21 +19,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D26-NF-god">
-                    <rect key="frame" x="20" y="183" width="374" height="530"/>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D26-NF-god">
+                    <rect key="frame" x="20" y="162" width="374" height="572"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="productMap" translatesAutoresizingMaskIntoConstraints="NO" id="tg6-Ya-UQD">
-                            <rect key="frame" x="0.0" y="0.0" width="346" height="530"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="572"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aK-GA-a0O" customClass="CustomBtn" customModule="Aparto" customModuleProvider="target">
-                            <rect key="frame" x="16" y="468.5" width="314" height="45.5"/>
+                            <rect key="frame" x="16" y="506.5" width="342" height="49.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="4aK-GA-a0O" secondAttribute="height" multiplier="311:45" id="QtQ-4T-MRx"/>
                             </constraints>
                             <state key="normal" title="Подтвердить"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNe-2H-xmZ">
-                            <rect key="frame" x="56" y="17.5" width="234" height="21"/>
+                            <rect key="frame" x="70" y="24.5" width="234" height="21"/>
                             <attributedString key="attributedText">
                                 <fragment content="Выберите местоположение">
                                     <attributes>
@@ -44,7 +44,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4r8-x0-gqM">
-                            <rect key="frame" x="306" y="16" width="24" height="24"/>
+                            <rect key="frame" x="320" y="16" width="38" height="38"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="4r8-x0-gqM" secondAttribute="height" id="2DU-6Y-e66"/>

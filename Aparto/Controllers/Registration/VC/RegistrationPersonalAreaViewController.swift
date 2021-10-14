@@ -90,7 +90,9 @@ class RegistrationPersonalAreaViewController: UIViewController {
     func goToMainApartoViewController() {
         let vc = MainTabBarViewController()
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        self.present(vc, animated: true) { [self] in
+            Cache.saveUser(password: passwordView.mainTitle!)
+        }
     }
     
     @IBAction func registerButtonTapped(_ sender: Any) {

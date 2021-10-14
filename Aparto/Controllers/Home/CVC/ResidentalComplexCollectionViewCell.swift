@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ResidentalComplexCollectionViewCell: UICollectionViewCell {
 
@@ -23,21 +24,39 @@ class ResidentalComplexCollectionViewCell: UICollectionViewCell {
     static func nib() -> UINib {
         return UINib(nibName: "ResidentalComplexCollectionViewCell", bundle: nil)
     }
+    
+    var _id: String = ""
 
     override func awakeFromNib() {
         super.awakeFromNib()
         imageView.layer.cornerRadius = 6
     }
     
-    func updateCell(isHide: Bool, top: CGFloat, title: String, desc: String, price: Double) {
+    func updateCell(isHide: Bool, top: CGFloat, title: String, desc: String, price: Double, image: String, _id: String) {
         titleLabel.text = title
         descLabel.text = desc
         priceLabel.text = "\(price)"
         heightForResidentalComplexCell.constant = top
         heartView.isHidden = isHide
+        imageView.sd_setImage(with: URL(string: API.imageBaseUrl+image), placeholderImage: #imageLiteral(resourceName: "home-2"))
+        self._id = _id
     }
 
     @IBAction func heartButtonTapped(_ sender: Any) {
-        Alert.showAlert(forState: .addFavorite, message: "Объявление добавлено в избранные")
+        
+        API.postLikeOne(_id: _id) { isliked in
+            if let isliked = isliked {
+                if isliked {
+                    print("Объявление добавлено в избранные")
+                    Alert.showAlert(forState: .addFavorite, message: "Объявление добавлено в избранные")
+                } else {
+                    Alert.showAlert(forState: .error, message: "Объявление недобавлено в избранные")
+                }
+            } else {
+                AlertNET.showAlert(title: Keys.a_internet, message: Keys.a_goOnline) { _ in }
+            }
+        }
+        
     }
 }
+

@@ -70,7 +70,7 @@ class NET {
             }
             
             AF.request(url, method: method, parameters: params, encoding: JSONEncoding.default, headers: commonHeader).responseJSON { (response) in
-                
+                print("🎯🎯 ",url)
                 //end loading
                 if let isLoaderActive = withLoader {
                     if isLoaderActive {
@@ -78,8 +78,8 @@ class NET {
                     }
                 }
                 switch response.result {
-                case .success(_): completion(JSON(response.data!))
-                case .failure(_): print(response.error.debugDescription); completion(nil)
+                case .success(_): print("✅✅ ",JSON(response.data!)); completion(JSON(response.data!))
+                case .failure(_): print("❌❌ ",response.error.debugDescription); completion(nil)
                 }
 
             }

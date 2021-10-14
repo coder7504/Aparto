@@ -14,12 +14,15 @@ class ObjectPermissionType {
     var priorityLevel: String
     var _id : String
     var icons: Icons
+    var isSelected: Bool
+
     
     init() {
         self.name = Population(en: "", ru: "", uz: "")
         self.priorityLevel = ""
         self._id = ""
         self.icons = Icons(_id: "", name: "", image: "")
+        self.isSelected = false
     }
     
     init(json: JSON) {
@@ -27,6 +30,7 @@ class ObjectPermissionType {
         self.priorityLevel = json["priorityLevel"].stringValue
         self._id = json["_id"].stringValue
         self.icons = Icons(json: json["icons"])
+        self.isSelected = false
     }
     
 }

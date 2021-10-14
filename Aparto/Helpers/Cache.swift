@@ -121,12 +121,20 @@ class Cache {
     }
     
     
-    static func save(announcementLength: Int) {
-        UserDefaults.standard.setValue(announcementLength, forKey: Keys.get_top_announcement_length)
+    static func save(topAnnouncementLength: Int) {
+        UserDefaults.standard.setValue(topAnnouncementLength, forKey: Keys.get_top_announcement_length)
     }
     
-    static func getTopAnnouncementLength()-> Int? {
+    static func getBottomAnnouncementLength()-> Int? {
         UserDefaults.standard.integer(forKey: Keys.get_top_announcement_length)
+    }
+    
+    static func save(recommendedAnnouncementLength: Int) {
+        UserDefaults.standard.setValue(recommendedAnnouncementLength, forKey: Keys.get_recommended_announcement_Length)
+    }
+    
+    static func getTopRecommendedAnnouncementLength()-> Int? {
+        UserDefaults.standard.integer(forKey: Keys.get_recommended_announcement_Length)
     }
     
 }

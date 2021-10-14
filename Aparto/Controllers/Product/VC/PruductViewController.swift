@@ -298,7 +298,8 @@ extension PruductViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ResidentalComplexCollectionViewCell.identifire, for: indexPath) as? ResidentalComplexCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.updateCell(isHide: true, top: 0, title: "title", desc: "description", price: 0)
+            //            MARK: -- bitta advertisementni id sini beriwkk 61226f1ea1c0dbaceeb70ee7
+            cell.updateCell(isHide: true, top: 0, title: "title", desc: "description", price: 0, image: "", _id: data._id)
             return cell
         }
         

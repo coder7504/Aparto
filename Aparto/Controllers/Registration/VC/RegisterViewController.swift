@@ -148,7 +148,7 @@ class RegisterViewController: UIViewController {
     fileprivate
     func goToOTPViewController(name: String, phone: String, surname: String, password: String, usertype: String) {
         let vc = OTPViewController(nibName: "OTPViewController", bundle: nil)
-        vc.isSignIn = true
+        vc.isSignIn = false
         vc.phoneNumber = phone
         vc.password = password
         vc.name = name

@@ -11,7 +11,7 @@ import SDWebImage
 class PhotoBannerViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var pageControllerOutlet: UIPageControl!
+//    @IBOutlet weak var pageControllerOutlet: UIPageControl!
     @IBOutlet weak var sellButtonOutlet: UIButton!
     @IBOutlet weak var imageCollectionView: UICollectionView! {
         didSet {
@@ -63,7 +63,7 @@ class PhotoBannerViewController: UIViewController {
     func setCornerRadius() {
         containerView.layer.cornerRadius = 8
         containerView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
-        pageControllerOutlet.numberOfPages = imageArray.count
+//        pageControllerOutlet.numberOfPages = imageArray.count
         sellButtonOutlet.layer.cornerRadius = 12
         imageCollectionView.layer.cornerRadius = 8
     }
@@ -87,12 +87,12 @@ class PhotoBannerViewController: UIViewController {
 
 
 //  MARK: -- extension : UICollectionViewDelegate
-
-extension PhotoBannerViewController: UICollectionViewDelegate {
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-            pageControllerOutlet.currentPage = Int(round((scrollView.contentOffset.x) / scrollView.frame.width))
-        }
-}
+//
+//extension PhotoBannerViewController: UICollectionViewDelegate {
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//            pageControllerOutlet.currentPage = Int(round((scrollView.contentOffset.x) / scrollView.frame.width))
+//        }
+//}
 
 
 //  MARK: -- extension : UICollectionViewDelegateFlowLayout

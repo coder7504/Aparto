@@ -129,7 +129,8 @@ extension SearchAdTableViewCell: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ResidentalComplexCollectionViewCell.identifire, for: indexPath) as? ResidentalComplexCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.updateCell(isHide: false, top: 20, title: "title", desc: "description", price: 0)
+//            MARK: -- bitta advertisementni id sini beriwkk 61226f1ea1c0dbaceeb70ee7
+            cell.updateCell(isHide: false, top: 20, title: "title", desc: "description", price: 0, image: "", _id: "61226f1ea1c0dbaceeb70ee7")
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCategoryCollectionViewCell.identifire, for: indexPath) as? ProfileCategoryCollectionViewCell else {

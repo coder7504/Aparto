@@ -36,6 +36,8 @@ class API {
         static var allCompany = "/v1/developer"
         static var service = "/v1/service"
         static var randomTopAnnouncement = "/v1/announcement/random-top"
+        static var randomRecommendedAnnouncement = "/v1/announcement/random-recommended"
+        static var objectPermissionType = "/v1/object-permission-type"
     }
     
     static private var signInUrl: URL = URL(string: baseUrl + EndPoints.signIn)!
@@ -59,6 +61,8 @@ class API {
     static private var allCompanyUrl: URL = URL(string: baseUrl + EndPoints.allCompany)!
     static private var serviceUrl: URL = URL(string: baseUrl + EndPoints.service)!
     static private var randomTopAnnouncementUrl: URL = URL(string: baseUrl + EndPoints.randomTopAnnouncement)!
+    static private var randomRecommendedAnnouncementUrl: URL = URL(string: baseUrl + EndPoints.randomRecommendedAnnouncement)!
+    static private var objectPermissionTypeUrl: URL = URL(string: baseUrl + EndPoints.objectPermissionType)!
     
     
 //    APIs
@@ -400,9 +404,8 @@ class API {
     class func getRandomAdvertisement(addType: String, completion: @escaping ([RandomAdvertisement]?) -> Void) {
         
         let params = [
-            "addType": addType
+            "addType": "carousel-card"
         ]
-        print(randomAdvertisementUrl, "URL")
         NET.simpleRequest(from: randomAdvertisementUrl, method: .get, params: params) { data in
             guard let data = data else { completion(nil); return }
             print("getRandomAdvertisement 👀👀👀👀👀 = ", data)
@@ -496,8 +499,8 @@ class API {
         print("_id = ",_id)
         NET.requestWithURLEncoding(from: URL(string: publicUserUrl)!, method: .post, params: nil) { data in
             guard let data = data else { completion(nil); return }
-            print("👑👑👑👑")
-            print(data)//["data"][0]["announcements"][0]["coordinates"][0])
+//            print("👑👑👑👑")
+//            print(data)//["data"][0]["announcements"][0]["coordinates"][0])
             if data["status"] == "success" {
                 let subData = data["data"][0]
                 completion(PublicUser(json: subData))
@@ -544,10 +547,10 @@ class API {
         
         NET.requestWithURLEncoding(from: randomTopAnnouncementUrl, method: .get, params: params) { data in
             guard let data = data else {  completion(nil); return }
-            print("🦈🦈🦈🦈🦈")
-            print(data)
+//            print("🦈🦈🦈🦈🦈")
+//            print(data)
             if data["status"].stringValue == "success" {
-                Cache.save(announcementLength: data["length"].intValue)
+                Cache.save(topAnnouncementLength: data["length"].intValue)
                if let subData = data["data"].array {
                 let announcement = subData.map{ Announcement(json: $0) }
                 completion(announcement)
@@ -557,6 +560,76 @@ class API {
             }
         }
         
+    }
+    
+    
+//    Get Get Random Recommended Announcement
+    
+    class func getRandomTopAnnouncement(limit: Int, skip: Int, completion: @escaping ([Announcement]?) -> Void) {
+        
+        let params: [String : Any] = [
+            "popOptions": "sellType comfortType district rentType",
+            "limit": limit,
+            "skip": skip
+        ]
+        
+        NET.requestWithoutEncoding(from: randomRecommendedAnnouncementUrl, method: .get, params: params) { data in
+            guard let data = data else { completion(nil); return }
+//            print("🐡🐡🐡🐡🐡")
+//            print("recomendedAnnouncement = ", data)
+            if data["status"].stringValue == "success" {
+                Cache.save(recommendedAnnouncementLength: data["length"].intValue)
+               if let subData = data["data"].array {
+                let announcement = subData.map{ Announcement(json: $0) }
+                completion(announcement)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+        
+    }
+    
+    
+    //    Get Get Object Permission Type
+    
+    class func getObjectPermissionType(completion: @escaping ([ObjectPermissionType]?) -> Void) {
+        
+        NET.requestWithURLEncoding(from: objectPermissionTypeUrl, method: .get, params: nil) { data in
+            guard let data = data else { completion(nil); return }
+//            print("🦢🦢🦢🦢🦢")
+//            print("objectPermission = ", data)
+            if data["status"].stringValue == "success" {
+               if let subData = data["data"].array {
+                let type = subData.map{ ObjectPermissionType(json: $0) }
+                completion(type)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+        
+    }
+
+    
+//    post Like One
+    
+    class func postLikeOne(_id: String, completion: @escaping(Bool?) -> Void) {
+        
+        let likeOneUrl: URL = URL(string: API.baseUrl + "/v1/news/like/\(_id)")!
+        
+        let params: [String : Any] = [
+            "user": Cache.getUserId() ?? ""
+        ]
+        
+        NET.simpleRequest(from: likeOneUrl, method: .post, params: params) { data in
+            guard let data = data else { completion(false); return }
+            if data["status"].stringValue == "success" {
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
     }
     
     

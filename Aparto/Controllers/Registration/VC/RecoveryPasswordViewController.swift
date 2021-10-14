@@ -61,14 +61,16 @@ class RecoveryPasswordViewController: UIViewController {
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
     }
     @IBAction func continueButtonTapped(_ sender: Any) {
-        Loader.start()
         changePassword()
+        print("repeatNewPasswordView.mainTitle = ", repeatNewPasswordView.mainTitle )
+        print("newPasswordView.mainTitle = ", newPasswordView.mainTitle)
 //        let count = navigationController?.viewControllers
 //        navigationController?.popToViewController(count![count!.count-3], animated: true)
     }
     
     func changePassword() {
         if newPasswordView.mainTitle == repeatNewPasswordView.mainTitle {
+            Loader.start()
             if Reachability.isConnectedToNetwork() {
                 API.changePassword(currentPassword: oldPasswordView.mainTitle!, newPassword: newPasswordView.mainTitle!) { [self] (isChange) in
                     Loader.stop()
